@@ -1,0 +1,126 @@
+title: Cyberviolence
+---
+author: Jean-Julien Aumercier et Louis Paternault
+---
+toc: 1
+---
+sort_key: 6
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{{ alertstart(level="info", title="")}}
+Une première version de cette séance a été écrite par Louis Paternault, en s'inspirant très fortement du <a href="https://www.nonauharcelement.education.gouv.fr/ressources/cahier-dactivites-second-degre-outils-et-sequences-pedagogiques/">Cahier d'activités — Secondaire : Outils et séquences pédagogiques</a>, disponible sur le site web <a href="https://www.nonauharcelement.education.gouv.fr/">Non au harcèlement</a>. Elle a servi de base à la seconde version, élaborée avec Jean-Julien Aumercier.
+{{ alertend() }}
+
+Cette séance dure 1h30. Elle s'appuie sur deux vidéos :
+
+* une fiction de sensibilisation au harcèlement : [*Les Injures*](https://www.nonauharcelement.education.gouv.fr/ressources/les-injures-film-de-sensibilisation/) ;
+* un entretien avec une *streameuse* victime de cyberharcèlement : [*Sexisme : la streameuse Ultia porte plainte pour cyberharcèlement*](https://www.youtube.com/watch?v=voTlfrBNYZo).
+
+Afin de créer un climat propice à la bienveillance, cette séance ne sera pas évaluée (et les élèves en sont évidemment informés).
+
+## (10') Remue-méninge
+
+Afin de partir de ce que les élèves connaissent du harcèlement, la séance commence par un remue-méninge (*brain storming*).
+
+Au tableau sont écrites les  questions : « Qu'est-ce que le harcèlement ? Quels en sont les acteurs ? »
+
+Les élèves répondent aux questions, le professeur note les réponses. Elles ne sont pas (encore) commentées : elles serviront de base à la discussion plus tard.
+
+## (10') Vidéo
+
+Projection des deux vidéos :
+
+* [*Les Injures*](https://www.nonauharcelement.education.gouv.fr/ressources/les-injures-film-de-sensibilisation/) ;
+* [*Sexisme : la streameuse Ultia porte plainte pour cyberharcèlement*](https://www.youtube.com/watch?v=voTlfrBNYZo).
+
+Le professeur s'assure que les élèves ont compris les deux vidéos (notamment la seconde), mais à ce stade, il n'y a pas de commentaires sur les vidéos (seulement les faits).
+
+## (15') Questionnaire
+
+Les élèves, par binôme ou petits groupes, répondent à [ce questionnaire](questionnaire.pdf).
+
+## (15') Définition du harcèlement
+
+Avant de répondre aux questions, l'enseignant distribue [l'extrait d'article du Code pénal](codepenal.pdf), qui sera collé dans le cahier (c'est aussi un prétexte pour qu'ils gardent une trace du numéro vert « Non au harcèlement », qui apparaît sur ce document).
+
+Les élèves lisent l'article, et l'enseignant commente. Il peut insister sur la structure de l'article :
+
+* définition du harcèlement, dans lequel on peut repérer les trois aspects qui constituent le harcèlement :
+  * la violence ;
+  * la répétition ;
+  * l'isolement.
+* cas particuliers :
+  * le harcèlement est à considérer du point de vue de la victime : même si chaque personne n'a été violent qu'une seule fois, la victime a subi de la violence répétée, donc il y a harcèlement ;
+  * même spontanée (sans coordination des harceleurs), la répétition de violence constitue du harcèlement ;
+* circonstances aggravantes :
+  * en particulier, on remarque que le cyberharcèlement est une circonstance agravante au harcèlement.
+
+## (30') Réponses aux questions
+
+Les élèves partagent les réponses au questionnaire (qui sont éventuellement complétées par le professeur).
+
+* *Quels sont les acteurs du harcèlement ?*
+
+  Les élèves trouvent facilement La victime et les harceleurs, mais ont tendance à oublier les témoins, qui peuvent basculer d'un côté (harceleurs) ou de l'autre (soutiens).
+
+  Dans l'entretien d'Ultia, on peut ajouter les réseaux sociaux (Twitter et Twitch dans l'exemple) qui fournissent l'infrastructure nécessaire au cyberharcèlement, et s'en lavent les mains. Il peut être intéressant d'expliquer que ces plates-formes appliquent bien souvent des lois des États-Unis, beaucoup plus permissives dans la liberté d'expression (les paroles racistes sont par exemples autorisées là-bas), alors qu'en France, la liberté d'expression est plus limitée, et interdit par exemple les discours de haine.
+
+* *Pourquoi peut-on parler de harcèlement dans les deux vidéos ?*
+
+  On retrouve dans les deux cas : la violence, la répétition, l'isolement.
+
+* *Quelles sont les conséquences du harcèlement sur la victime ?*
+
+  On peut noter que dans le cas d'Ultia (la streameuse), ce harcèlement a pour conséquence :
+
+     * des pertes d'opportunités professionnelles (cette activité est son métier, et le harcèlement peut l'empêcher de promouvoir ses interventions) ;
+     * une perte de liberté (il y a des choses pourtant légitimes qu'elle s'interdit de faire à cause du harcèlement).
+
+* *Qu'est-ce qui peut empêcher la victime de se défendre ? Que peut ressentir la victime ?*
+
+  L'impuissance, la peur que cela empire…
+
+  La honte.
+
+* *Quelles autres formes ou pratiques de harcèlement connaissez-vous ?*
+
+  Harcèlement physique, moral, sexuel, de rue… Exclusion, dénigrement, happy slapping, doxxing…
+
+* *Quelles sont les spécificités du cyberharcèlement ? Pourquoi peut-on dire que l'utilisation des multimédias facilite et accentue le phénomène de harcèlement ?*
+
+  - Il ne s'arrête jamais (contrairement au harcèlement physique, qui s'arrête lorsque l'élève rentre chez lui).
+  - Caractère permanent des messages.
+  - Utilisation et détournement d’informations personnelles.
+  - Diffusion massive, rapide et ininterrompue des moqueries et/ou insultes.
+  - Sentiment d'impunité des harceleurs à cause de la « distance » mise par l'écran, et de la non-réaction de certaines plate-formes.
+  - Désincarnation de la violence (par écran interposé, sans voir les réactions de la victime).
+
+  Attention : Ce qui se passe sur écran ou sur les réseaux sociaux, souvent qualifié de « virtuel », n'en est pas moins réel (par exemple, la peur ressentie devant un film d'horreur est bien réelle).
+
+* *A-t-on le droit de prendre une photo d'un camarade et de la diffuser sur les réseaux sociaux ? A-t-on le droit de diffuser une photo d'un camarade sans son accord ?*
+
+  Non et non (droit à l'image).
+
+* *A-t-on le droit de faire une blague sexiste, homophobe, ou raciste en public ?*
+
+  Non.
+
+  À noter qu'il faut être vigilants sur les réseaux sociaux, qui peuvent rendre floue la limite entre public et privé.
+
+* *Pourquoi est-il difficile, en tant que témoin, d'agir ? En quoi la réaction du témoin change-t-elle la situation ? Ne pas intervenir, est-ce consentir ?*
+
+  Menaces, peur de devenir à son tour victime, peur d’être une « balance »…
+
+  Dans cette vidéo, le témoin montre de la solidarité, et romp ainsi l'isolement (l'une des trois composantes du harcèlement).
+
+* *Que peuvent faire les différents acteurs pour arrêter cette situation de harcèlement ?*
+
+  - La victime : En parler (à ses parents, à un adulte du lycée, à un camarade de confiance, en appelant le 3020).
+  - Le témoin : Même chose.
+  - Le harceleur : Se rendre compte de ses actes : « C'est juste pour rire » n'est pas une excuse. En parler.
+
+## Discussion
+
+Les réponses aux questionnaires peuvent déboucher sur une discussion libre, qui durera jusqu'à la fin de la séance.

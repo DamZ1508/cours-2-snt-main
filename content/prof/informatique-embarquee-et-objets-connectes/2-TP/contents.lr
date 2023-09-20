@@ -1,0 +1,43 @@
+title: Travaux pratiques
+---
+sort_key: 2
+---
+body:
+
+## Présentation
+
+En grand groupe, une demi-heure.
+
+* Présenter la carte micro:bit avec le programme [`presentation.py`](presentation.py), qui affiche un point d'interrogation, puis :
+
+  * si la carte est secouée, affiche un bonhomme triste ;
+  * si un des boutons est pressé, affiche la température ;
+  * si l'autre bouton est pressé, affiche une flèche vers le bas (la micro:bit est supposée être tenue à la verticale pour être montrée aux élèves) ;
+  * si les deux boutons sont pressés en même temps, fait clignoter la carte.
+
+* Présenter le « projet » : Je veux programmer ma carte micro:bit pour qu'elle indique, par une flèche, quel bouton est pressé.
+
+* Premier programme : [`exemple0-sans-boucle.py`](exemple0-sans-boucle.py). L'analyser ensemble.
+
+  * Que font chacune des lignes ?
+  * Flasher le programme sur la micro:bit.
+  * Observer que cela ne fonctionne pas (pas comme prévu en tout cas). Problème : Il manque une boucle.
+
+* Second programme :
+
+  * Écrire le programme en langue naturelle (il suffit « d'enrober » le programme précédent dans une boucle infinie).
+  * Convertir ce programme en micropython : [`exemple0-avec-boucle.py`](exemple0-avec-boucle.py).
+  * Flasher le programme, et observer : ça fonctionne.
+
+* Insister sur quelques points :
+
+  * ``while True:`` : Boucle infinie : à éviter en math, mais tout indiqué ici.
+  * ``if``, ``elif``, ``else`` ;
+  * ``button_a``, ``button_b``, ``display`` : spécifique à la carte micro:bit ; nous y reviendrons.
+  * Importance des commentaires.
+
+## Travail en autonomie
+
+{% for item in site.get("/informatique-embarquee-et-objets-connectes/tp-utilisation-de-la-carte-microbit").children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}

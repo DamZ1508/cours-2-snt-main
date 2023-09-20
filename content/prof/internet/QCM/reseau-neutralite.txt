@@ -1,0 +1,26 @@
+Parmi les scénarios (imaginaires) suivants, lesquels ne respectent pas le « traitement égal des flux d'informations » ou la « non-discrimination » ?
+
+- Un fournisseur d'accès à internet fait payer un accès « prioritaire » au réseau en cas de congestion du réseau.
+- Un fournisseur d'accès à internet bloque le traffic en pair-à-pair.
+- Un fournisseur d'accès à internet diffuse Netflix plus vite que Youtube, suite à un accèrd avec Netflix.
+- Un opérateur de téléphonie mobile bloque l'utilisation de Skype en 4G ou 5G.
+- Un fournisseur d'accès à internet propose une offre gratuite ne permettant de visiter que Facebook et Wikipédia.
+- Un opérateur de téléphonie mobile compresse les images pour accélérer le débit.
+
+- Un fournisseur d'accès à internet interdit à ses utilisateurs et utilisatrices de télécharger plus de 20Go de données par mois.
+- Un fournisseur d'accès à internet pratique des prix différents pour ses abonnés français et belges.
+- Un opérateur de téléphonie mobile fait payer plus cher les appels vers d'autres pays.
+- À la demande d'un juge, une fournisseur d'accès à internet bloque un site web permettant de téléchargement illégal.
+
+Pourquoi la neutralité du net protège-t-elle la liberté d'expression ?
+
+- Parce qu'elle empêche les fournisseurs d'accès à Internet de pratiquer la censure.
+- Parce qu'elle subventionne les abonnements à Internet.
+- Parce qu'elle permet aux États de mieux contrôler Internet.
+
+
+Pourquoi l'Inde a-t-elle interdit le service « Free Basic » de Facebook ?
+
+- Parce que ce service ne respectait pas la neutralité du net.
+- Parce que Facebook refusait de censurer les articles des opposants du gouvernement.
+- Parce que Facebook refusait de payer ses impôts en Inde.

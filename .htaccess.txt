@@ -1,0 +1,4 @@
+AuthName "Accès protégé"
+AuthType Basic
+AuthUserFile /home3/csgsv/sites/snt/apropos/.htpasswd
+require valid-user

@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2023 Louis Paternault --- http://ababsurdo.fr
+%
+% Reproduction, diffusion, et modification interdites, sauf exceptions prévues par la loi.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{2223-pablo}
+\usepackage[python]{2223-pablo-listings}
+
+\usepackage[
+	a4paper,
+	includehead,
+	margin=10mm,
+	headsep=3mm,
+]{geometry}
+\usepackage{2223-pablo-header}
+\fancyhead[L]{\textsc{SNT > Données > Python et format CSV}}
+\fancyhead[R]{\textsc{Corrigé}}
+
+\def\thesubsection{\arabic{section}.\alph{subsection}}
+
+\begin{document}
+
+\setcounter{section}{2}
+\section{Exemple pas à pas}
+
+\setcounter{subsection}{2}
+\subsection{Parcours du tableau}
+
+\begin{enumerate}
+	\item  En 2021, dans le département d'Ille et Villaine (35), 5 filles sont nées avec le prénom Zya.
+		\stepcounter{enumi}
+	\item \lstinline{recherche = prenoms.loc[3784670, "preusuel"]}
+	\item
+		\begin{lstlisting}
+		import pandas
+		prenoms = pandas.read_csv("dpt2021.csv", sep=";")
+		recherche = prenoms.loc[:, "preusuel"]
+		print(recherche)
+		\end{lstlisting}
+\end{enumerate}
+\subsection{Recherche dans le tableau}
+\begin{enumerate}
+		\setcounter{enumi}{4}
+	\item
+		\begin{enumerate}
+			\item En 2019 en Isère, le prénom le plus donné a été Léo (88 fois).
+			\item En 2019 en Isère, le prénom le plus donné aux filles a été Emma (69 fois).
+			\item En 2019 en Isère, 78 garçons ont été nommés Gabriel.
+		\end{enumerate}
+	\item
+		\begin{enumerate}
+			\item \emph{Ça dépend…}
+			\item \emph{Ça dépend…}
+			\item \emph{Ça dépend…}
+		\end{enumerate}
+\end{enumerate}
+
+\section{Un peu plus d'autonomie}
+
+\begin{enumerate}
+		\setcounter{enumi}{2}
+	\item
+		\begin{enumerate}
+			\item On a simplement changé l'année aux trois valeurs 1999, 2009, puis 2019.
+		\begin{center}\begin{tabular}{cn{2}{1}}
+			\toprule
+			Année & {Moyenne} \\
+			1999 &    25.831762 \\
+			2009 &    29.661775 \\
+			2019 &    31.159518 \\
+			\bottomrule
+		\end{tabular}\end{center}
+	\item La moyenne est en défaveur des femmes, et augmente dans le temps, donc oui.
+		\end{enumerate}
+		\stepcounter{enumi}
+	\item La plus égalitaire est Téva (\numprint{49.507175}\%), la moins égalitaire est Canal+ Sport (\numprint{5.136651}\%).
+
+		Voici le programme utilisé pour répondre.
+
+		\begin{lstlisting}
+		import pandas
+		parole = pandas.read_csv("20190308-years.csv")
+		recherche = parole.loc[
+			(parole['year'] == 2019),
+			["channel_name", "women_expression_rate"],
+		]
+		tri = recherche.sort_values(
+			by="women_expression_rate",
+			)
+		print(tri)
+		\end{lstlisting}
+\end{enumerate}
+
+
+\end{document}

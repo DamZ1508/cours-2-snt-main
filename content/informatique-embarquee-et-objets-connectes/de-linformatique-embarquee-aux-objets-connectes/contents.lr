@@ -1,0 +1,27 @@
+title: De l'informatique embarquée aux objets connectés
+---
+sort_key: 3
+---
+toc: 
+---
+image: ../internet-des-objets.jpg
+---
+morehead:
+
+<link rel="stylesheet" href="/static/sublist.css">
+<link rel="stylesheet" href="/static/spoiler.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+
+## Définitions
+
+- **Un objet connecté** est un système informatique embarqué disposant d’une connexion à un réseau local ou à L’Internet. Les Interfaces Homme Machine des objets connectés sont souvent des applications Web disponibles sur Smartphone
+
+- **L'Internet des objets** : avec la baisse des coûts des microcontrôleurs et des puces Wifi, les objets connectés se multiplient. On peut en fabriquer facilement à partir de cartes Arduino, de Raspberry Pi ou de cartes Wifi ESP8266. Actuellement, il existe plus d’objets que d’humains connectés à Internet et leur nombre va augmenter fortement dans les prochaines années avec la baisse de coût des . On parle d’IOT pour Internet Of Things pour désigner l’ensemble des objets connectés à l’Internet. On estime à 50 milliards le nombre d’objets connectés en 2020.
+
+<center><iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=DOECi_ZKaYI&vignette=https://i.ytimg.com/vi/DOECi_ZKaYI/hqdefault.jpg&debut=0&fin=272&largeur=200&hauteur=113&st=fr,fr" allowfullscreen frameborder="0" width="700" height="394"></iframe></center>
+
+

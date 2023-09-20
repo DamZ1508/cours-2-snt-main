@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage[a5paper, margin=1cm]{geometry}
+
+\usepackage{textcomp}
+\usepackage[francais]{babel}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© 2020 Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage{mdframed}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+Nom (2) : \dotfill
+
+\bigskip
+
+Rôle : \textbf{Président ou Présidente de jury :} Votre rôle est de vous assurer que les règles du débat sont respectées. Vous êtes aidées par les « montres » pour le chronométrage. 
+
+\bigskip
+
+\begin{mdframed}
+\begin{description}
+  \item[Préparation (20')] Les deux équipes préparent leurs arguments, et choisissent leurs deux orateurs ou oratrices de départ.
+  \item[Annonce du début] Vous rappelez la question du débat, et rappelez les règles.
+  \item[Premier round (5')] Les orateurs ou oratrices de chaque équipe débattent. Pendant ce temps, vous vous assurez que les règles sont respectées (les autres membres de l'équipe n'interviennent pas, on ne coupe pas la parole, on écoute l'autre, etc.).
+
+    Les orateurs et oratrices ont le droit de demander un temps mort par round, pendant lequel ils peuvent discuter avec leur équipe pendant une minute. Ils n'ont pas le droit de changer d'orateur ou oratrice pendant ce temps mort.
+  \item[Pause (3')] Les équipes discutent du débat et préparent le second round. Elles peuvent changer d'orateur ou oratrice si elles le souhaitent.
+  \item[Second round (5')] Mêmes règles que le premier round.
+  \item[Pause (3')]
+  \item[Troisième round (5')] Mêmes règles que le premier round.
+  \item[Bilan] Votre positionnement vers l'une ou l'autre des 2 équipes rapporte 1 point à l'équipe. 
+  
+  Vous faites le bilan des points gagnés par les deux équipes et annoncez l'équipe gagnante.
+\end{description}
+\end{mdframed}
+
+\end{document}

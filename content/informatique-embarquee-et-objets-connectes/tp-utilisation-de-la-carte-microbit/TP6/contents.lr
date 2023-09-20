@@ -1,0 +1,144 @@
+title: TP6 — Utiliser une machine à états
+---
+sort_key: 6
+---
+image: washing-machine.jpg
+---
+toc: 1
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">
+---
+body:
+
+{% from 'macros/images.html' import image with context %}
+
+On souhaite améliorer le système de « clignotant » pour vélo que vous avez (peut-être) réalisé au TP précédent (ce n'est pas grave si vous avez préféré faire un autre TP).
+
+## Clignotant de vélo
+
+On souhaite créer un clignotant pour vélo avec deux cartes *micro:bit* :
+
+* la première carte est placée sur le guidon, et la cycliste peut appuyer sur un des boutons *A* ou *B* pour prévenir qu'elle va tourner à gauche ou à droite ;
+* la seconde carte est accrochée à l'arrière du vélo, et selon la commande de la cycliste, affiche une flèche vers la gauche ou vers la droite pour prévenir les véhicules qui la suivent.
+
+Plus précisément :
+
+* Au départ, les deux cartes n'affichent rien.
+* Lorsque le bouton *A* est appuyé, la carte affiche une flèche à gauche, et un message est envoyé à la seconde carte pour qu'elle affiche aussi une flèche à gauche.
+* Cette flèche reste affichée, jusqu'à une nouvelle action sur la première carte :
+
+  * encore le bouton *A* : les deux cartes n'affichent plus rien ;
+  * bouton *B* : les deux cartes affichent une flèche à droite.
+
+Le travail va se faire en deux étapes :
+
+1. D'abord, nous allons programmer la carte située sur le guidon, sans nous occuper de l'autre (pas de radio).
+2. Ensuite, nous nous occuperons de la carte à l'arrière.
+
+### Guidon
+
+Le graphe suivant représente une [*machine à état*](https://fr.wikipedia.org/wiki/Machine_%C3%A0_%C3%A9tats_abstraits) :
+
+- les sommets (appelés ici « états ») représentent l'état actuel de l'écran de la carte (éteint, flèche à gauche, flèche à droite) ;
+- les arêtes (appelées ici « transitions ») représentent l'action de l'utilisatrice (bouton *A* ou bouton *B* appuyé).
+
+Par exemple :
+
+- la transition *A* qui va de *éteint* à *gauche* signifie : « Si la carte est éteint et que le bouton *A* est pressé, afficher une flèche à gauche » ;
+- la transition *B* qui va de *gauche* à *droite* signifie : « Si la carte affiche une flèche à gauche et que le bouton *B* est pressé, afficher une flèche à droite » ;
+- etc.
+
+{{ image(
+  "automate.png",
+  ) }}
+
+0. Recopier et compléter le graphe ci-dessus, en remplaçant tous les `?` par les bonnes valeurs (vous pouvez déjà prendre la feuille bilan pour cela).
+0. Téléchargez le fichier [`machine-guidon.py`](machine-guidon.py), et complétez-le avant de l'exécuter sur la carte *micro:bit*. Il met en œuvre la machine à état que vous venez de compléter.
+
+Si tous fonctionne, l'écran devrait afficher rien du tout, une flèche à gauche ou à droite en fonction, et changer selon le bouton sur lequel vous appuyez.
+
+### Arrière
+
+Nous voulons maintenant que les mêmes flèches soient affichées à l'arrière. Pour cela, nous allons reprendre le programme précédent, et à chaque changement d'état, un message va être envoyé par radio pour dire quel est le nouvel état.
+
+0. Pour le guidon :
+
+   0. Reprendre le programme précédent, et ajoutez les lignes suivantes en début, pour activer la radio.
+
+      ~~~python
+      import radio
+
+      radio.on()
+      radio.config(channel=7)
+      ~~~
+
+   0. À chaque fois que l'état change, ajouter la ligne suivante (complétée correctement) pour envoyer le nouvel état par radio :
+
+      ~~~python
+      radio.send(XXX)  # Envoie le nouvel état.
+      ~~~
+
+0. Pour l'arrière :
+
+   0. Téléchargez le fichier [`machine-arriere.py`](machine-arriere.py), enregistrez-le dans votre répertoire personnel, et ouvrez-le avec le logiciel habituel.
+   0. Complétez-le (remplacez les `XXX` par les valeurs correctes).
+   0. Exécutez-le sur la seconde carte.
+
+0. Vérifiez maintenant que les deux cartes interagissent correctement.
+
+0. **Bilan**
+
+   - Demander puis compléter la fiche bilan de ce TP ;
+   - Enregistrez vos programmes dans le dossier `micro:bit` précédemment créé ;
+   - Rendez la fiche au professeur ;
+   - Passez à la partie suivante
+
+## Amélioration
+
+Une dernière chose est gênante avec notre clignotant : il ne clignote pas… Nous allons corriger cela.
+
+Il y a plusieurs manières de faire cela. L'une d'entre elle (plus longue) consiste à afficher une flèche, attendre, effacer l'écran, attendre, et recommencer.
+
+~~~python
+from microbit import *
+
+for i in range(5):
+    display.show(Image.ARROW_W)
+    sleep(500)
+    display.clear()
+    sleep(500)
+~~~
+
+Cela fonctionne, mais il y a encore plus rapide !
+
+0. Lire la partie [Animation](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html#animation) de la documentation de *micro:bit* sur [les images](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html).
+
+0. Voici un programme qui fait ouvrir et fermer la bouche à Pac-Man. On remarquera que l'une des deux images vient de la banque intégrées à la *micro:bit*, et l'autre a été dessinée « à la main ».
+
+   ~~~python
+   from microbit import *
+
+   bouchefermée = Image(
+       "09990:"
+       "99099:"
+       "99999:"
+       "99999:"
+       "09990:"
+   )
+   display.show(
+       [Image.PACMAN,  bouchefermée],
+       loop=True,
+   )
+   ~~~
+
+   0. Exécutez ce programme sur la carte *micro:bit*.
+   0. Modifiez-le pour qu'il alterne entre une flèche, et un écran vide (on créera une image spécifique pour l'écran vide).
+
+0. Modifiez vos programmes de la partie précédente pour que la flèche soit animée, et non plus statique.
+
+0. *Bilan :*
+
+   - Enregistrez vos programmes.

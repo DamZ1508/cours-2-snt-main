@@ -1,0 +1,28 @@
+title: Informatique embarquée et objets connectés
+---
+image: internet-des-objets.jpg
+---
+description: Séquence d'enseignement sur le thème « Informatique embarquée et objets connectés ».
+---
+sort_key: 8
+---
+stream: true
+---
+tags:
+
+accueil
+theme
+---
+body:
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/) {{ item }}
+{% endfor %}
+
+---
+toc: 1
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">

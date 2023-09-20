@@ -1,0 +1,30 @@
+title: Graphes
+---
+sort_key: 5
+---
+author: François Paoli et Louis Paternault
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+
+Une séance d'une heure.
+
+[Ce polycopié](5-graphes.pdf) ([source](5-graphes.odt)) est distribué aux élèves, et complété pendant l'heure.
+
+À la fin, les élèves font les exercices 4 et 9 p. 72 et 73 (corrigés en classe avec le professeur) qui leur sont projetés au tableau.
+
+{{ image("ex4.png") }}
+{{ image("ex9.png") }}
+
+Les élèves sont prévenus qu'ils seront évalués sur des exercices du type des exercices 4 et 9. Leur travail à
+faire pour la séance suivante est donc de s'assurer qu'ils sont capables de refaire ces exercices.
+
+Pour cela, les élèves se voient distribuer [ce document](reseaux-sociaux-devoir2-blanc.pdf) ([source](reseaux-sociaux-devoir2-blanc.odt)), avec [le corrigé](reseaux-sociaux-devoir2-blanc-corrige.pdf) ([source](reseaux-sociaux-devoir2-blanc-corrige.tex)), pour réviser le devoir, et savoir ce qui est attendu d'eux[^ecc].
+
+[^ecc]: C'est (en partie) de [l'évaluation par contrat de confiance](http://mclcm.free.fr/).
+
+- Semaine 1 (fin de séance) : On distribue le sujet d'entraînement, en leur disant de commencer à travailler et à préparer des questions pour la semaine suivante.
+- Semaine 2 : On répond aux questions.
+- Semaine 3 : Devoir, qui s'inspire du devoir blanc [*(les sujets de devoirs)*](devoirs.zip)

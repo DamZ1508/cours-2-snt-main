@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{calc}
+\usepackage[
+  paperwidth={21cm/2},
+  paperheight={29.7cm/4},
+  margin=6mm,
+  includehead,
+]{geometry}
+\usepackage{evaluation}
+
+\title{Photographie --- Algo}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\newcommand{\points}{\parbox[t]{13cm}{\dotfill}}
+
+\begin{document}
+
+\vspace*{\stretch{1}}
+
+\rowcolors{1}{}{lightgray}
+\begin{tabularx}{\textwidth}{Xc}
+  \toprule
+  Python : Assombrir & …/1 \\
+  Python : Éclaircir & …/1 \\
+  Python : Symétrie & …/1 \\
+  Python : Niveaux de gris & …/1 \\
+  Python : Inverser les couleurs & …/1 \\
+  Python : Pivoter & …/1 \\
+  \midrule
+  \textbf{Total} & \textbf{…/6} \\
+
+  \bottomrule
+\end{tabularx}
+
+\end{document}

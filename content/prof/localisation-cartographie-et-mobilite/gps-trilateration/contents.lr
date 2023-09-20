@@ -1,0 +1,25 @@
+title: GPS : trilatération (1h30)
+---
+sort_key: 2
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+{% from 'macros/spoiler.html' import spoiler with context %}
+
+## Fonctionnement du GPS : Théorie
+- Les élèves regardent la vidéo suivante : https://ladigitale.dev/digiview/inc/video.php?videoId=WoqpQbWdacQ
+- Les élèves répondent au QCM Pronote *(à préparer)*
+
+## Fonctionnement du GPS : Une illustration en deux dimensions GEOGEBRA
+- Les élèves suivent les consignes en ligne et ont accès à l'application GéoGebra en ligne
+- ils peuvent dévoiler les indices s'ils le souhaitent
+- [Fichier GeoGebra corrigé](trilateration_corr.ggb)
+- Correction des calculs à effectuer :
+
+{{ image("calcul-distances.png") }}
+{{ image("calcul-geogebra.png") }}
+
+## TP
+- [Le document à distribuer aux élèves](SNT_tp_local_carto.pdf) [*(source)*](SNT_tp_local_carto.tex)

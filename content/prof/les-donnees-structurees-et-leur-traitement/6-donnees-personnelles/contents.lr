@@ -1,0 +1,49 @@
+title: Données personnelles (1h30)
+---
+sort_key: 6
+---
+toc: 2
+---
+body:
+
+Les gens non concernés sont généralement peu réceptifs aux arguments en faveur d'une protection des données *(je n'ai rien à cacher)*. L'idée est de forcer une partie de la classe à défendre ce point de vue dans un débat.
+
+> Si je n'ai rien à me reprocher, je n'ai rien à cacher.
+
+## Déroulement de la séance
+
+### Séance précédente
+
+Le principe de la séance est annoncé dans les grandes lignes à la séance précédente (le thème du débat). Le [corpus de textes](corpus.pdf) ([sources](corpus.tar.xz)) est distribué (une page par élève ; plusieurs élèves peuvent avoir la même page).
+
+### Devoirs
+
+Chez eux, pour préparer le débat, les élèves doivent lire la page qui leur a été distribuée, et préparer des arguments *pour* et *contre* la phrase de débat.
+
+### Séance
+
+- 5' Diffusion de la vidéo [Datagueule 15 : Big data](https://ladigitale.dev/digiview/#/v/64edb490092a5) pour introduire le débat.
+
+- 10' Explication du fonctionnement et distribution des rôles : 
+
+  - Les élèves sont placés par groupe de 8.
+
+  - [président·e](roles/president.pdf) ([source](roles/equipier.tex)) : Les président·e·s s'assurent que les règles sont respectées (dans l'idéal, le professeur est en retrait et n'intervient pas). Ils sont 2 et sont intégrés au jury car leur voix rapportera 1 point à l'équipe choisie.
+  - [montre](roles/montre.pdf) ([source](roles/equipier.tex))) : ils assistent le président en s'occupant du chronométrage. Ils sont 2 et sont également membres du jury car le respect des temps impartis rapporte 1 point à l'équipe.
+  - [jury](roles/jury.pdf) ([source](roles/equipier.tex)) : ils évaluent les équipiers (qui débattent) en mettant des points et pénalités en fonction du respect des règles ;
+  - [équipier·e](roles/equipier.pdf) ([source](roles/equipier.tex)) : ils débattent. Seuls deux personnes dans chaque équipes (les orateur·ice·s, qui peuvent changer pendant le débat, interviennent ; les autres préparent les arguments avec eux, et les épaulent pendant les pauses).
+
+- 20' Préparation du débat : les deux équipes affutent leurs arguments. Pendant ce temps, avec le jury :
+
+  - je détaille leur rôle ;
+  - je les fais mettre la salle en place ;
+
+- 30' Débat :
+
+  - Trois rounds de cinq minutes de débats entre les quatre « champions ».
+  - Trois minutes de pause entre chaque round, durant lesquels les équipes peuvent se concerter.
+  - Chaque équipe a droit à un temps mort d'une minute par round.
+
+- 10' Décompte des points et bilan.
+
+Cela fait un total d'une heure et quart, sur une séance d'une heure et demie. Il faut donc être prêt à meubler, ou à introduire le chapitre suivant.

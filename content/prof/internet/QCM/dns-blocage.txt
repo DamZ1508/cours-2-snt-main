@@ -1,0 +1,13 @@
+Comment fonctionne la méthode « Bloquer l'URL » ?
+- Lorsqu'un ordinateur demande l'adresse IP correspondant au nom de domaine interdit, les serveurs DNS ne renvoient pas la bonne adresse IP.
+- Les fournisseurs d'accès internet bloquent toutes les connections vers les adresses IP interdites.
+- La liste des sites interdits est connue des navigateurs web (Firefox, Google Chrome, Safari…), qui en interdit l'accès.
+
+Pourquoi la méthode « Couper les serveurs » ne fonctionne-t-elle pas à l'étranger ?
+- La police ne peut pas intervenir directement, et doit demander aux pays concernés de bien vouloir agir.
+- Il n'y a aucun accord international qui autorise cela. => De tels accords existent.
+
+Parmi les méthodes suivantes, lesquelles permettent d'ignorer le blocage d'URL (première méthode décrite dans l'article) ?
+- Accéder au site en utilisant directement l'adresse IP (au lieu de passer par le nom de domaine). => C'est très facile, à condition de connaître cette adresse IP.
+- Passer par le réseau TOR.
+- Utiliser un autre serveur DNS que celui de son fournisseur d'accès. => Il est tout à fait possible de configurer son ordinateur (ou sa « box » internet) pour utiliser un autre serveur DNS que celui de son fournisseur d'accès. En utilisant un serveur étranger, les sites web ne seront pas bloqués. Pour des raisons techniques, il est parfois utile de changer de serveur DNS, et cela n'a rien d'illégal.

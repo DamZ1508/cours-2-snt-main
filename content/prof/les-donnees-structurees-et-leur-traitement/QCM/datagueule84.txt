@@ -1,0 +1,41 @@
+- Quel est le critère de succès de l'argorithme *Wave Clinical Platform*.
+
+  - La survie du patient.
+  - Un coût du traitement peu élevé.
+  - Un retour rapide du patient chez lui.
+  - Un grand nombre de patients auscultés par les docteurs.
+
+- Pourquoi l'algorithme de Youtube propose-t-il davantage de vidéos sur Trump que sur Clinton à la recherche "Trump + Clinton" ?
+
+  - Pour garder les audiences plus longtemps sur Youtube.
+  - Parce que les directeurs de Youtube soutiennent Trump.
+  - Parce que les informaticiens qui ont programmé Youtube sont sexistes.
+  - C'est un bug qui a été rapidement corrigé.
+
+- Que veut dire la phrase « Les algorithmes enracinent dans le présent les inégalités du passé » ?
+
+  - Parce qu'ils ont appris à partir de données du passé, les algorithmes reproduisent ces inégalités dans le présent.
+  - Les informaticiens qui programment les algorithmes n'aiment pas le changement.
+  - Les algorithmes permettent de lutter contre les inégalités.
+  - Il y a moins d'inégalité aujourd'hui que dans le passé.
+
+- Qui sont les principaux financeurs des recherches en intelligence artificielle ?
+
+  - Les GAFAM (et IBM) et les BATX.
+  - Les gouvernements de l'Union Européenne.
+  - Des hackers.
+  - La NASA.
+
+- Pourquoi les États et administrations publiques sont réticents à révéler leurs algorithmes ?
+
+  - Pour éviter que les gens veuillent en discuter.
+  - Parce qu'ils ont signé des accords de confidentialités avec des entreprises.
+  - Parce la loi l'interdit.
+  - Parce que les entreprises pourraient les utiiles contre les citoyens.
+
+- Comment s'appellent les gens qui créent des algorithmes
+
+  - Des data scientists.
+  - Des algologues.
+  - Des algorithmiciens.
+  - Des black hats.

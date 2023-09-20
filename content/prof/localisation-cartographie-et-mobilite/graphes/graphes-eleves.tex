@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2022-2023 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{2122-pablo}
+\usepackage{2122-pablo-paternault}
+\usepackage{2122-pablo-math}
+
+\usepackage[
+  a6paper,
+  landscape,
+  margin=10mm,
+  includehead,
+]{geometry}
+\usepackage{2122-pablo-header}
+\fancyhead[L]{\textsc{Snt > Cartographie > Graphes}}
+
+\usepackage{mdframed}
+
+\begin{document}
+
+\begin{mdframed}
+  Un réseau de routes peut être représenté par un graphe, où :
+  \begin{itemize}
+    \item les routes sont représentées par les \blanc{arêtes} ;
+    \item les intersections sont représentées par les \blanc{sommets} ;
+    \item le graphe peut être \blanc{pondéré} par les distances.
+  \end{itemize}
+
+  Il est possible de trouver le plus court chemin entre deux sommets en utilisant \emph{l'algorithme de Dijkstra}.
+\end{mdframed}
+
+\begin{exercice*}
+  Utiliser l'algorithme de Dijkstra pour déterminer le plus court chemin pour aller d'Annecy à Saint-Étienne.
+\end{exercice*}
+
+\end{document}

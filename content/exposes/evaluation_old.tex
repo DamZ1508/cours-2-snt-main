@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020-2021 Louis Paternault --- http://ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+%\usepackage{2122-pablo}
+%\usepackage{2122-pablo-paternault}
+\usepackage[
+  paperwidth=21cm,
+  paperheight={29.7cm/3},
+  includehead,
+  vmargin=4mm,
+  hmargin=10mm,
+]{geometry}
+
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\usepackage{multirow}
+
+\newcommand{\theme}[2]{%
+  \midrule
+  \multicolumn{1}{r}{%
+    \textbf{\large #1}
+  }&
+  %\multicolumn{4}{l}{\textbf{#2}}%
+  \multicolumn{4}{l}{\textbf{}}%
+}%
+
+\begin{document}
+
+\rowcolors{2}{gray!10}{white}
+\begin{center}
+  \begin{tabularx}{\linewidth}{r*{4}{|C}}
+    \toprule
+    \rowcolor{white}
+    \multirow{2}{*}{\textsc{\LARGE Snt --- Exposé}} & Très insuffisant & Insuffisant & Satisfaisant & Très satisfaisant \\
+    & 0 points         & 0,5 points  & \multicolumn{2}{c}{1 points}    \\
+
+    \theme{Préparation}{5 points}\\
+    L'exposé dure entre 3 et 5 minutes &&&&\\
+    Les connaissances sont maîtrisées  &&&&\\
+    %L'exposé est structuré &&&&\\
+    Pas de « trou » ni de hors-sujet &&&&\\
+    Les info. données sont claires et précises &&&&\\
+    \theme{Communication orale}{5 points} \\
+    Les notes ne sont ni lues, ni récitées &&&&\\
+    La présentation est audible &&&&\\
+    La présentation est dynamique &&&&\\
+    Le niveau de langue est correct &&&&\\
+    Bonne réaction aux questions &&&&\\
+    %\theme{Sources}{2 points}\\
+    %Au moins deux sources sont données &&&&\\
+    %Les sources sont citées &&&&\\
+    \bottomrule
+  \end{tabularx}
+\end{center}
+
+\end{document}

@@ -1,0 +1,39 @@
+- Un fichier est transmis depuis l'ordinateur A vers tous les ordinateurs B à G. Quelle représentation correspond le mieux à du peer-to-peer ?
+
+  3-p2p-graphe.pdf
+
+- Les notions suivantes correspondent-elles à un réseau centralisé ou décentralisé ?
+
+  - Les communications passent par un serveur central.
+  - Les communications ne passent pas par un serveur central.
+  - Tous les ordinateurs jouent le rôle de serveur.
+  - Une seule connection coupée (celle du serveur) interromp toutes les communications.
+
+- Quels sont les avantages des réseaux pair-à-pair ? Plusieurs réponses possibles.
+
+  - Ils sont moins vulnérables aux pannes et attaques informatiques.
+  - Il n'est pas possible d'intercepter toutes les communications.
+  - Le téléchargement peut être bien plus rapide qu'avec un réseau centralisé.
+
+- Le peer-to-peer est illégal
+
+  - Toujours
+  - Ça dépend de l'utilisation qui en est faite
+  - Jamais
+
+- Parmi les protocoles suivants, lesquels sont des protocoles pair-à-pair ? Plusieurs réponses possibles. Faire quelques recherches sur internet pour répondre.
+
+  - BitTorrent
+  - eDonkey
+  - Gnutella
+  - Napster
+  - FTP
+  - HTTP
+
+- Parmi les services suivants, lesquels sont basés sur une architecture décentralisée ? Faire quelques recherches sur internet pour répondre. Plusieurs réponses possibles.
+
+  - Youtube
+  - Peertube
+  - Mastodon
+  - Twitter
+

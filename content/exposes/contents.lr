@@ -1,0 +1,95 @@
+title: Exposés
+---
+description: Idées d'exposés
+---
+image: beamer.jpg
+---
+toc: 1
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="")}}
+Cette liste est un mélange d'idées de Louis Paternault, et <a href="https://groupes.renater.fr/sympa/arc/sciences-numeriques-technologie/2020-02/msg00200.html">d'une liste de Frédéric Mandon</a>.
+{{ alertend() }}
+
+Pour information, au grand oral du bac, vous serez évalués avec cette grille : [lycée général](https://www.education.gouv.fr/bo/20/Special2/MENE2002780N.htm?cid_bo=149115), [lycée technologique](https://www.education.gouv.fr/bo/20/Special2/MENE2002781N.htm?cid_bo=149116). En classe, vous serez évalués avec des critères un peu plus concrets : [grille d'évaluation](evaluation.pdf).
+
+Choisissez un sujet parmi cette liste, qui n'a pas encore été traité en classe.
+Vous pouvez aussi me proposer un autre sujet en lien avec l'informatique.
+
+## Informations d'actualités
+
+Vous pouvez présenter une actualité en lien avec l'informatique :
+
+- cyberattaques,
+- vote de nouvelles lois,
+- découvertes et inventions,
+- scandales, procès,
+- etc.
+
+## Personnages historiques
+
+Qui est-ce ?
+À quelle époque a-t-il vécu ?
+Quelle est son histoire ?
+Pourquoi est-ce une personnalité importante de l'histoire de l'informatique ?
+Quelles ont été ses contributions ?
+
+* Ada Lovelace
+* Alan Turing
+* Linus Torvald
+* Richard Stallman
+* Margaret Hamilton
+* Hedy Lamarr
+* Aaron Swartz
+* et [bien d'autres…](https://fr.wikipedia.org/wiki/Liste_d%27informaticiens_et_pr%C3%A9curseurs_de_l%27informatique)
+
+## Culture libre
+
+* *Logiciel libre :*
+  Qu'est-ce que le logiciel libre / le logiciel propriétaire ?
+  Quels sont les avantages du logiciel libre / du logiciel propriétaire ?
+  Quels sont des exemples de logiciel libre / propriétaire que vous utilisez tous les jours ?
+  Pourquoi des bénévoles ou des entreprisent choisissent-elles de développer un logiciel libre plutôt que propriétaire ?
+* *Licences *Creative commons* :*
+  Que sont les licences *Creative commons* ?
+  Que permettent-elles que le droit d'auteur « par défaut » ne permet pas ?
+  Pourquoi des artistes utilisent-ils ces licences ?
+* *Linux :*
+  Qu'est-ce que Linux ?
+  Qui l'utilise ?
+  Quelles sont ses différences avec Windows et MacOS ?
+* *Wikipédia :*
+  Qu'est-ce que Wikipédia ?
+  Qui écrit les articles de Wikipédia ?
+  Ses informations sont-elles fiables ?
+  En quoi est-elle différente des encyclopédies classiques ?
+  Peut-on utiliser Wikipédia pour faire un exposé au lycée ?
+
+## Technique et Politique
+
+* *Bitcoin :*
+  Qu'est-ce que le bitcoin ?
+  Comment fonctionne-t-il ?
+  Quelles questions pose-t-il ?
+* *Chiffrement :*
+  Comment fonctionne le chiffrement ?
+  Qui utilise le chiffrement ?
+  Le chiffrement est-il sûr ?
+* *Photos sur Facebook (ou Instagram, etc.) :*
+  À qui appartiennent les photos publiées sur Facebook ?
+  Sont-elles privées ? Quel droit à Facebook sur ces photos ?
+  A-t-on le droit de publier n'importe quelles photos sur Facebook (*L'Origine du monde*, des photos d'amis, des photos d'œuvres d'art, etc.) ?
+* *Peer-to-peer :*
+  Qu'est-ce que le peer-to-peer ?
+  Pourquoi est-il utilisé ?
+  Quelle est la différence par rapport au téléchargement direct ?
+  Est-il légal ?
+  Qu'est-ce que la HADOPI ?  Que sanctionne-t-elle ?
+* *Darknet, Tor :*
+  Qu'est-ce que le « darknet » ?
+  Qu'est-ce que Tor ?
+  Comment fonctionne-t-il ?
+  Qui utilise Tor et le « darknet » ?

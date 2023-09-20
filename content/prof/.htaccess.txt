@@ -1,0 +1,4 @@
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "/Users/damz/Documents/Damien_Travail/Lycée/Lycée 2023-2024/2GT_SNT/cours-2-snt-main/content/prof"
+Require valid-user

@@ -1,0 +1,249 @@
+\input{preambule_damien2.tex}   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[lgt=2,espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\tkzTabIma{4}{6}{5}{$\frac{16}{3}$}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=gray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{minted}
+%
+%\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+%\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+%\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+%\newminted[pythonsansnum]{python}{fontfamily=tt,linenos=false,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+%\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%
+%\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=false,autogobble,mathescape=true,python3}
+%
+%\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{html}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{css}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTêtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\setlength{\headheight}{40pt} % Haut de page
+\renewcommand{\headrulewidth}{0.8pt}
+\setlength{\textheight}{26cm}
+\lhead{\footnotesize \em Nom : }
+%\chead{\thepage/\pageref{LastPage}}
+\rhead{\footnotesize \em Durée : 30 min $\bullet$ }
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT --- Évaluation Pixels}
+\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}}
+
+%\usepackage{2122-pablo}
+%\usepackage{2122-pablo-paternault}
+%\usepackage{2122-pablo-math}
+%
+%\usepackage[
+%  a5paper,
+%  margin=10mm,
+%  includehead,
+%]{geometry}
+%\usepackage{2122-pablo-header}
+%\fancyhead[L]{\textsc{Snt > Photo > Pixels}}
+
+
+%\fancyhead[R]{\textsc{Évaluation --- Sujet \lettrealeatoire}}
+
+\begin{document}
+
+\begin{exo}[Définition et Résolution --- 7 points]
+  \emph{Les questions sont indépendantes.}
+
+  \begin{enumerate}
+    \item L'écran d'un téléphone portable vendu à la fin des années 1990 a les caractéristiques suivantes :
+  \begin{itemize}[label=$\bullet$]
+    \item largeur : \si{3,3}{cm}, 84 pixels ;
+    \item hauteur : \si{1,9}{cm}, 48 pixels.
+  \end{itemize}
+  \begin{enumerate}
+    \item Donner la définition de l'écran.
+    \item Convertir la largeur de cet écran en pouces.
+    \item Calculer la résolution, en largeur, de cet écran.
+  \end{enumerate}
+\item Un téléphone vendu en 2022 a une largeur de \np{2,65} pouces, et une résolution de 326 ppp. Quelle est la définition, en largeur, de ce téléphone ?
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[Modèle RGB --- 3 points]
+  \emph{Les questions sont indépendantes.}
+  \begin{enumerate}
+    \item Donner le code RGB de la couleur noire.
+    \item Les deux couleurs suivantes sont définies dans le modèle RGB :
+      \begin{description}
+        \item[Chocolat :] $(210~;~105~;~30)$
+        \item[Chartreuse :] $(127~;~ 255~;~ 0)$
+      \end{description}
+        Laquelle de ces deux couleurs a la plus grande \enquote{quantité} de vert ?
+    \item Combien de couleurs différentes est-il possible de coder en utilisant le code RGB ? Justifier.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[Appareil photo --- 2 points]
+  Définir un \emph{photosite}.
+\end{exo}
+
+
+\sautpage
+\rhead{\footnotesize \em Durée : 30 min $\circ$ }
+\setcounter{exo}{0}
+
+\begin{exo}[Définition et Résolution --- 7 points]
+  \emph{Les questions sont indépendantes.}
+
+  \begin{enumerate}
+    \item L'écran d'un téléphone portable vendu au début des années 2000 a les caractéristiques suivantes :
+  \begin{itemize}[label=$\bullet$]
+    \item largeur : \si{5}{cm}, 320 pixels ;
+    \item hauteur : \si{7,5}{cm}, 480 pixels.
+  \end{itemize}
+  \begin{enumerate}
+    \item Donner la définition de l'écran.
+    \item Convertir la largeur de cet écran en pouces.
+    \item Calculer la résolution, en largeur, de cet écran.
+  \end{enumerate}
+\item Un téléphone vendu en 2023 a une hauteur de \np{5,5} pouces, et une résolution de 460 ppp. Quelle est la définition, en hauteur, de ce téléphone ?
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[Modèle RGB --- 3 points]
+  \emph{Les questions sont indépendantes.}
+  \begin{enumerate}
+    \item Donner le code RGB de la couleur blanche.
+    \item Les deux couleurs suivantes sont définies dans le modèle RGB :
+      \begin{description}
+        \item[Chocolat :] $(210~;~105~;~30)$
+        \item[Chartreuse :] $(127~;~ 255~;~ 0)$
+      \end{description}
+        Laquelle de ces deux couleurs a la plus petite \enquote{quantité} de rouge ?
+    \item Combien de couleurs différentes est-il possible de coder en utilisant le code RGB ? Justifier.
+  \end{enumerate}
+\end{exo}
+
+\begin{exo}[Appareil photo --- 2 points]
+\saut \vspace*{-0.4cm}
+  \begin{enumerate}
+  	\item Pourquoi y a-t-il deux fois plus de photosites verts que de photosites des autres couleurs ? Justifier
+  	\item En conséquence, combien de photosites faut-il associer pour créer un seul pixel ?
+  \end{enumerate}
+\end{exo}
+
+\sautpage
+\lhead{}
+\chead{Correction}
+\rhead{}
+
+\section*{Evaluation $\bullet$}
+\setcounter{exo}{0}
+\exo
+\saut \vspace*{-0.4cm}
+\begin{enumerate}
+		\item
+		\begin{enumerate}
+			\item $84 \times 48$ soit $\np{4032}$ pixels
+			\item $3,3$ cm $\approx 1,3$ pouce
+			\item $\dfrac{84}{1,3} \approx 65$ ppp
+		\end{enumerate}
+		\item $2,65 \times 326 \approx 864$ pixels en largeur
+\end{enumerate}
+
+\exo
+\saut \vspace*{-0.4cm}
+\begin{enumerate}
+	\item Noir : $(0~;~0~;~0)$
+	\item $255 > 105$ : c'est la couleur Chocolat
+	\item $256 \times 256 \times 256 = 256^3 > \np{16000000}$
+\end{enumerate}
+
+\exo
+Un photosite est un composant électronique ayant la capacité de capter un signal \textbf{lumineux} pour le convertir en un signal \textbf{électrique} (grâce à l'effet \textbf{photoélectrique}), qui sera lui-même converti en un signal \textbf{numérique} (on parle de numérisation).
+
+\section*{Evaluation $\circ$}
+\setcounter{exo}{0}
+\exo
+\saut \vspace*{-0.4cm}
+\begin{enumerate}
+		\item
+		\begin{enumerate}
+			\item $320 \times 480$ soit $\np{153600}$ pixels
+			\item $5$ cm $\approx 1,97$ pouce
+			\item $\dfrac{320}{1,97} \approx 162$ ppp
+		\end{enumerate}
+		\item $5,5 \times 460 \approx \np{2530}$ pixels en largeur
+\end{enumerate}
+
+\exo
+\saut \vspace*{-0.4cm}
+\begin{enumerate}
+	\item Blanc : $(255~;~255~;~255)$
+	\item $210 > 127$ : c'est la couleur Chartreuse
+	\item $256 \times 256 \times 256 = 256^3 > \np{16000000}$
+\end{enumerate}
+
+\exo
+\saut \vspace*{-0.4cm}
+\begin{enumerate}
+	\item Afin d'imiter la physiologie de l'\oe il humain (notre \oe il est plus sensible au vert qu'au bleu et au rouge)
+	\item L'association de 4 photosites (deux verts, un rouge et un bleu) donnera les informations qui permettront de créer un pixel de l'image.
+\end{enumerate}
+
+\end{document}

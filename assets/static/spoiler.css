@@ -1,0 +1,19 @@
+.spoiler {
+  color: black;
+  background-color: black;
+  transition: background-color 500ms ease-in-out;
+}
+
+.spoiler a {
+  color: black;
+  transition: color 500ms ease-in-out;
+}
+.spoiler:hover a {
+  color: #4582EC;
+  transition: color 500ms ease-in-out;
+}
+
+.spoiler:hover {
+  background-color: lightgray;
+  transition: background-color 500ms ease-in-out,
+}

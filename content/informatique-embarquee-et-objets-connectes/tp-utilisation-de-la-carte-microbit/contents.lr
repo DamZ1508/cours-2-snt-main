@@ -1,0 +1,18 @@
+title: TP : utilisation de la carte `micro:bit`
+---
+sort_key: 2
+---
+toc: 0
+---
+image: ../internet-des-objets.jpg
+---
+body:
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/) {{ item }}
+{% endfor %}
+---
+morehead:
+
+
+

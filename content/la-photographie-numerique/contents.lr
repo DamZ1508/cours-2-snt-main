@@ -1,0 +1,20 @@
+title: Photographie numérique
+---
+description: Séquence d'enseignement sur le thème « La Photographie numérique ».
+---
+sort_key: 5
+---
+image: paint.jpg
+---
+stream: true
+---
+tags:
+
+accueil
+theme
+---
+body:
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}

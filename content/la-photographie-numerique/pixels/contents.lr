@@ -1,0 +1,273 @@
+title: Pixels
+---
+image: cell_phone_screen_pixels.jpg
+---
+toc: 1
+---
+sort_key: 1
+---
+morehead:
+
+
+<link rel="stylesheet" href="/static/sublist.css">
+<link rel="stylesheet" href="/static/spoiler.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+{% from 'macros/spoiler.html' import spoiler with context %}
+
+{{ alertstart(level="info", title="")}}
+Cette activité est très inspirée des activités de <a href="https://drive.google.com/drive/folders/1w1jbU-pWYJ8IgAxcT_bvsZuhiQ8OV-QD">Gilles Lassus</a> et <a href="https://snt.entraide-ella.fr/chapitres/photo-numerique/1/">Stéphane Colomban</a>. Merci à eux.
+{{ alertend() }}
+
+{{ alertstart(level="warning", title="Consignes")}}
+<b>A la maison :</b><br/>
+Regardez attentivement la vidéo de présentation du thème et prenez quelques notes.
+<br/><br/>
+<b>En classe :</b><br/>
+Répondez aux questions sur un compte-rendu papier, manuscrit et personnel. Lors du contrôle sur cette partie, vous aurez ce compte-rendu avec vous.
+<br/>
+Vous pouvez faire ce travail à plusieurs, mais prenez garde à bien comprendre toutes les réponses (même celles apportées par vos camarade) et à ce que votre compte-rendu soit personnel : vous ferez le contrôle seul·e·s, même si vous avez fait cette activité à plusieurs !
+<br/>
+Si votre compte-rendu n'est pas manuscrit (impression ou photocopie), vous n'aurez pas le droit de l'utiliser pendant le devoir.
+<br/>
+Les parties <b>❤️ À savoir</b> désignent les savoirs ou savoir-faire qui pourront vous être demandés en devoir.
+{{ alertend() }}
+
+*Lorsqu'une question est marquée d'un symbole 🔎, la réponse est à aller chercher sur Internet.*
+
+## A la maison : Présentation du thème
+
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=UnNPNc-F9ks&vignette=https://i.ytimg.com/vi/UnNPNc-F9ks/hqdefault.jpg&debut=0&fin=257&largeur=200&hauteur=113&st=fr,fr" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+## Pixels, Définition, Résolution
+
+Une photographie numérique (au format jpg, png, tiff, etc.) est un tableau de pixels, chaque pixel étant une case du tableau, d'une couleur bien précise.
+
+{{ image(
+  "pixel-example.png",
+  caption='<a  href="https://commons.wikimedia.org/wiki/File:Pixel-example.png">Pixel-example</a>, par <a href="https://commons.wikimedia.org/wiki/User:Ed_g2s">ed g2s</a>, publié sous licence <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.',
+  url="https://commons.wikimedia.org/wiki/File:Pixel-example.png"
+  ) }}
+
+La **définition** d'un écran est **le nombre de pixels qui composent l'écran** (généralement donnée sous la forme *1024×780*, signifiant « 1024 pixels de large, et 780 pixels de haut », soit 798 720 pixels).
+
+{{ image(
+  "cell_phone_screen_pixels.jpg",
+  caption='
+  <a href="https://commons.wikimedia.org/wiki/File:Cell_Phone_screen_Pixels.jpg">Cell Phone screen Pixels</a>, par Dinesh Dhankhar, publié sous licence <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>.',
+  ) }}
+
+La **résolution** d'un écran *(exprimée en **ppp** (pixels par pouce))* est le **nombre de pixels disponibles sur une longueur d'un pouce** *(environ 2,54 cm)*. Plus ce nombre est élevé, plus la taille des pixels est petite, et plus l'image sera précise.
+
+0. 🔎 Quelle est l'étymologie du mot *pixel* ?
+0. 🔎 Quelle est la définition (le nombre de pixels en largeur et hauteur) d'un écran *HD*, *Full HD*, et *4K* ?
+0. *Écran de téléphone portable.* Sur la fiche technique du téléphone portable [Fairphone 3](https://shop.fairphone.com/fr/) est écrit : *« 2160 x 1080 resolution ; 427 ppi pixel densité. »*
+  Quelles sont la définition et la résolution de cet écran (attention : il y a un piège) ?
+
+   {{ spoiler("Définition : 2160×1080. Résolution : 427.") }}
+0. *Écran de télévision 4K.* Une télévision *4K* a les caractéristiques techniques suivantes :
+
+   > - Taille de l'écran 55"
+   > - Résolution : Longueur 3840 Pixels
+   > - Résolution : Largeur 2160 Pixels
+   > - Longueur du produit 123,06 cm
+   > - Largeur du produit 79,26 cm
+   > - Hauteur du produit 23,75 cm
+
+  0. 🔎 [Convertir](https://duckduckgo.com/?q=conversion%20pouces%20centim%C3%A8tres) la largeur de la télé en pouces.
+     {{ spoiler("31,2 pouces") }}
+  0. Quelle est la résolution (en largeur) de cet écran ?
+     {{ spoiler("69,2 ppp") }}
+  0. La résolution est-elle plus grande ou plus petite que celle du téléphone portable étudié à la question précédente ?
+
+0. Les imprimantes n'utilisent pas de pixels, mais manipulent de minuscules points d'encre, qui forment des lettres et autres dessins. Il est possible de faire des calculs avec les points d'encre d'une imprimante de la même manière que les calculs faits avec les pixels d'un écran.
+
+   Une imprimante a une résolution de 300 ppp *(dpi en anglais)*, soit 300 points d'encre par pouce (un pouce ≈ 2,54 cm). On souhaite imprimer une photo en pleine page sur une feuille A4.
+
+  0. 🔎 Quelle est la définition de cette feuille pour cette imprimante ?
+     {{ spoiler("3508×2480") }}
+  0. On désire imprimer une photo sur toute la feuille. Est-ce que la définition de 1024 × 768 est suffisante ?
+     {{ spoiler("Chaque pixel sera imprimé sur trois points d'encre : l'image risque d'être pixellisée.") }}
+
+### ❤️ À savoir
+
+* Je connais la définition de **résolution** et **définition**.
+* Je sais convertir les centimètres en pouces et inversement (exemple : *Combien mesure, en pouces, un écran de 5 cm ?*).
+* Je sais passer de la résolution à la définition, et inversement (exemple : *Un écran de 7 cm a une résolution de 30 ppp ; quelle est sa définition ?*).
+
+## Couleurs
+
+Dans cette partie nous nous intéresserons à manière dont sont codées les couleurs.
+
+### Souvenirs d'art plastique
+
+0. Quelles sont les trois couleurs primaires en peinture  ?
+0. Comment obtenir les couleurs suivantes à partir des trois couleurs primaires : orange, vert, violet ?
+
+### Modèle RGB
+
+En informatique, les couleurs sont codées par en utilisant trois nombres. Nous allons voir dans cette partie comment passer des couleurs (bleu clair, orange, noir, rouge, etc.) aux nombres.
+
+Vous pouvez faire cette partie en utilisant le logiciel <a href="https://g.co/kgs/b7g4SR" target="_blank" rel="noopener">Sélecteur de couleur RGB de Google</a>.
+
+-Choisissez une couleur sur la palette disponible et vous obtiendrez un affichage dans ce genre : 
+
+{{ image("palette.png") }}
+
+Dans cette partie, nous nous intéressons *uniquement* aux trois valeurs R, G, B (qui ont, sur l'image, les valeurs 208, 13 et 212).
+
+Vous pouvez alors :
+
+- en sélectionnant une couleur dans la palette, voir quels nombres R, G, B codent cette couleur ;
+- en écrivant les nombres R, G, B *(séparés par une virgule)*, voir à quelle couleur ils correspondent.
+
+Nous voyons sur la capture d'écran que la couleur rose correspond aux nombres `R = 208, G = 13, B = 212`.
+
+#### Questions
+
+0. 🔎 Que signifient les initiales RGB ?
+0. Quelles sont les valeurs minimales et maximales que peuvent prendre les quantité de rouge, vert, bleu ?
+   {{ spoiler("Minimale : 0 ; Maximale : 255") }}
+0. En utilisant la palette utilisée à la question précédente, donner le code des couleurs suivantes (on notera `(x, y, z)` la couleur composée de `x` rouge, `y` vert et `z` bleu) :
+
+  - Rouge : ``(255, 0, 0)``
+  - Vert : ``(…, …, …)``
+  - Bleu : ``(…, …, …)``
+  - Noir : ``(…, …, …)``
+  - Blanc : ``(…, …, …)``
+
+0. En utilisant le même outil, avec la même notation, donner les couleurs (en français) correspondant aux codes suivants :
+
+  - (0, 255, 255) {{ spoiler("Bleu clair") }}
+  - (255, 0, 255) {{ spoiler("Violet") }}
+  - (255, 255, 0) {{ spoiler("Jaune") }}
+  - (255, 128, 0) {{ spoiler("Orange") }}
+
+0. Combien de couleurs différentes est-il possible de coder en utilisant cette méthode ?
+   {{ spoiler("Plus de 16 millions de couleurs.") }}
+0. 🔎 Quels autres modèles de couleur sont aussi utilisés en informatique ?
+   {{ spoiler("TSL, TSV, CMJN…") }}
+
+### ❤️ À savoir
+
+* Je connais la signification des initiales RGB.
+* Je connais la signification des trois nombres d'un code RGB (exemple : *Dans la couleur ``(27, 150, 42)``, quelle est la « quantité » de vert, de rouge, de bleu ?*).
+* Je connais le code RGB des couleurs suivantes : noir, blanc, rouge, vert, bleu.
+* Je sais calculer le nombre de couleurs, c'est-à-dire, je sais expliquer d'où sort le nombre « plus de 16 millions de couleurs ».
+
+## Capteurs et Photosites
+
+Lire la page suivante, qui explique le fonctionnement d'un appareil photo numérique :
+<a href="https://pixees.fr/informatiquelycee/n_site/snt_photo_capteur.html" target="_blank" rel="noopener">Capteur photo</a>
+
+Répondre aux questions suivantes (toutes les réponses se trouvent dans le document qui vient d'être lu).
+
+0. Compléter la phrase suivante : *« Un photosite est un composant électronique ayant la capacité de capter un signal … pour le convertir en un signal … (grâce à l'effet ...), qui sera lui-même converti en un signal … (on parle de numérisation). »*
+   {{ spoiler("lumineux") }}
+   {{ spoiler("électrique") }}
+   {{ spoiler("photoélectrique") }}
+   {{ spoiler("numérique") }}
+0. Comment fait-on pour qu'un photosite ne soit sensible qu'à une des trois couleurs (rouge, verte, bleue) ?
+   {{ spoiler("filtre") }}
+0. Pourquoi y a-t-il deux fois plus de photosites verts que de photosites des autres couleurs ?
+   {{ spoiler("œil humain") }}
+0. Combien de photosites faut-il associer pour créer un seul pixel ?
+   {{ spoiler("4") }}
+
+### ❤️ À savoir
+
+* Je suis capable de répondre aux quatre questions ci-dessus.
+
+## Traitement d'image
+
+En manipulant les pixels d'une image, il est possible de la modifier, à plusieurs fins.
+
+Lisez les quelques exemples, et répondez aux questions de la dernière partie.
+
+### Exemples de traitement d'image
+
+#### Ajout de personnes absentes de la photo originale
+
+{{ image(
+  "congress-women.jpg",
+  caption='
+  <a href="https://en.wikipedia.org/wiki/File:113th_congress_usa_women_version_altered_by_office_of_House_Minority_Leader.jpg">113th congress usa women version altered by office of House Minority Leader.jpg</a>, original de <em>US Congress</em>, modifié par <em>Office of the House Minority Leader</em>, domaine public.',
+) }}
+
+Quatre personnes, qui n'ont pu arriver à temps, ont été ajoutées après la prise de la photo.
+
+#### Flou artificiel de l'arrière-plan
+
+{{ image(
+  "flou.jpg",
+  caption='
+  <a href="https://commons.wikimedia.org/wiki/File:Faux-bokeh-comparison.jpg">Faux-bokeh-comparison</a>, par BenFrantzDale, retouché par <a href="https://commons.wikimedia.org/wiki/User:Cmglee">Cmglee</a>, publié sous licence <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Creative Commons by-sa 3.0</a>.',
+) }}
+
+La photo originale (1) a été altérée pour flouter l'arrière plan, en utilisant deux méthodes différentes (2 et 3).
+
+#### Bracketing ou Prise de vue en fourchette
+
+{{ image(
+  "focus-stacking.jpg",
+  caption='
+  <a href="https://commons.wikimedia.org/wiki/File:Focus_stacking_Tachinid_fly.jpg">Focus stacking Tachinid fly</a>, par <a href="https://en.wikipedia.org/wiki/User:Muhammad_Mahdi_Karim">Muhammad Mahdi Karim</a>, publié sous licence <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Creative Commons by-sa 3.0</a>.',
+) }}
+
+Série d'images d'une mouche tachinaire montrant l'intérêt de la Prise de vue en fourchette. Les deux première images montrent les problèmes de profondeur de champ rencontrés, la troisième a été obtenue en combinant six clichés réalisés avec six mises au point différentes.
+
+#### Assemblage de photos
+
+{{ image(
+  "panorama.jpg",
+  caption='
+  <a href="https://en.wikipedia.org/wiki/File:Rochester_NY.jpg">Rochester NY</a>, par <a href="https://en.wikipedia.org/wiki/User:Noso1">Noso1</a>. <em>The copyright holder of this file allows anyone to use it for any purpose, provided that the copyright holder is properly attributed. Redistribution, derivative work, commercial use, and all other use is permitted.</em>',
+) }}
+
+Plusieurs photos différentes sont assemblées pour donner l'illusion d'une seule photo panoramique.
+
+#### Correction de la perspective
+
+{{ image(
+  "remap.jpg",
+  caption='
+  <a href="https://commons.wikimedia.org/wiki/File:Panotools5618.jpg">Panotools5618</a>, par <a href="https://en.wikipedia.org/wiki/User:Ashley_Pomeroy">Ashley Pomeroy</a>, publié sous licence <a href="https://creativecommons.org/licenses/by/3.0/deed.en">Creative Commons by 3.0</a>.',
+) }}
+
+La photo prise avec une lentille *fisheye* (en haut) a été altérée pour corriger la perspective.
+
+#### Fausse miniature
+
+{{ image(
+  "tilt-shift.png",
+  caption='
+  <a href="https://commons.wikimedia.org/wiki/File:Jodhpur_rooftops.jpg">Jodhpur rooftops</a>, par <a href="https://www.flickr.com/photos/65414509@N00">Paul Goyette</a>, publié sous licence <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.en">Creative Commons by-sa 2.0</a>.',
+) }}
+
+En floutant numériquement la photo de gauche, la photo de droite donne l'impression d'une photo de modèle réduit.
+
+### Questions
+
+0. Classer les six exemples de manipulation d'image dans les trois catégories suivantes (plusieurs réponses sont possibles) :
+
+  0. Algorithmes essayant de reproduire le plus fidèlement possible la réalité.
+     {{ spoiler("Assemblage de photo, bracketing…") }}
+  0. Algorithmes essayant d'imiter ou de créer un effet artistique.
+     {{ spoiler("Fausse miniature…") }}
+  0. Algorithmes produisant l'image d'une situation qui n'a jamais existé.
+     {{ spoiler("Ajout de personnes…") }}
+
+0. Citez deux autres exemples de filtres (que vous utilisez peut-être), et :
+
+   - décrivez-les (je ne les connais pas forcément) ;
+   - classez-les dans les catégories de la question précédente.
+
+0. Dans quelle mesure peut-on considérer qu'une photographie est une preuve ?
+   {{ spoiler("Une photographie peut difficilement être une preuve, car…") }}
+
+### ❤️ À savoir
+
+* Je sais donner et décrire quelques algorithmes de manipulation d'image.

@@ -1,0 +1,54 @@
+title: Présentation des réseaux sociaux
+---
+sort_key: 1
+---
+author: François Paoli et Louis Paternault
+---
+body:
+
+{% from 'macros/images.html' import image with context %}
+
+## Présentation générale
+
+*10 minutes*
+
+Possibilité de travailler par groupe de 2 ou 3 pour donner une définition de *société* et de *réseau*.
+
+Cours magistral co-construit avec les élèves : définition d'un réseau social ; liste des fonctionnalités.
+
+C'est l'occasion de dessiner au tableau des (tous petits) graphes pour illustrer le caractère orienté ou non des réseaux sociaux (sans insister dessus : ce sera développé dans la séance 4 sur les graphes).
+
+Les élèves prennent des notes ou recopient le tableau sur leur cahier.
+
+> Un réseau social, c’est d’abord des relations entre des personnes : une entreprise, une association, une famille, etc. constituent des réseaux sociaux.
+
+> Ces relations peuvent être orientées (je «suis» l’actualité du PSG sur Twitter mais la réciproque n’est pas vraie) ou non orientées (Louis et François sont amis sur Facebook)
+
+> {{ image("exemples.png", prefix=">") }}
+
+> Sur le Web, un réseau social désigne une application qui :
+
+> - met en relation des utilisateurs (anciens camarades de classe, employés et entreprises, rencontres de personnes pour des sorties, etc.)
+
+> - propose des fonctionnalités :
+
+>   * partage de documents (texte, images, vidéo etc.)
+>   * le contenu peut être d’accès public ou privé, en direct, éphémère ou persistant
+>   * on peut généralement réagir aux publications d’autres utilisateurs (like, ou autre)
+
+## Activité
+
+*[Activité](activite.pdf) ([source](activite.tex)).*
+
+*20' de recherche seuls ; 10' de correction en grand groupe*
+
+L'énoncé est distribué aux élèves. Après 20' de recherche individuelle ou en binôme, mise en commun en grand groupe. Ils sont autorisés à utiliser leur smartphone ou un ordinateur de la salle pour la réponse à la dernière question.
+
+La correction à la question 1 peut être faite sous la forme d'un tableau ou d'une liste énumérant les différents réseaux sociaux traités par les élèves. D'autres réseaux sociaux (auxquels ils n'auront pas forcément pensé) peuvent être amenés par le professeur : [Linkedin](https://www.linkedin.com/) (recherche de travail par exemple), [Gitlab](https://gitlab.com/) (développement logiciel), [Fortnite](http://fortnite.com) (jeu vidéo en ligne)…
+
+La question 5 peut être laissée à faire à la maison.
+
+## A faire à la maison : 
+
+Les élèves ont à regarder pour la séance suivante cette vidéo : [https://ladigitale.dev/digiview/#/v/64f09759a0114](https://ladigitale.dev/digiview/#/v/64f09759a0114)
+

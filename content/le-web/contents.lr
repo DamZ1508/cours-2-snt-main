@@ -1,0 +1,21 @@
+title: Le Web
+---
+description: Séquence d'enseignement sur le thème « Le Web ».
+---
+sort_key: 3
+---
+image: silver-web.jpg
+---
+stream: true
+---
+tags:
+
+accueil
+theme
+---
+body:
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}
+

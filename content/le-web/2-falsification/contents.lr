@@ -1,0 +1,46 @@
+_discoverable: yes
+---
+title: Falsification d'une page web
+---
+sort_key: 2
+---
+image: newspapers.jpg
+---
+body:
+
+## Évaluation
+
+[Ce barême](evaluation2.pdf) sera utilisé pour vous évaluer.
+
+## Mise en place de l'environnement de développement
+
+### Téléchargement de l'article original
+
+0. Si ce n'est pas déjà fait, dans votre dossier personnel, créez un dossier `SNT`. Durant toute l'année scolaire, les travaux de SNT seront enregistrés dans ce dossier.
+0. Créez un sous dossier `SNT/web`.
+0. Rendez-vous sur le site web d'information [France Info](https://www.francetvinfo.fr), et choisissez un article que vous allez falsifier.
+0. Enregistrez la page de l'article dans le dossier `SNT/web`, en choissant `article.html` comme nom de fichier : `Fichier > Enregistrer sous…`. Vous devez maintenant avoir *deux* éléments dans le répertoire `SNT/web` : un fichier `article.html` et un dossier `article_fichiers`.
+
+### Configuration du logiciel
+
+0. Ouvrir le logiciel `Notepad++`, puis ouvrir le fichier `article.html` que vous venez de télécharger (autre méthode : faire un clic droit sur votre fichier `article.html`, puis choisir `Edit with Notepad++`).
+0. Ouvrir également le même fichier `article.html` avec Firefox ;
+0. Séparez votre écran en deux, en mettant à gauche Firefox, à droite Notepad++ (ou inversement). Votre écran doit alors afficher quelque chose qui ressemble à la capture d'écran suivante.
+
+    <figure class="figure mx-auto">
+    <img src="environnement.png" class="img-thumbnail" alt="Environnement de travail.">
+    </figure>
+
+## Modification de la page
+
+0. Dans Notepad++, recherchez (en utilisant le menu `Rechercher`) le titre de l'article (qui se termine par une balise `</h1>`). Modifiez-le (à votre guise[^scolaire]), puis enregistrez le fichier. Actualisez alors la page dans Firefox (bouton <kbd>⟳</kbd> ou touche <kbd>F5</kbd>).
+0. De même, effectuez les modifications suivantes :
+
+  - mettez vos noms comme auteurs de l'article ;
+  - modifiez le titre de l'onglet en recherchant la balise `</title>` ;
+  - modifiez quelques mots du chapeau (le court résumé en début d'article).
+
+0. Appelez le professeur pour vérifier votre travail.
+0. [Créez une archive](/tutoriels/creer-une-archive/) contenant le fichier `article.html` *et* le dossier `article_fichiers`, et envoyez cette archive (le fichier `article.zip`) à votre professeur via la messagerie de l'ENT.
+
+[^scolaire]: Tant que cela reste acceptable dans un cadre scolaire…

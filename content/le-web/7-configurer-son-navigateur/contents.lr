@@ -1,0 +1,15 @@
+title: Configurer son navigateur
+---
+sort_key: 7
+---
+image: belem-au-large-de-brest.jpg
+---
+body:
+
+Configurez votre navigateur pour limiter d'être traqués (par des publicitaires notamment).
+
+0. Bloqueur de publicité
+  0. Consultez la page d'accueil [du Monde](http://lemonde.fr), et observez toutes les publicités.
+  0. Installez un bloqueur de publicités ([ublock origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) par exemple).
+  0. Retournez sur la page d'accueil [du Monde](http://lemonde.fr), et observez que les publicités ont disparu.
+0. Suivez [les recommandations de la CNIL](https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser).

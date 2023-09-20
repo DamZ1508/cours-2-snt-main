@@ -1,0 +1,13 @@
+{% macro spoiler(text) -%}
+  <span class="spoiler">
+    {{ text }}
+    </span>
+{%- endmacro %}
+
+{% macro beginspoiler()  -%}
+  <span class="spoiler">
+{%- endmacro %}
+
+{% macro endspoiler() -%}
+  </span>
+{%- endmacro %}

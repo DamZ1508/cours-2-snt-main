@@ -1,0 +1,7 @@
+_model: redirect
+---
+url: ../python-csv/
+---
+title: Python et Format CSV
+---
+_discoverable: false

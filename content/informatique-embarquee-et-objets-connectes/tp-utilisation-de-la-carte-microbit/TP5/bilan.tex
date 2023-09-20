@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2023 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{textcomp}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\usepackage{hyperref}
+\usepackage[
+  a5paper,
+  includehead,
+  landscape,
+  headsep=3mm,
+  margin=10mm]{geometry}
+
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage{fancyhdr}
+\fancyhead[L]{\textsc{SNT > Informatique embarquée > TP5}}
+\fancyfoot{}
+\pagestyle{fancy}
+
+\usepackage{xcolor}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{tblr}{XX}
+\textbf{Votre nom : \dotfill}
+&
+\textbf{Nom de votre partenaire : \dotfill}
+\\
+\end{tblr}
+
+\vfill
+
+\begin{tblr}{
+    colspec={Xr},
+    row{even} = {lightgray},
+    row{1, 5} = {font=\bfseries\large},
+    row{2-4} = {ht=15mm},
+    cell{2-4}{1} = {
+      halign=l,
+      valign=h,
+    },
+    cell{2-4}{2} = {
+      halign=r,
+      valign=h,
+    },
+  }
+  \toprule
+  Questions & …/3 \\
+  Écrire la commande permettant de configurer la radio pour utiliser le canal 42. & …/1 \\
+  Écrire la commande permettant d'envoyer le message \texttt{"Bonjour"}. & …/1 \\
+  Écrire la commande permettant de recevoir un message, et de tester si ce message est \texttt{"Bonjour"} (une ou deux lignes). & …/1 \\[2cm]
+  \midrule
+  Programme : Bracelet, Clignotant, Station météo & …/2 \\
+  Le programme fonctionne comme attendu. \\[2cm]
+  \bottomrule
+\end{tblr}
+
+\end{document}

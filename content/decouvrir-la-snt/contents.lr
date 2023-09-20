@@ -1,0 +1,23 @@
+_model: page
+---
+title: Découvrir la SNT
+---
+_discoverable: yes
+---
+tags:
+
+theme
+accueil
+---
+sort_key: 1
+---
+stream: yes
+---
+image: fresh-start.jpg
+---
+description: Séquence d'introduction à la SNT
+---
+body:
+
+0. [Diaporama de présentation de la SNT](presentation_SNT.pdf)
+0. [Découvrir l'environnement de travail et les connaissances abordées en SNT](00_SNT_decouverte_v2.pdf)

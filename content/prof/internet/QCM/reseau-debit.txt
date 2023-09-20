@@ -1,0 +1,11 @@
+- Pendant une vidéo live de 2 minutes avec un débit de 1,5Mo/s, quelle quantité de données a été transmise (en Mo) ?
+
+  2 minutes correspondent à 120 secondes. Donc la quantité de données transmises est 120×1,5=180Mo.
+
+- Je veux publier mes 1,3Go de photos de vacances avec ma connexion de 2Mo/s. Combien de temps cela va-t-il prendre (répondre en minutes) ?
+
+  1,3Go correspondent à 1300 Mo, donc la transmission va prendre 1300÷2=650 secondes, soit environ 11 minutes (car 650÷60≃11).
+
+- Dans les années 90, la plupart des foyers se connectaient à Internet avec des « modems 56k », qui avaient un débit théorique maximum de 56ko/s. Combien de temps fallait-il pour télécharger une photo de 2Mo ?
+
+  2Mo correspond à 2000ko, donc il fallait 2000÷56≃36 secondes environ.

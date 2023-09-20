@@ -1,0 +1,379 @@
+\input{preambule_damien2.tex}     
+%\setboolean{Professeur}{true}
+
+%\usepackage{array,multirow,makecell}
+%\setcellgapes{1pt}
+%\makegapedcells
+%\usepackage[table]{xcolor}
+%\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+%\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+%\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[{$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%}\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{minted}
+%
+%\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+%\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+%\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+%\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{html}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{css}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTêtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+%\lhead{TSTMG --- 01 - Information Chiffrée}
+%\chead{\thepage/\pageref{LastPage}}
+%\rhead{Cours}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT - SNT - Découverte}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+
+\begin{document}
+
+%%%%%%%%%%%TITRE DOCUMENT%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titre}{NSI}{2\up{nde} GT - SNT}
+\centering
+{\Large \textsc{\textbf{SNT : Sciences Numériques et Technologie}}}
+\end{titre}
+
+%%%%%%%%%%%%%%%%%%%OBJECTIFS%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\maketitle
+\large \saut
+
+{\black\rule{\linewidth}{2pt}} \saut
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[scale=0.33]{img/chat.eps} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.7\textwidth}
+	\begin{flushright}
+		\textit{\og Je ne suis pas un crack en informatique, loin de là, mais il n'y a pas que les mécaniciens qui sachent conduire une voiture. \fg{}}, 
+	\saut
+	\textbf{\href{https://fr.wikipedia.org/wiki/Joseph_Finder}{Joseph Finder}, \underline{\textit{Secrets enfouis (2011)}}}
+	\end{flushright}
+	
+\end{minipage}
+\saut
+{\black\rule{\linewidth}{2pt}}
+
+%%%%%%%%%%%%%%%%%%%COURS%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Présentation de l'enseignement de SNT}
+
+	Voir le diaporama de présentation : \url{https://vu.fr/WpM6}
+
+\section{Découvrir notre environnement de travail}
+
+\subsection{Le poste de travail}
+	\begin{enumerate}
+		\item 
+		\begin{enumerate}
+			\item Repérez l'UC (Unité Centrale) du PC.
+			\item De combien de périphériques apparents dispose-t-on ?
+			\item Peut-on connecter d'autres périphériques ?
+		\end{enumerate}
+		
+		\begin{attention}
+			\begin{itemize}
+				\item A chaque début de séance, \textbf{le matériel est vérifié par l'enseignant} et comparer aux rapports effectués précédemment.
+				\item \textbf{PRENEZ SOIN DU MATÉRIEL : il VOUS sert à VOUS !!!}
+			\end{itemize}
+		\end{attention}
+		
+		\item
+		\begin{enumerate}
+			\item Allumez le PC puis connectez-vous à l'aide de vos identifiants
+					
+		\begin{attention}
+			\textbf{Vos identifiants sont à retenir au plus vite !!!} Ils sont valables pour vos 3 années au lycée !
+		\end{attention}
+		
+			\item Sur quel système d'exploitation votre machine fonctionne-t-elle ?
+			\item Quelles sont les caratéristiques de ce PC ?
+			
+\renewcommand{\arraystretch}{1.25}
+\begin{center}
+\begin{tabularx}{0.94\linewidth}{|c|*{1}{>{\centering \arraybackslash}X|}}
+\hline 
+Processeur installé & \\ \hline
+Mémoire & \\ \hline
+Connexion réseau active & \\
+\hline 
+\end{tabularx} 
+\end{center}
+			\end{enumerate}
+	\end{enumerate}	
+\begin{methode}
+	Toutes les informations que vous cherchez sont disponibles en utilisant l'\textbf{invite de commandes} Windows : 
+	\begin{enumerate}
+		\item Entrez la recherche \textit{cmd} dans la barre de tâches
+		\item Tapez la commande : {\tt systeminfo}
+	\end{enumerate}
+\end{methode}
+
+\subsection{Le réseau du lycée}
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		\item Repérez votre espace personnel. \quad \textit{\underline{\textbf{Aide :}} utilisez l'explorateur de fichiers.}
+		\item Profitez-en pour créer \textbf{un répertoire SNT} dans votre répertoire \textit{Documents}.
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item Repérez le dossier partagé de votre classe : 
+			
+			$\blacktriangleright$ Combien contient-il de répertoires ?
+			
+			$\blacktriangleright$ Quels sont vos droits dans chacun de ces répertoires ? \\ \textit{\underline{\textbf{Aide :}} consultez les Propriétés des répertoires}
+
+			\item Repérez les fichiers qui ont été déposés pour cette séance de Découverte de SNT et copiez tout de suite ces fichiers dans votre espace personnel.
+			
+			\begin{attention}
+				$\blacktriangleright$ Ce fonctionnement est à privilégier ! 
+				
+				$\blacktriangleright$ Espace personnel $\neq$ Espace classe $\neq$ Sauvegarde locale
+			\end{attention}
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{L'ENT Lycée connecté}
+
+\begin{enumerate}
+	\item Connectez-vous sur \textbf{l'ENT Lycée connecté} : \url{https://ent.ac-poitiers.fr}
+	\item Si ce n'est pas déjà fait :
+	\begin{enumerate}
+		\item Configurez votre page d'accueil : organisez vos filtres d'informations (\textit{Filtrer sur})
+		\item Placer \textbf{PRONOTE} dans les applications favorites pour un accès plus rapide.
+		\item Testez rapidement \textbf{la messagerie}.
+	\end{enumerate}
+	\item Vous disposez sur l'ENT d'un espace de stockage de documents en ligne (\textit{cloud)} : ouvrez \textbf{l'application Documents}
+	\begin{enumerate}
+		\item L'application vous donne accès à un espace \textbf{Documents personnels} : de quelle taille est l'espace de stockage disponible ?
+		\item Vous pouvez aussi accéder à un espace \textbf{Documents partagés} : 
+		\begin{itemize}
+			\item Trouvez le fichier partagé \textit{je\_suis\_passe\_par\_ici.ods} et ouvrez-le.
+			\item Vous pouvez éditer ce fichier en ligne : cliquez sur Éditer et complétez.
+		\end{itemize}
+	\end{enumerate}
+	
+	\item Dernière application utile en SNT : \textbf{Jupyter} (\textit{favori}).
+	
+	L'application \textbf{Jupyter} permet d'ouvrir et d'utiliser des Notebooks dans lesquels il est possible de programmer dans le langage \textbf{Python}.
+	\begin{enumerate}
+		\item Ouvrez Jupyter et créez un nouveau répertoire \textit{SNT}
+		\item Vous avez sauvegardé dans votre espace personnel sur le réseau du lycée, un fichier nommé \textit{mon\_premier\_code\_Python.ipynb} : déposez-le sur Jupyter, dans votre répertoire SNT tout simplement avec \textbf{un glisser-déposer}.
+		\item Ouvrez ce fichier en double-cliquant dessus puis suivez les consignes \dots
+	\end{enumerate}
+\end{enumerate}
+
+\section{Testez vos connaissances}
+
+\subsection{Réseaux et Internet}
+
+Votre ordinateur est connecté au réseau du lycée comme vous avez déjà pu le constater.
+
+\begin{enumerate}
+	\item Afin de pouvoir s'identifier, tout ordinateur possède une adresse sur un réseau : \textbf{son adresse IP}. Quelle est celle de votre poste ?
+	
+	\begin{methode}
+		Tapez {\tt ipconfig} dans l'invite de commande Windows ou tapez à nouveau {\tt systeminfo}.
+	\end{methode}
+	
+	\item Vous devriez aussi pouvoir repérer le nom du réseau du lycée \dots Que signifie \textbf{LAN} ?
+	
+	\item Vous avez aussi accès par ce réseau à Internet. Un idée de l'âge du réseau Internet ?
+\end{enumerate}
+
+\subsection{Web}
+
+\begin{enumerate}
+	\item Dans votre espace personnel, vous avez sauvegardé un fichier \textit{mystere.html} : ouvrez-le. Que voyez-vous ?
+	\item Pourtant, il contient un message caché \dots
+	\item Ouvrez maintenant le fichier \textit{liens\_mysteres.html} : sans cliquer sur les liens disponibles, pouvez-vous retrouver le seul qui ne renvoie pas vers le site du lycée ?
+\end{enumerate}
+
+\subsection{Données structurées}
+
+Vous avez sauvegardé dans votre espace personnel, un fichier nommé \textit{base\_donnees.csv} : déposez-le dans Jupyter \textit{(même démarche que précédemment : glisser-déposer)}
+	\begin{enumerate}
+		\item Ouvrir dans Jupyter le fichier \textit{base\_donnees.csv} : en choisissant le bon \textbf{délimiteur}, que contient ce fichier ?
+		\item Êtes-vous capable en moins d'1 min de trouver le code postal de la commune de Surin ?
+		\item Retournez dans votre espace personnel, et déposez \textit{(dans le même répertoire que base\_donnees.csv)} le fichier \textit{recherche\_donnee.ipynb} sur Jupyter.
+		\item Ouvrez-le et suivez les consignes \dots
+	\end{enumerate}
+	
+\subsection{Photographie numérique}
+
+Toujours dans votre espace personnel, vous avez sauvegarder le fichier \textit{tigre.bmp}. 
+
+\begin{enumerate}
+	\item Connaissez-vous le format \textit{.bmp} ? Ouvrez le fichier.
+	\item Par le moyen de votre choix :
+	\begin{itemize}
+		\item Déterminer la taille de cette image ? \textit{(longueur $\times$ largeur en pixels)}.
+		\item Déterminer le poids exact de ce fichier \textbf{en octets}.
+	\end{itemize}
+	\item Y a-t-il un lien entre ces deux données ?
+\end{enumerate}
+
+\subsection{Informatique embarquée}
+
+	Le(s)quel(s) de ces objets ne contient pas de programme informatique ?
+	
+	\begin{minipage}{0.33\textwidth}
+		\includegraphics[scale=0.1]{img/smartphone.eps} 
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.33\textwidth}
+		\includegraphics[scale=0.33]{img/lavelinge.eps} 
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.33\textwidth}
+		\includegraphics[scale=0.1]{img/airbus.eps} 
+	\end{minipage}
+	
+	\begin{minipage}{0.33\textwidth}
+		\includegraphics[scale=0.1]{img/twingo.eps} 
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.33\textwidth}
+		\includegraphics[scale=0.33]{img/tv.eps} 
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.33\textwidth}
+		\includegraphics[scale=0.5]{img/codebarre.eps} 
+	\end{minipage}
+	
+\subsection{Localisation}
+\begin{enumerate}
+	\item Sur votre smartphone, êtes-vous capable de lister exactement les applications qui accèdent à votre localisation ?
+	\item La localisation s'effectue (entre autres) grâce \textbf{au GPS} : 
+		\begin{enumerate}
+			\item Que signifie le sigle GPS ?
+			\item Le GPS a été inialement conçu par l'armée :
+			
+			\vspace*{-0.4cm} \begin{multicols}{4} \begin{itemize}
+				\item russe
+				\item américaine
+				\item française
+				\item chinoise
+			\end{itemize} \end{multicols}
+			
+			\item La géolocalisation est possible avec :
+			
+			\vspace*{-0.4cm} \begin{multicols}{4} \begin{itemize}
+				\item un satellite
+				\item 3 satellites
+				\item un sous-marin
+				\item deux satellites
+			\end{itemize} \end{multicols}
+		\end{enumerate}			
+
+	\item Le GPS sert énormément dans nos déplacements quotidiens : il calcule facilement le meilleur trajet à suivre. Transformez-vous en GPS et sur le graphe ci-dessous, déterminer le meilleur trajet pour aller de Parme à Rome.
+	\begin{center}
+	\begin{minipage}{0.48\textwidth}
+	\centering
+	\begin{tikzpicture}[>=latex ]
+	% [>=latex ] : option pour la forme des pointes de
+	% Styles (MODIFIABLES)
+	\tikzstyle{fleche}=[-,>=latex,thick]
+	\tikzstyle{sommet}=[]
+	\tikzstyle{etiquette}=[midway, fill=white]
+	% Sommets : 
+	\node[sommet](F) at (0,0) {Florence};
+	\node[sommet](S) at (-3,3) {La Spezia};
+	\node[sommet](Pa) at (0,5) {Parme};
+	\node[sommet](B) at (4,3) {Bologne};
+	\node[sommet](Pe) at (4,-1.5) {Pérouse};
+	\node[sommet](R) at (1.5,-6) {Rome};
+	% tracé des arêtes :
+	\draw[fleche] (F)--(S) node[etiquette]{\it \footnotesize 153 km, 106 min, 43 \euro};
+	\draw[fleche] (F)--(B) node[etiquette]{\it \footnotesize 131 km, 99 min, 22 \euro};
+	\draw[fleche] (F)--(Pe) node[etiquette]{\it \footnotesize 150 km, 103 min, 20 \euro};
+	\draw[fleche] (F)--(R) node[etiquette]{\it \footnotesize 283 km, 168 min, 42 \euro};
+	\draw[fleche] (R)--(Pe) node[etiquette]{\it \footnotesize 181 km, 127 min, 22 \euro};
+	\draw[fleche] (Pe)--(B) node[etiquette]{\it \footnotesize 245 km, 174 min, 30 \euro};
+	\draw[fleche] (B)--(Pa) node[etiquette]{\it \footnotesize 104 km, 71 min, 16 \euro};
+	\draw[fleche] (Pa)--(S) node[etiquette]{\it \footnotesize 124 km, 83 min, 25 \euro};
+	\end{tikzpicture}
+	\end{minipage}
+	\end{center}
+\end{enumerate}
+	
+\subsection{Réseaux sociaux}
+
+Saurez-vous classer par ordre les apparitions de ces réseaux sociaux ?
+
+\begin{center}
+\includegraphics[scale=1]{img/reseaux.eps}
+\end{center}
+
+\end{document}

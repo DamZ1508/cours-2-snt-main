@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage[a6paper, landscape, margin=.5cm]{geometry}
+
+\usepackage{textcomp}
+\usepackage[francais]{babel}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© 2020 Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\debut}[1]{%
+  Nom : \dotfill
+
+  Rôle : \textbf{Jury}
+
+  Votre rôle est d'évaluer les équipes, en utilisant la grille suivante (d'autres membres du jury ont d'autres grilles).
+
+  Comptez les #1 de chacune des deux équipes en utilisant la grille suivante.
+}
+\newenvironment{tableau}[1]{
+
+  \bigskip
+
+  \tabularx{\textwidth}{|p{5cm}||X|X|}
+  \hline
+  \multicolumn{1}{|c||}{\textbf{#1}} &
+  \multicolumn{1}{c||}{Équipe 1} &
+  \multicolumn{1}{c|}{Équipe 2} \\
+  \hline
+  \hline
+}{
+  \hline
+\endtabularx
+}
+
+\newcommand{\fin}{\scriptsize
+  \vfill
+  \emph{Tableau recopié depuis :}\\
+  \url{https://sesame.apses.org/index.php?option=com_content&view=article&id=84&Itemid=235}
+}
+
+\begin{document}
+
+\debut{points}
+\begin{tableau}{Forme --- Positif}
+  Clarté des propos &&\\
+  \hline
+  Capacité à écouter &&\\
+  \hline
+  Capacité à convaincre (posture, ton, regard, gestes) &&\\
+  \hline
+  Temps morts demandés au bon moment &&\\
+  \hline
+  Capacité à reprendre la parole &&\\
+\end{tableau}
+\fin
+\newpage
+
+\debut{points}
+\begin{tableau}{Fond --- Positif}
+Nombre d'arguments &&\\
+\hline
+Capacité à contre-argumenter &&\\
+\hline
+Capacité à réorienter/relancer le débat &&\\
+\hline
+Qualité des arguments (maîtrise, précision) &&\\
+\end{tableau}
+\fin
+\newpage
+
+\debut{pénalités}
+\begin{tableau}{Forme --- Négatif}
+Agressivité &&\\
+\hline
+Couper la parole &&\\
+\hline
+Rester silencieux / être en retrait &&\\
+\hline
+Monopoliser la parole &&\\
+\hline
+Les co-équipiers parlent pendant les rounds &&\\
+\end{tableau}
+\fin
+\newpage
+
+\debut{pénalités}
+\begin{tableau}{Fond --- Négatif}
+Propos hors sujet &&\\
+\hline
+Répétitions (enferme le débat) &&\\
+\hline
+Affirmations gratuites (sans preuves) &&\\
+\hline
+Contradictions / erreurs &&\\
+\end{tableau}
+\fin
+
+\end{document}

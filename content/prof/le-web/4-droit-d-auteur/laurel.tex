@@ -1,0 +1,263 @@
+\input{preambule_damien2.tex}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[{$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%}\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{minted}
+%
+%\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+%\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+%\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+%\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{html}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{css}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTÍtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\setlength{\headheight}{40pt} % Haut de page
+\renewcommand{\headrulewidth}{0.0pt}
+\setlength{\textheight}{26cm}
+\lhead{}
+%\chead{\thepage/\pageref{LastPage}}
+\rhead{}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT}
+\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{etude}
+
+\usepackage{xspace}
+\newcommand{\ellipse}{[...]\xspace}
+
+% mdframed
+\usepackage{mdframed}
+\mdfdefinestyle{citationstyle}{%
+  outerlinewidth=.5em,
+  outerlinecolor=white,%
+  leftmargin=-1em,
+  rightmargin=-1em,%
+  middlelinewidth=1.2pt,
+  roundcorner=5pt,
+  linecolor=black,
+  skipbelow=10cm,
+  innerbottommargin=5pt,
+  innerleftmargin=5pt,
+  innerrightmargin=5pt,
+  innertopmargin=5pt,
+}
+%%%%%%%
+
+\begin{document}
+
+\begin{titre}{2NDE}{Seconde - SNT}
+\centering
+{\Large \textsc{\textbf{Thème : Le web --- Droit d'auteur}}}
+\end{titre}
+
+\vspace*{-0.5cm}
+
+\section*{Etude de documents ---  Laurel}
+
+\begin{em}
+\noindent
+Laurel est une auteur de bandes dessinées française contemporaine. Elle a publié plusieurs albums chez plusiers éditeurs, et tient un blog depuis de nombreuses années. Elle a aussi publié plusieurs ouvrages en auto-édition (sans éditeur) financés par ses lecteurs et lectrices, en financement participatif.
+\end{em}
+
+En vous aidant des documents ci-dessous, répondre aux questions suivantes.
+
+  \begin{enumerate}
+    \item J'ai envie d'imprimer une image trouvée sur le site web de l'auteur·e pour l'afficher dans ma chambre.
+      
+      \emph{Document 3}
+      \begin{enumerate}
+      \begin{minipage}{0.3\linewidth}
+        \item En ai-je le droit ?
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.65\linewidth}
+        \item La loi autorise-t-elle l'auteur·e à autoriser ou interdire cet usage ?
+        \end{minipage}
+      \end{enumerate}
+    \item J'ai envie d'utiliser une image trouvée sur le site web de l'auteur·e pour illustrer un article du journal du lycée.
+      \dotfill\emph{Documents 2 et 3}
+      \begin{enumerate}
+        \begin{minipage}{0.3\linewidth}
+        \item En ai-je le droit ?
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.65\linewidth}
+        \item La loi autorise-t-elle l'auteur·e à autoriser ou interdire cet usage ?
+        \end{minipage}
+      \end{enumerate}
+    \item \emph{Rémunération}
+      \dotfill\emph{Document 1}
+      \begin{enumerate}
+        \item Les lecteurs payent-ils pour voir les dessins publiés sur le site web ?
+        \item L'auteur·e gagne-t-il·le de l'argent avec la publication des dessins sur son site web ? Si non, d'où vient sa rémunération ?
+      \end{enumerate}
+     \end{enumerate}
+
+%\subsubsection{}
+%\label{wiki}
+%
+%\noindent
+%Contributeurs de Wikipédia,
+%\emph{Comme convenu}\footnote{\url{https://fr.wikipedia.org/w/index.php?title=Comme_convenu&oldid=158751406}},
+%Wikipédia, l'encyclopédie libre,
+%(page consultée le 25 avril 2019).
+%
+%\begin{oframed}
+%Comme convenu est une bande dessinée autobiographique réalisée par la dessinatrice française Laurel, publiée entre 2014 et 2017 sur son blog. Les deux volumes sont auto-édités, grâce à deux campagnes de financement participatif, respectivement en 2016 et 2017.
+%
+%\ellipse{}
+%
+%Laurel commence la publication de Comme convenu sur son blog, ainsi que sur ses différents sites et réseaux sociaux, en 2014. L'?uvre porte alors le titre de \emph{Ma vie en Californie}, puis \emph{The Daily Struggle}. Elle prend son titre définitif en 2015. Cette même année, après avoir achevé les 250 premières pages, la dessinatrice entreprend le financement participatif de la version papier du premier volume sur le site Ulule. La campagne est un succès et l'album est finalement imprimé en 2016 à hauteur de \numprint{9000} exemplaires.
+%
+%Également en 2016, Laurel débute la publication en ligne des planches du second volume. Celui-ci voit sa propre campagne de financement se dérouler en 2017. L'objectif initial est à nouveau très largement dépassé. Le 19 mai 2017, Laurel publie les ultimes planches de \emph{Comme convenu} sur son blog. Le livre est finalement publié à la fin de l'année 2017.
+%
+%Le financement participatif était le seul moyen d'obtenir les albums, aucune sortie en librairie n'étant prévue.
+%\end{oframed}
+
+\noindent
+\textbf{\large Document 1} - Audrey Oeillet,
+\emph{Comme Convenu : quand l'enfer d'une startup se transforme en succès d'auto-édition} \footnote{\url{https://dgxy.link/numerama}},
+Numérama,
+27 mars 2017.
+
+\vspace*{-0.4cm}
+
+\begin{oframed}
+  En octobre 2015, Laurel lance une campagne de financement participatif sur Ulule. L'objectif : éditer le premier tome de Comme Convenu sur le principe de l'auto-édition. Le succès est colossal : la dessinatrice visait la somme de \numprint{9300} euros, elle en récolte finalement plus de \numprint{268000}, soit une campagne financée à 2860 \%.
+
+%L'illustratrice n'en espérait pas autant : \enquote{J'avais demandé moins que ce dont j'avais besoin. Je me disais que j'allais compléter avec un petit prêt pour gérer tout ça.} Il faut dire que Laurel avait, à la base, des raisons de se méfier :
+\enquote{Quand j'ai atteint environ 200 pages [raconte Laurel], j'ai été contactée par de gros éditeurs franco-belges. Ils voulaient éditer Comme Convenu sur papier. C'est à ce moment-là que j'ai estimé que l'ensemble allait faire 500 pages, et qu'une répartition en deux tomes serait judicieuse.}
+
+%Mais la proposition d'un éditeur lui fait l'effet d'une douche froide : \enquote{Il me proposait \numprint{8000} euros pour l'ensemble. Pour trois ans de travail. Même pas 2 euros par page !} La dessinatrice est d'autant plus remontée que, de loin, elle a pu assister à la dégradation du métier d'auteur de BD en France : En 2016, une étude réalisée dans le cadre des États Généraux de la Bande Dessinée révélait que 36 \% des auteurs vivent sous le seuil de pauvreté en France, alors que 53 \% sont sous le SMIC annuel brut. \enquote{Quand j'ai commencé, les éditeurs soignaient leurs relations avec les auteurs. Aujourd'hui, ils s'en fichent. Quand j'ai terminé le tome 3 de Cerise, mon éditeur m'a dit qu'il me tiendrait au courant pour la suite. Plus d'un an après, il n'a même pas pris la peine de m'écrire un mail. J'imagine que c'est mort pour un tome 4}, ironise-t-elle.
+\ellipse
+
+\enquote{Si j'avais accepté, je n'aurais jamais eu la volonté de continuer} explique Laurel. \enquote{Et puis mon côté tête de mule a pris le dessus : je préférais que ça reste gratuit pour tous. J'aurais même accepté que ça me coûte de l'argent, plutôt que d'en arriver là.} Mais la perspective de sortir la BD en version papier lui plaisait, et le crodwfunding s'est rapidement imposé comme étant la solution idéale pour tenter l'aventure.
+\end{oframed}
+
+\noindent
+\textbf{\large Document 2} -Laurel,
+\emph{Mentions légales}\footnote{\url{http://bloglaurel.com}},
+blog de l'autrice,
+avril 2019.
+\vspace*{-0.4cm}
+\begin{oframed}
+  \textcopyright{} 2003-2019 Laurel
+\end{oframed}
+
+%\subsubsection{}
+%\label{argent}
+%
+%\noindent
+%Laurel,
+%\emph{``Comme convenu'', le compte-rendu de la première campagne Ulule}\footnote{\url{https://bloglaurel.com/post/comme-convenu-le-compte-rendu-de-la-premiere-campagne-ulule./969}},
+%blog de l'autrice\footnote{\url{http://bloglaurel.com}},
+%mars 2017.
+%
+%\noindent Le graphique représente la manière dont a été dépensé l'argent récolté lors de la campagne de financement participatif pour la publication du premier tome de \emph{Comme convenu}.
+%
+%\begin{oframed}
+  %\begin{multicols}{2}
+    %\noindent --- Ce qui reste (en brut): Après retranchement de 35\% de taxes, il me restait bien plus que ce que j'aurais gagné avec un éditeur classique ! \Laughey{} Grâce à cette campagne, j'ai pu m'offrir un super appareil photo, j'en rêvais depuis plus de quinze ans, je l'utilise tout le temps, je suis ravie. \Laughey{} Le livre a représenté 18 mois de travail, ça fait un très bon tarif horaire quand on fait la moyenne. \Smiley
+%
+    %\begin{center}
+%\includegraphics[width=5cm]{laurel-camembert}
+%\end{center}
+%\end{multicols}
+%\end{oframed}
+
+\noindent
+\textbf{\large Document 3} -\emph{Code de la propriété intellectuelle},
+version du 1\ier{} juin 2019.
+\vspace*{-0.4cm}
+\begin{oframed}
+  \begin{description}
+    %\item[Article L112-1] Les dispositions du présent code protègent les droits des auteurs sur toutes les oeuvres de l'esprit, quels qu'en soient le genre, la forme d'expression, le mérite ou la destination.
+
+    \item[Article L122-4]
+      Toute représentation ou reproduction intégrale ou partielle faite sans le consentement de l'auteur ou de ses ayants droit ou ayants cause est illicite. Il en est de même pour la traduction, l'adaptation ou la transformation, l'arrangement ou la reproduction par un art ou un procédé quelconque.
+
+    \item[Article L122-5]
+      Lorsque l'\oe uvre a été divulguée, l'auteur ne peut interdire
+      \ellipse{}
+      sous réserve que soient indiqués clairement le nom de l'auteur et la source
+      \ellipse{}
+      les copies ou reproductions réalisées à partir d'une source licite et strictement réservées à l'usage privé du copiste et non destinées à une utilisation collective
+      \ellipse{}.
+    %\item[Article L122-7-1] L'auteur est libre de mettre ses oeuvres gratuitement à la disposition du public, sous réserve des droits des éventuels coauteurs et de ceux des tiers ainsi que dans le respect des conventions qu'il a conclues.
+  \end{description}
+\end{oframed}
+
+\begin{flushright}
+\includegraphics[scale=0.05]{code-qr-2.eps} 
+\hspace*{0.4cm}
+\includegraphics[scale=0.05]{code-qr-3.eps} 
+\end{flushright}
+
+\end{document}

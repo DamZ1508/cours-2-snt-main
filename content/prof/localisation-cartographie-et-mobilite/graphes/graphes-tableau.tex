@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2022-2023 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt, aspectratio=43, xcolor=table]{beamer}
+
+\usepackage{2223-pablo}
+\usepackage{2223-pablo-beamer}
+\usepackage{2223-pablo-paternault}
+
+\title{Cartographie}
+\subtitle{Un peu de vocabulaire…}
+
+\begin{document}
+
+\begin{frame}
+  Un chauffeur a une livraison à effectuer d'Annecy à Saint-Étienne. Il a accès aux autoroutes suivantes (le prix et la distance de chaque tronçon sont les mêmes pour l'aller et le retour) :
+  \begin{center}
+    \rowcolors{1}{}{lightgray}
+    \begin{tabular}{llcc}
+      \toprule
+      && Distance (km) & Prix (€) \\
+      \midrule
+      Annecy & Bourg-en-Bresse & 70 & 25 \\
+      Annecy & Chambéry & 50 & 15 \\
+      Bourg-en-Bresse & Lyon & 80 & 15 \\
+      Chambéry & Grenoble & 60 & 20 \\
+      Chambéry & Lyon & 110 & 20 \\
+      Grenoble & Lyon & 110 & 15 \\
+      Grenoble & Valence & 90 & 15 \\
+      Lyon & Saint-Étienne & 60 & 30 \\
+      Saint-Étienne & Valence & 120 & 10 \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \begin{enumerate}
+    \item Quel est l'itinéraire le plus court ?
+    \item Quel est l'itinéraire le moins cher ?
+  \end{enumerate}
+
+\end{frame}
+
+\end{document}

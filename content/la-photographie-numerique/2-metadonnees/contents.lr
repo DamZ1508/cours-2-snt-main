@@ -1,0 +1,7 @@
+_model: redirect
+---
+url: ../metadonnees/
+---
+title: Métadonnées
+---
+_discoverable: false

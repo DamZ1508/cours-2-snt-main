@@ -1,0 +1,15 @@
+title: TP : Traitement d'images
+---
+sort_key: 4
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">
+---
+image: gere.jpg
+---
+body:
+
+0. Accédez au TP sur l'application `Capytale` grâce au code d'accès fourni par votre professeur
+0. Toute la suite de ce TP est à travailler sur le Notebook.

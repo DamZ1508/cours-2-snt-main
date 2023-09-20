@@ -1,0 +1,29 @@
+title: Créer une archive au format `.zip` contenant plusieurs fichiers et dossiers.
+---
+description: Comment compresser des fichiers et dossiers en une archive au format `.zip`.
+---
+image: clamp.jpg
+---
+body:
+
+{% from 'macros/images.html' import image with context %}
+
+On souhaite créer une archive au format `.zip`.
+
+## Sélectionner les fichiers à mettre dans l'archive
+
+- Si on souhaite compresser un dossier complet : 
+  - Faire un clic droit sur le dossier sélectionné, puis choisissez `7-Zip > Ajouter à "NOM_prenom.zip"`
+
+- Pour sélectionner plusieurs fichiers ou dossiers qui ne sont pas côte à côte :
+  - cliquez sur le premier fichier ou dossier ;
+  - maintenez la touche <kbd>Ctrl</kbd> du clavier enfoncée ;
+  - cliquez sur chacun des autres fichiers ou dossiers à ajouter à l'archive.
+{{ image("selection.png") }}
+  - Faitez un clic droit sur un des fichiers sélectionnés, puis choisissez `7-Zip > Ajouter à "NOM_prenom.zip"`
+{{ image("compresser.png") }}
+
+## C'est bon
+
+Un nouveau fichier `NOM_prenom.zip` a été créé. Vous pouvez double-cliquer dessus pour vérifier son contenu.
+{{ image("zip.png") }}

@@ -1,0 +1,18 @@
+- Quel est le nom de domaine ? Quelle est l'adresse IP ?
+  - fr.wikipedia.org
+  - 91.198.174.192
+
+- Que signifie DNS ?
+  - Domain Name System
+
+- Dans le nom de domaine fr.wikipedia.org, quel est le domaine (ou sous-domaine) le plus bas dans la hiérarchie ?
+  - fr
+  - wikipedia
+  - org
+  - .
+
+- Comment s'appelle le premier serveur DNS auquel fait appel un ordinateur lors de la résolution de noms de domaines ?
+  - Serveur récursif
+  - Serveur de premier niveau
+  - Serveur racine
+  - Serveur root

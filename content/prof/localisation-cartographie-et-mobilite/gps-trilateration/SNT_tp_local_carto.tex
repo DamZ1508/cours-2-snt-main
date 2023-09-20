@@ -1,0 +1,151 @@
+\input{preambule_twilo.tex}
+\usepackage{tkz-tab}
+
+%Couleur pour l'entète des tableaux
+\definecolor{emerald}{rgb}{0.31, 0.78, 0.47}
+\usepackage{layout}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTètes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+%\lhead{2 Maths --- ?? - Titre}
+%\chead{\thepage/\pageref{LastPage}}
+%\rhead{Cours}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT -- Localisation et Cartographie}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+
+\begin{document}
+	
+	%%%%%%%%%%%TITRE DOCUMENT%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{titre}{yellow!50!white}{Seconde - SNT}
+		\centering
+		{\Large \textsc{\textbf{Localisation et Cartographie}}}
+	\end{titre}
+
+%%%%% Le contenu %%%%%%%%
+	
+
+		Dans ce TP, nous allons imiter manuellement dans des cas simples, simplistes et simplifiés les principes de bases de la géolocalisation et de la navigation numérique.
+		\bigskip
+		
+		Nous travaillerons dans un premier temps sur la carte de France ci-dessous :\bigskip
+		
+		
+		\includegraphics[width=1\linewidth]{img/carte.png}
+	
+\newpage
+	\begin{exersb}
+		
+	
+			Il est exactement midi (on considérera que votre horloge est très précise et à l’heure).\\
+			La vitesse de la lumière est de $299~792~458~m/s$.\\
+			Vous venez de recevoir les informations suivantes de la part de trois satellites :
+			
+			\begin{tblr}{hlines,vlines,colspec={*4{X[c,m]}},row{1}={black!30,font=\bfseries},cell{2-6}{1}={black!30,font=\bfseries}}
+				&Satellite 1&Satellite 2&Satellite 3\\
+				Longitude (DD)&$3,0558^\circ$&$-4,5052^\circ$&$-1,4651^\circ$\\
+				Latitude (DD)&$50,634^\circ$&$48,3857^\circ$&$43,4896^\circ$\\
+				Altitude (km)&$20~200$&$20~200$&$20~200$\\
+				Heure (h:min:s)&$11:59:59,93257$&$11:59:59,932564$&$11:59:59,932604$\\
+			\end{tblr}
+		
+		\begin{enumerate}
+			\item Positionnez les satellites sur les villes correspondantes.
+
+			\item Expliquez comment a été calculée la première colonne du tableau ci-dessous puis complétez les deux dernières colonnes de la même manière.\medskip
+				
+				\begin{tblr}{hlines,vlines,colspec={Q[c,m]*3{X[c,m]}},row{1}={black!30,font=\bfseries},cell{2-7}{1}={black!30,font=\bfseries}}
+					&Satellite 1&Satellite 2&Satellite 3\\
+					Altitude (km)&$20~200$&$20~200$&$20~200$\\
+					Heure (h:min:s)&$11:59:59,93257$&$11:59:59,932564$&$11:59:59,932604$\\
+					Délai (s)&$0,06743$&&\\
+					Distance réelle (km)&$20~215$&&\\
+					Distance au sol (km)&$779$&&\\
+					Distance sur la carte (cm)&$11,7$&&\\					
+				\end{tblr}
+				\medskip
+				
+%%% le corrigé
+%			 \begin{tblr}{hlines,vlines,colspec={Q[c,m]*3{X[c,m]}},row{1}={black!30,font=\bfseries},cell{2-7}{1}={black!30,font=\bfseries}}
+%					&Satellite 1&Satellite 2&Satellite 3\\
+%					Altitude (km)&$20~200$&$20~200$&$20~200$\\
+%					Heure (h:min:s)&$11:59:59,93257$&$11:59:59,932564$&$11:59:59,93257$\\
+%					Délai (s)&$0,06743$&$0,067436$&$0,067396$\\
+%					Distance réelle (km)&$20~215$&$20~217$&$20~205$\\
+%					Distance au sol (km)&$779$&$829$&$449$\\
+%					Distance sur la carte (cm)&$11,7$&$12,4$&$6,7$\\					
+%				\end{tblr}
+			
+			\item Placez-vous sur la carte.
+
+			\item Pourquoi 3 satellites étaient nécessaires ?
+		
+			\item Pourquoi peut-on se passer du quatrième satellite ?
+		
+		\end{enumerate}
+	\end{exersb}
+	\begin{exersb}
+
+			Le GPS de l’ami que vous devez rejoindre viens d’émettre le NMEA suivant :
+			
+			\hfill\textbf{GPGGA,123959.301,4851.558,N,00220.529,E,1,12,1.0,0.0,M,0.0,M,,*67}\hfill\allowbreak
+		
+	 	Positionnez votre ami sur la carte.
+			
+
+	\end{exersb}
+\newpage
+	\begin{exersb}
+	
+			Afin de rejoindre votre ami, vous avez récupéré et regroupé dans un tableau les temps de trajets (en minutes) séparant différentes villes qui pourraient se situer sur votre parcours.\medskip
+			
+			\begin{tblr}{hlines,vlines,colspec={Q[c,m]*{12}{X[c,m]}},row{1}={black!30,font=\bfseries},cell{2-13}{1}={black!30,font=\bfseries}}
+				&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Avignon}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Carcassonne}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Clermont-Ferrand}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Dijon}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Limoges}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Lyon}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Montpellier}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Nîmes}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Orléans}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Paris}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Saint-Étienne}}}&\rotatebox[origin=c]{90}{\parbox{4cm}{\textbf{Toulouse}}}\\
+				Avignon&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Carcassonne&&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Clermont-Ferrand&&&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Dijon&&&&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Limoges&&&$150$&&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Lyon&$140$&&$120$&$150$&&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Montpellier&&$100$&$210$&&&&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Nîmes&$30$&&&&&&$60$&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Orléans&&&$180$&&$170$&&&&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Paris&&&&$230$&&&&&$90$&\SetCell{bg=black!15}&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Saint-Étienne&&&$100$&&&$70$&&&&&\SetCell{bg=black!15}&\SetCell{bg=black!15}\\
+				Toulouse&&$60$&&&$180$&&&&&&&\SetCell{bg=black!15}\\
+			\end{tblr}
+		
+		\begin{enumerate}
+			\item	Représentez ces informations sous forme d’un graphe pondéré.
+				
+			\newpage
+		
+			\item
+		
+				À l’aide de l’algorithme de Dijkstra, déterminez le trajet le plus court pour rejoindre votre ami.
+				
+				\begin{tblr}{hlines,vlines,colspec={*{12}{X[c,m]}},row{1}={black!30,font=\bfseries}}
+					\rotatebox[origin=c]{90}{\parbox{5cm}{A -- \textbf{Avignon}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{C -- \textbf{Carcassonne}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{CF -- \textbf{Clermont-Ferrand}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{D -- \textbf{Dijon}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{Li -- \textbf{Limoges}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{Ly -- \textbf{Lyon}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{M -- \textbf{Montpellier}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{N -- \textbf{Nîmes}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{O -- \textbf{Orléans}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{P -- \textbf{Paris}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{S -- \textbf{Saint-Étienne}}}&\rotatebox[origin=c]{90}{\parbox{5cm}{T -- \textbf{Toulouse}}}\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+					\\
+				\end{tblr}
+				
+		\end{enumerate}
+	\end{exersb}
+\label{LastPage}
+\end{document}

@@ -1,0 +1,70 @@
+title: TP4 — Détecter les mouvements
+---
+sort_key: 4
+---
+toc: 0
+---
+morehead: <link rel="stylesheet" href="/static/numbered-h2.css">
+---
+image: mexican-hats.jpg
+---
+body:
+
+## Mouvement
+
+La carte *micro:bit* dispose d'un accéléromètre lui permettant de détecter son inclinaison, et de nombreux mouvements. Tout cela est détaillé [dans la documentation](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/gestures.html)
+
+0. Exécutez le programme suivant sur votre carte *micro:bit*. Elle devrait afficher un visage triste, puis un visage content si vous la retournez vers le haut.
+
+   ~~~python
+   from microbit import *
+   
+   while True:
+       display.show(Image.SAD)
+       if accelerometer.was_gesture("face up"):
+           display.show(Image.HAPPY)
+           sleep(500)
+   ~~~
+
+0. Lisez la liste des gestes reconnus dans la documentation, puis ajouter trois lignes à ce programme pour que la carte affiche un cœur si la carte est secouée.
+
+## Hasard
+
+Le module [`random`](https://docs.python.org/fr/3/library/random.html#module-random) permet de manipuler du hasard. Nous n'utiliserons ici que la fonction [`random.choice(LISTE)`](https://docs.python.org/fr/3/library/random.html#random.choice) qui sélectionne et renvoit un nombre aléatoire parmi la liste proposée.
+
+0. Exécutez le programme suivant sur votre carte *micro:bit*.
+
+   ~~~python
+   from microbit import *
+   import random
+   
+   SALUTATION = [
+       "Bonjour",
+       "Hey !",
+       "Coucou...",
+       "Salut :)",
+       ]
+
+   display.scroll(random.choice(SALUTATION))
+   ~~~
+
+   Ce programme n'affiche qu'un seul mot, et s'arrête. Pour le relancer, vous pouvez débrancher puis rebrancher la carte *micro:bit*, ou appuyer sur le bouton *reset* au dos de la carte.
+
+0. Modifiez le programme pour ajouter `Hello` à la liste des mots que peut afficher la carte.
+
+## Choixpeau
+
+L'objectif de ce travail est de réaliser un programme qui simule le [Choixpeau](https://fr.wikipedia.org/wiki/Objets_magiques_de_Harry_Potter#Choixpeau_magique) de l'univers d'Harry Potter.
+
+- La carte micro:bit affiche un point d'interrogation, et attend…
+- Lorsqu'elle est secouée, elle affiche, au hasard, l'un des quatre mots ``Poufsouffle``, ``Serdaigle``, ``Serpentard``, ``Gryffondor``.
+- Elle revient dans son état initial (affichage du point d'interrogation).
+
+0. Téléchargez le fichier [`choixpeau.py`](choixpeau.py) dans votre répertoire personnel.
+0. Ce programme est incomplet. Remplacez tous les ``XXX`` par le code correct, en vous inspirant des deux premières parties de ce TP.
+5. **Bilan**
+
+   - Demander puis compléter la fiche bilan de ce TP ;
+   - enregistrez votre programme `choixpeau.py`;
+   - Rendez la fiche au professeur ;
+   - Passez au TP suivant.

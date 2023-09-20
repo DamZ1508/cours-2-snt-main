@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[11pt]{article}
+
+\usepackage{textcomp}
+\usepackage{fontspec}
+\usepackage[french]{babel}
+\usepackage[a5paper, margin=.7cm]{geometry}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© 2020 Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage[perpage, bottom]{footmisc}
+
+\usepackage{numprint}
+
+\usepackage{csquotes}
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+
+\newcommand{\source}[1]{%
+  \noindent\emph{#1}%
+}
+
+\makeatletter
+\def\input@path{{corpus/}}
+\makeatother
+
+\begin{document}
+
+\input{ashley-madison}
+\input{facebook}\newpage
+
+\input{brandon-mayfield}
+\input{cambridge-analytica}\newpage
+
+\input{chine}
+\input{miscreants}\newpage
+
+\input{lettre-ouverte}
+\input{google}
+\input{hortefeux}\newpage
+
+\input{matin-brun}
+\input{stade}\newpage
+
+\input{reaction}\newpage
+\input{enceinte}\newpage
+
+\input{non-rien-a-cacher}
+\input{benefits}
+
+\input{victimes-stic}\newpage
+\input{rien-a-cacher-wikipedia}\newpage
+
+\input{on-a-tous}
+
+\input{marc-l}
+
+\input{alicem}
+\input{fiasco}\newpage
+\input{manuel-valls}
+
+\input{police-britannique}\newpage
+\input{instagram}\newpage
+
+\end{document}

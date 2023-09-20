@@ -1,0 +1,55 @@
+title: Le Web
+---
+image: /le-web/silver-web.jpg
+---
+description: Séquence d'enseignement sur le thème « Le Web » — Ressources pour le professeur.
+---
+toc: 1
+---
+body:
+
+Tous les documents PDF du Chapitre : [Web](web.zip) ([sources](web_sources.zip))
+
+## Contexte
+
+Cette séquence couvre le thème « Le web » du programme, en cinq séances d'une heure et demie (soit un peu plus de ce qui est recommandé dans le programme officiel — quatre semaines par thème — mais nous passons moins de temps sur d'autres thèmes). Il est tout à fait possible de la réduire à quatre semaines en diminuant le temps passé sur la tâche finale.
+
+Il n'y a aucun prérequis : elle peut être faite dés le début de l'année.
+
+Cette séquence suppose que les élèves ont accès à un ordinateur pour chacune des séances.
+
+Durant cette séquence, les élèves seront amenés à consulter ce site web ([cette page là](/le-web/) en particulier) : lors des activités sur ordinateur, plutôt que de distribuer un énoncé papier, celui-ci est publié sur mon site web.
+
+## Programme
+
+Cette séquence couvre les points suivants  (parfois totalement, parfois partiellement) :
+
+- Repères historiques.
+- Droit d'auteur
+- Langage HTML (langage CSS en option)
+- Modèle client/serveur
+- Liens hypertexte
+- URL (de manière partielle et succinte)
+- Paramètres de sécurité d'un navigateur
+- Programmation en Python
+- Moteurs de recherche : Principes et usages
+
+Cette séquence ne couvre pas les points suivants :
+
+- Requête HTTP
+
+## Déroulement
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}
+
+Cela fait un total de cinq semaines de cours, ce qui un peu plus long que ce qui est recommandé sur les programmes (mais puisque la tâche finale a été commencée en fin des séances précédentes, on peut tout à fait la réduire quelques morceaux bouche-trous par-ci par-là, et finir avec une seule séance d'une heure et demie en fin de séquence).
+
+Remarquons que la [tâche finale](8-tache-finale/) est découpée dans plusieurs séances. De nombreuses séances (d'une heure et demie) sont constituées d'environ une heure de cours divers (introduction, droit d'auteur, etc.) suivis de la tâche finale pour le reste de la séance. Si vous êtes absent·e une fois, si les vacances tombent pendant la séquence, il peut y avoir un mois entre deux séances de travail sur la tâche finale, et les élèves ont le temps d'oublier ce qu'ils ont fait, et même quels étaient les binômes de travail…
+
+## Évaluation
+- QCM Pronote sur la partie connaissances (historiques, définition, …)
+- La tâche finale est évaluée : elle est notée sur 10 points.
+---
+sort_key: 3

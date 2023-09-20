@@ -1,0 +1,35 @@
+title: Falsification d'un site web (45 minutes)
+---
+sort_key: 1
+---
+body:
+
+*Note : Cette séance est très largement inspirée d'une [séance proposée par Laurent Cooper](https://magistere.education.fr/ac-grenoble/pluginfile.php/1097872/mod_folder/content/0/xray-goggle.docx).*
+
+Le but de cette séance est de :
+
+- faire découvrir le langage HTML ;
+- repérer la barre d'URL, et faire une première analyse de cette URL ;
+- découvrir la structure d'une URL ;
+- parler d'hameçonnage ;
+- prendre conscience de la différence entre client et serveur.
+
+Au préalable, le professeur a téléchargé, puis falsifié une page web. Rendre absurde le titre d'un article de presse est une bonne idée.
+
+**1. Falsification**
+
+  - Le professeur projette sa page web falsifiée, et demande des commentaires. Si nécessaire, il les guide pour qu'ils se rendent compte que l'article est faux.
+  - Les autres lecteurs du site web voient-il l'article original, ou l'article modifié ? Cela est l'occasion de parler de client et de serveur. Il est possible d'amener un journal (papier) pour expliciter le fait qu'une altération d'un exemplaire du journal ne modifie pas les autres exemplaires.
+  - C'est l'occasion de parler d'hameçonnage.
+
+[**2. TP : Mise en place de l'environnement de développement et Modification de page Web**](../../../le-web/2-falsification)
+
+**3. Institutionnalisation : Structure d'une URL**
+- Le professeur explique rapidement ce qu'est une URL (en prenant pour exemple https://eduscol.education.fr/recherche?keywords=snt), et comment elle fonctionne (protocole, nom de domaine, nom de la ressource (pour faire simple)), et comment cela peut aider à repérer une tentative d'hameçonnage.
+- [Synthèse de cours](url.pdf) [*(source)*](url.tex)
+
+**4. Fin de séance : début de la tâche finale**
+
+En fonction du temps disponible, les élèves peuvent commencer à prendre connaissance de la [tâche finale](../../../le-web/8-tache-finale)
+---
+image: news-papers.jpg

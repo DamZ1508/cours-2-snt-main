@@ -1,0 +1,82 @@
+title: TP2 — Afficher des choses
+---
+sort_key: 2
+---
+toc: 1
+---
+morehead: <link rel="stylesheet" href="/static/numbered-h2.css">
+---
+image: LEDs.jpg
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="Crédits")}}
+Plusieurs éléments de se travail sont inspirés de <a href="https://snt.entraide-ella.fr/chapitres/objets-connectes/1/">celui de mes collègues Stéphane Colomban et Jérémy Chevillot</a>. Merci à eux.
+{{ alertend() }}
+
+Ce TP a pour but de vous expliquer comment afficher du texte ou des images à « l'écran » de la carte *micro:bit*.
+
+Vous avez déjà manipulé dans le TP précédent l'allumage d'images pixel par pixel, en utilisant la fonction [`display.set_pixel()`](https://microbit-micropython.readthedocs.io/fr/latest/display.html#microbit.display.set_pixel). Mais une carte *micro:bit* peut afficher beaucoup d'autres choses.
+
+## Texte
+
+La fonction [`display.scroll()`](https://microbit-micropython.readthedocs.io/fr/latest/display.html#microbit.display.scroll) permet de faire défiler du texte à l'écran.
+
+Exécutez le programme suivant sur votre carte *micro:bit*.
+
+~~~python
+from microbit import *
+
+display.scroll("Bonjour, monde!")
+~~~
+
+## Images
+
+La carte *micro:bit* a en mémoire toute une banque d'images pré-enregistrée.
+
+1. Exécutez le programme suivant sur votre carte *micro:bit*. Votre carte devrait afficher un *smiley*.
+
+   ~~~python
+   from microbit import *
+
+   display.show(Image.HAPPY)
+   ~~~
+
+2. Exécutez le programme suivant. Votre carte devrait afficher un visage triste, puis s'éteindre.
+
+   ~~~python
+   from microbit import *
+
+   display.show(Image.SAD)
+   sleep(1000)
+   display.clear()
+   ~~~
+
+   Notez bien dans un coin de votre tête, dans le programme précédent, quelle instruction permet d'attendre, et quelle instruction permet d'éteindre l'écran.
+
+3. Modifiez le programme précédent pour qu'il affiche une maison, puis une vache, puis qu'il s'éteigne. On attendra une demi-seconde entre chaque action.
+
+   La liste de toutes les images disponibles se trouve sur la [documentation de la carte *micro:bit*](https://microbit-micropython.readthedocs.io/fr/latest/image.html).
+
+4. On remarquera enfin que `display.show()` peut aussi afficher une lettre (par exemple `display.show("S")`). Écrire un programme qui affiche votre prénom, lettre par lettre, avant de s'éteindre.
+
+## Compte à rebour
+
+On souhaite écrire un programme qui fasse un compte à rebours de 5 à 0.
+
+1. Téléchargez le programme [`rebours.py`](rebours.py) dans votre dossier `microbit` dans votre répertoire personnel, puis exécutez-le sur votre carte *micro:bit*.
+
+2. Modifiez le programme pour qu'il fasse un compte à rebours de 5 à 0, en comptant une seconde entre chaque nombre.
+
+   Vous aurez besoin de lire la [documentation de la fonction `range()`](https://docs.python.org/fr/3/library/stdtypes.html#range), ou de « jouer » avec les arguments de `range()` dans le code.
+
+3. Modifiez le programme pour que la carte fasse défiler `Partez !` à la fin du compte à rebours.
+
+4. **Bilan**
+
+   - Demander puis compléter la fiche bilan de ce TP ;
+   - Enregistrez votre programme dans le dossier `micro:bit` précédemment créé sous le nom `rebours.py`
+   - Rendez la fiche au professeur ;
+   - Passez au TP suivant.

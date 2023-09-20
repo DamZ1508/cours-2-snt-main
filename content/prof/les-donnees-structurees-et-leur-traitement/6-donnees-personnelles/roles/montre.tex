@@ -1,0 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage[a6paper, landscape, margin=1cm]{geometry}
+
+\usepackage{textcomp}
+\usepackage[francais]{babel}
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© 2020 Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage{booktabs}
+\usepackage{numprint}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+Nom (2) : \dotfill
+
+Rôle : \textbf{Montre :} Vous vérifiez que le temps de chaque phase est respecté, et prévenez les présidents et présidentes peu avant la fin de chaque phase.
+
+Vous êtes autorisées à utiliser le chronomètre de votre téléphone portable.
+
+Le respect des temps impartis rapporte 1 point à l'équipe.
+
+\begin{center}
+\small
+  \begin{tabular}{p{5cm}n{2}{0}}
+    \toprule
+    \emph{Phase} & \emph{Durée} \\
+    \midrule
+    Préparation\dotfill & 20' \\
+    Premier round\dotfill & 5' \\
+    Pause\dotfill & 3' \\
+    Second round\dotfill & 5' \\
+    Pause\dotfill & 3' \\
+    Troisième round\dotfill & 5' \\
+    Temps-mort\dotfill & 1' \\
+    (pendant les rounds, un seul par équipe et par round) & \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+\end{document}

@@ -1,0 +1,72 @@
+title: Adresses symboliques et Serveurs DNS
+---
+sort_key: 3
+---
+image: sans-titre.jpg
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2.css">
+<link rel="stylesheet" href="/static/sublist.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/embed.html' import youtube with context %}
+{% from 'macros/spoiler.html' import beginspoiler, endspoiler, spoiler with context %}
+
+Sur Internet, les ordinateurs communiquent entre eux en utilisant des adresses IP, du type [`91.198.174.192`](http://91.198.174.192/) pour la version 4, ou [`2620:0:862:ed1a::1`](http://2620:0:862:ed1a::1) pour la version 6. Ils fonctionnent un peu comme les numéros de téléphone : ils désignent une connexion à Internet (et donc le ou les ordinateurs utilisant cette connexion). Dans certains cas, on pourrait se connecter à un site web en utilisant son adresse IP. Mais de même qu'on préfère utiliser un annuaire avec des noms humains pour téléphoner à quelqu'un, on préfère utiliser des noms de domaines (ou adresses symboliques) ([`fr.wikipedia.org`](http://fr.wikipedia.org), [`elysee.fr`](http://elysee.fr), [`framasoft.org`](http://framasoft.org), etc.) pour accéder à un site web.
+
+Le service qui fait le lien entre nom de domaine (du type [`fr.wikipedia.org`](http://fr.wikipedia.org), utilisé par les humains) et adresse IP (du type [`91.198.174.192`](http://91.198.174.192/), utilisé par les ordinateurs) est appelé *système de noms de domaines*, ou DNS (pour l'anglais *domain name system*).
+
+{{ alertstart(level="info")}}
+Un compte-rendu sera ramassé en fin de séance, et évalué.
+{{ alertend() }}
+
+## Mise en œuvre
+
+De nombreux outils existent pour faire le lien entre nom de domaine et adresse IP. Votre navigateur web (Firefox, Google Chrome, Microsoft Edge…) le fait sans que vous vous en rendiez compte, mais il est possible de voir explicitement ce lien, avec des logiciels à installer sur son ordinateur, ou avec des outils en ligne.
+
+{{ alertstart(level="info")}}
+Toute cette partie (ou presque) se fait avec l'invite de commande Windows.
+{{ alertend() }}
+
+0. Ouvrez l'invite de commande Windows : `Windows + R` puis tapez `cmd` 
+0. Entrez la commande : ``nslookup snt.ababsurdo.fr``. 
+
+   0. L'adresse symbolique `snt.ababsurdo.fr` est un alias vers un autre nom de domaine. Lequel ?
+   0. Quelle est l'adresse IP (version 4) correspondant au nom de domaine ``snt.ababsurdo.fr`` ?
+
+0. Le site web d'un collègue *(Stéphane Colomban)* se trouve à l'adresse : https://snt.entraide-ella.fr/.
+
+   0.  Quelle est l'adresse IP (version 4) de ce nom de domaine ?
+   0.  Que peut-on en déduire ?
+
+0. On s'intéresse maintenant au site SNT de notre lycée :.
+
+   0. Quel est son nom de domaine ?
+   0. À quelle adresse IP est associé ce nom de domaine ?
+
+0. Accès par l'adresse IP.
+
+   0. On s'intéresse au site web du rectorat de l'académie de Grenoble. Il est possible d'accéder à ce site en utilisant le nom de domaine `http://www.ac-grenoble.fr` ou l'adresse IP `http://193.54.149.86`. Expliquer la différence entre ces deux méthodes.
+   0. Pourquoi cette méthode ne fonctionne pas en entrant directement l'adresse IP du site web `https://www.ac-poitiers.fr` ?
+
+## Choix d'un nom de domaine
+
+On suppose que vous souhaitez acheter un nom de domaine pour vous et votre famille (qui vous permettra d'avoir par exemple votre adresse électronique ``prénom@nom-de-famille.fr``).
+
+Rendez-vous sur le site web d'un registraire (par exemple [Gandi](https://www.gandi.net/fr) ou [OVH](https://www.ovhcloud.com/fr/domains/)), et choisissez un nom de domaine *disponible* pour votre famille.
+
+0. Quel est ce nom de domaine ?
+0. Quel est la signification du domaine de premier niveau choisi (`.fr`, `.com`, `.net`, etc.) ?
+0. Quel est le prix annuel de ce nom de domaine (en ignorant l'éventuelle promotion offerte pour la première année) ?
+0. Combien d'adresses e-mail ou redirections sont incluses avec ce nom de domaine ?
+
+## Censure
+
+Lire l'article suivant : [Comment les autorités peuvent bloquer un site Internet](https://www.sciencesetavenir.fr/high-tech/comment-les-autorites-peuvent-bloquer-un-site-internet_35828)
+
+0. En prenant comme exemple une des questions de la partie précédente, expliquer comment il est (parfois) possible de contourner la méthode « Bloquer l'URL » pour accéder au site censuré.
+
+0. Pourquoi la méthode « Couper les serveurs » ne fonctionne-t-elle pas toujours à l'étranger ?

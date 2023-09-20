@@ -1,0 +1,31 @@
+title: Un peu de vocabulaire (30 min)
+---
+sort_key: 1
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="Crédits")}}
+Cette séance est inspirée de la ressource publiée sur Éduscol : <a href="https://cache.media.eduscol.education.fr/file/SNT/93/8/RA19_Lycee_G_SNT_2nd_vocabulaire_donnees_1151938.pdf">Les Données structurées et leur Traitement — VOCABULAIRE</a>.
+{{ alertend() }}
+
+## Description
+
+Le but de cette séance est d'introduire les notions de donnée, d'objet (sur lequel on recueille des données), de descripteur, la différence entre descripteur et valeur, et une introduction au format CSV.
+
+Elle se déroule en classe entière, sans ordinateur (sauf celui du professeur, vidéo-projeté).
+
+## Déroulement
+
+- Le professeur a préparé [ce document](act1_decrire_livre.pdf) [*(source)*](act1_decrire_livre.docx) à distribuer aux élèves et qui contient la correction pour le prof.
+
+*Remarque générale : Après avoir sollicité les collègues de français, il n’y a pas d’œuvre obligatoire en classe de seconde. Le dernier jour d’un condamné fait partie des œuvres généralement étudiées par les collègues de lettres mais ce ne sera pas forcément le cas pour le groupe d’élèves que nous aurons en SNT. J’ai choisi ce titre car il y a deux éditions (Hachette et Larousse) disponibles au labo de français.*
+
+- On peut projeter aux élèves [la fiche du livre](condamne_Hachette.jpg). 
+
+- Quand tou·te·s les élèves ont répondu à la première question, lors de la mise en commun, le professeur insiste sur le fait que la description permet ou non d'identifier précisément le livre.
+
+- Il est possible de générer un nuage de mots avec : [Digiwords by La Digitale](https://ladigitale.dev/digiwords/#/) ou bien avec [Wooclap](https://app.wooclap.com/auth/login)
+
+- A la fin de l'activité, les élèves sont amener à copier [un point cours](Point_cours.pdf) [*(source)*](Point_cours.docx). Le professeur leur distribue [cette application](Point_cours_eleve.jpg)

@@ -1,0 +1,61 @@
+title: Pour les profs
+---
+description: Séquence de SNT — Ressources pour le professeur.
+---
+sort_key: 
+---
+image: cheering-chalks.jpg
+---
+tags: 
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+## Les séquences
+
+{% for item in this.children -%}
+- [{{ item.title }}]({{ item.path }}/) {{ item }}
+{% endfor %}
+
+## Séquences publiées par des collègues
+
+* [Ressources officielles](https://eduscol.education.fr/cid143713/snt-bac-2021.html)
+* [Partage de ressources](https://tribu.phm.education.gouv.fr/portal/auth/pagemarker/434/cms/default-domain/workspaces/enseignants-sciences-numeriques-technologie-snt-national)
+* [David Roche](https://pixees.fr/informatiquelycee/n_site/snt.html)
+* [Julien Launay](http://icnisnlycee.free.fr/index.php/42-snt)
+* [Guillaume Martin](https://tribu.phm.education.gouv.fr/portal/share/formation-snt-bassin-chambery)
+* [Stéphane Colomban](https://snt.entraide-ella.fr)
+* [Julien de Villele](http://prof.devillele.free.fr/)
+* [Nicolas Tourreau](http://citescolaire-lannemezan.mon-ent-occitanie.fr/disciplines/sciences-numeriques-et-technologie/) ([fiches connaissances en SNT](https://citescolaire-lannemezan.mon-ent-occitanie.fr/disciplines/sciences-numeriques-et-technologie/fiches-connaissances-51467.htm))
+* [Pascal Rousset](https://drive.google.com/drive/folders/1mh906RDyeWJfEMLIZbUghjlDq4Lqhs7u?usp=sharing)
+* [Gilles Lassus](https://drive.google.com/drive/folders/1G8zVpO3Lv2Ucg8-uNVRFiBltWMQLTtIm)
+* [Pierrick Vaire](http://pierrick.vaire.free.fr/snt/)
+* [Julien Chu, Cédric Lusseau, Fadi Tamin](https://clusseau-drive.mycozy.cloud/public?sharecode=Qu6dggO4Ej3o)
+* [IREM de la Réunion](http://irem.univ-reunion.fr/spip.php?article1022)
+* [Activités de médiation de Marie Duflot](https://members.loria.fr/MDuflot/files/med/index.html)
+* [Christophe Mieszczak](https://framagit.org/tofmzk/informatique_git/-/blob/master/snt/readme.md)
+* [Enseignants du lycée Emmanuel Mounier à Angers](https://info-mounier.fr/snt/)
+
+## Autres ressources
+
+* Le [MOOC SNT](https://www.fun-mooc.fr/courses/course-v1:inria+41018+session01/about).
+* [Des liens pour la SNT](http://www.pearltrees.com/t/snt/id23193114)
+* [Interstices](https://interstices.info/sciences-numeriques-et-technologie-au-lycee/)
+* Une [liste de diffusion](https://groupes.renater.fr/sympa/info/sciences-numeriques-technologie) d'enseignants de SNT.
+* Ressources proposées par [FFDN](https://www.ffdn.org/wiki/doku.php?id=formations:seconde).
+* Voir aussi la [bibliographie](/biblio).
+* La revue [*Au Fil des maths*](https://afdm.apmep.fr) de [l'APMEP](https://www.apmep.fr/) propose plusieurs activités de SNT :
+  * [Les petits papiers](https://afdm.apmep.fr/rubriques/fil/activite-snt-les-petits-papiers)
+  * [Le robot sauteur](https://afdm.apmep.fr/rubriques/fil/activite-snt-le-robot-sauteur/)
+  * et d'autres… ?
+
+## Divers
+
+* [Diaporama](/decouvrir-la-snt/presentation_SNT.pdf) ([source](/prof/decouvrir-la-snt/presentation_SNT.pptx)) pour présenter la SNT lors de la journée portes-ouvertes.
+---
+_discoverable: yes
+---
+_hidden: no
+---
+toc: 1

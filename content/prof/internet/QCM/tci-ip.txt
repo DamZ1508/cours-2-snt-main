@@ -1,0 +1,29 @@
+- Que signifient les initiales IP ?
+  - Internet Protocol
+  - Intelligent Post
+  - Information Packet
+  - Interface Provider
+
+- Laquelle de ces propositions peut correspondre à une adresse IP ?
+  - 176.162.143.55
+  - 555-4823
+  - France, Lyon, rue de la poulaillerie, 13
+  - 04 78 37 65 98
+
+- Comment appelle-t-on le mécanisme qui décide par quels nœuds d'interconnexions va passer un paquet sur Internet ?
+  - Le routage IP
+  - L'algorithme de Dijkstra
+  - Le protocole TCP
+  - Le réseau de réseaux
+
+- Que se passe-t-il si un « segment » d'un contenu n'a pas été correctement transmis ?
+  - Ce segment est envoyé à nouveau.
+  - Le destinataire refuse tous les paquet jusqu'à la réception du segment correct.
+  - L'ensemble des segments du contenu sont à nouveau renvoyé.
+  - Une « erreur 404 » s'affiche à l'écran de l'émetteur.
+
+- Dans quel cas le protocole UDP peut-il être utilisé à la place de TCP ?
+  - S'il est acceptable que la transmission contienne des erreurs.
+  - Si la communication doit être cryptée.
+  - Si le fichier est trop gros pour être transmis avec TCP.
+  - Si la transmission a rencontré trop d'erreurs avec TCP.

@@ -1,0 +1,127 @@
+title: Tableur
+---
+sort_key: 3
+---
+image: cinema.jpg
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+
+## Partie 1 : Apprendre à trier et à filtrer
+
+{{ alertstart(level="info", title="Remarque")}}
+Le traitement des données peut être réalisé de diverses manières : recherche, tri, filtre, calcul, etc.
+Un logiciel tableur tel que Calc de LibreOffice, peut réaliser ces différents traitements.
+{{ alertend() }}
+
+Pour démarrer, télécharger et enregistrer dans votre espace personnel [le fichier suivant](Act_Tableur.ods)
+
+### Le tri
+Il est possible de trier les données selon une ou plusieurs colonnes (un ou plusieurs descripteurs).
+0. Dans le menu `Données`, cliquer sur `Trier…`.
+{{ image("tri_01.png") }}
+0. Effectuer `un tri croissant sur le nom` pour que la table de données s'affiche ainsi :
+{{ image("tri_02.png") }}
+0. Effectuer `un tri décroissant sur le prénom` **et** `un tri croissant sur la date de naissance` pour que la table de données s'affiche ainsi :
+{{ image("tri_03.png") }}
+
+### Les filtres
+Pour montrer seulement certaines lignes (donc certains objets) du fichier, on utilise des filtres.
+0. Dans le menu `Données`, cliquer sur `AutoFiltre`.
+{{ image("filtre_01.png") }}
+0. Des listes déroulantes apparaissent pour chaque descripteur.
+{{ image("filtre_02.png") }}
+0. Pour filtrer les personnes nées en 2005, deux solutions : 
+  - on décoche `Tout` puis on coche `2005` OU
+  - on saisit `2005` dans le champ `Elément à rechercher`
+La table de données doit s'afficher ainsi : 
+{{ image("filtre_03.png") }}
+0. Pour afficher la table de données dans son état initial, il suffit de recocher `Tout`.
+0. Pour filtrer les personnes dont `le prénom contient la lettre "c"` : 
+  - on clique sur `Filtre standard` dans le menu `Données ;
+  - on choisit ensuite la condition `Contient` ;
+{{ image("filtre_04.png") }}
+  - la table de données doit s'afficher ainsi :
+{{ image("filtre_05.png") }}
+0. Pour supprimer un filtre, deux solutions : 
+  - cliquer sur le bouton `Autofiltre` ;
+{{ image("filtre_06.png") }}
+  - dans le menu `Données → Plus de filtres → Filtre standard`, cliquer sur `Effacer`.
+
+## Partie 2 : TP
+0. Préparation du compte-rendu :
+  0. Ouvrir le traitement de texte LibreOffice.
+  0. Ecrire votre nom, votre prénom, la date et le titre de la séance.
+  0. Modifiez les métadonnées de votre compte-rendu :
+    - Titre : TP - Le tableur
+    - Sujet : Compte-rendu de l'activité Tableur.
+    - Mots-clés : SNT, tableur
+    - Enregistrer le document dans votre répertoire personnel en le nommant sous la forme `NOM_Prenom_tableur.ods`
+
+0. Questions
+0. Télécharger [le fichier suivant](Les_longs_metrages_Disney.ods) et l'enregistrer dans votre espace personnel.
+0. Répondez aux questions suivantes sur votre compte-rendu. *N'hésitez pas à justifier, expliquer votre démarche et/ou ajouter des copies d'écran*
+
+✏️ Q1 : `Trier` les longs métrages selon leur titre par ordre croissant. Indiquer le titre de la ligne n°4.
+
+✏️ Q2 : `Trier` les longs métrages selon leur numéro de de "classique Disney" par ordre décroissant. Indiquer le titre de la ligne n°45. 
+
+✏️ Q3 :  `Trier` les longs métrages selon leur numéro de "classique d'animation" par ordre décroissant et leur commentaire par ordre croissant. Indiquer le titre de la ligne n°93.
+
+✏️ Q4 :  `Filtrer` les longs métrages qui ne sont pas des « classiques Disney » *(absence de nombre)* et qui sont sortis en octobre puis `trier` le résultat selon le titre par ordre décroissant. Indiquer le titre de la dernière ligne.
+
+*Supprimer les filtres !!!*
+
+✏️ Q5 : `Filtrer` les longs métrages dont le titre commence par un "V", qui sont des « classiques Disney » et dont le commentaire indique une coproduction avec Pixar *(choisir « ET » comme opérateur)*. Indiquer le nombre de titres correspondant à ce filtre.
+
+*Supprimer les filtres !!!*
+
+✏️ Q6 : On veut connaître, parmi les longs métrages sortis au 21e siècle *(après le 01/01/2000 inclus)*, quels sont les trois premiers « classiques d’animation » par ordre alphabétique.
+0. Décrire **obligatoirement** sur votre compte-rendu votre démarche pour répondre à cette question : Quels filtres appliqués ? Quels tris ?
+0. Répondre à la question.
+
+{{ alertstart(level="info", title="Crédits")}}
+Cette séance est largement inspirée de <a href="https://snt.entraide-ella.fr/chapitres/donnees-structurees/1">celle d'un collègue</a>. Merci à Stéphane Colomban.
+{{ alertend() }}
+
+## Tâche complexe
+Vous continuez de compléter votre compte-rendu.
+
+<!--
+  Le document dans lequel les élèves vont trouver les réponses se trouve ici :
+  https://www.data.gouv.fr/fr/datasets/liste-des-etablissements-cinematographiques-actifs-1/
+  -->
+
+Dans cette partie, les réponses seules aux questions ne rapporteront aucun point. La **démarche** utilisée devra être expliquée.
+
+0. Allez sur [data.gouv.fr](https://www.data.gouv.fr), et recherchez ``liste cinémas``, puis cliquez sur ``Liste des établissements cinématographiques actifs``.
+
+0. ✏️ Qu'est-ce qui vous indique que le fichier trouvé est digne de confiance ?
+
+0. Téléchargez le fichier, et ouvrez le avec `LibreOffice`.
+
+0. ✏️ Utilisez ce fichier, les filtres et les tris vus précédemment pour répondre aux questions suivantes.
+
+  Pour chaque question, préciser la démarche utilisée : Quels filtres avez-vous utilisé ? Quels tris ? Quelles analyses ou manipulations avez-vous effectuées « à la main » ? Votre démarche est clairement expliquée si en lisant votre compte-rendu, il est possible de l'appliquer sans hésitation et sans erreur.
+
+  0. Quelle est la salle de cinéma en France ayant le plus de fauteuils ?
+     Donner la ville, le nom de la salle, le nombre de fauteuils.
+  0. Combien d'écrans et de fauteuils l'unique cinéma de Vienne a-t-il ?
+  0. Combien y a-t-il en France de cinéma *« Art et Essai »* *(descripteur `AE`)* itinérants *(descripteur `genre`)* ?
+  0. Combien d'écrans ont l'ensemble des cinémas des Deux-Sèvres ?
+
+## Rendu
+
+0. Enregistrer votre travail puis convertir votre compte-rendu au `format pdf` *(menu `Fichier → Exporter vers...` et choisir `Exporter directement au format PDF`)*.
+0. Déposer votre compte-rendu au format pdf sur l'espace classe dans le dossier `Restitution de devoirs`.
+---
+stream: no
+---
+toc: 1

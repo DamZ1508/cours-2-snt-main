@@ -1,0 +1,69 @@
+title: Repères historiques et premières connaissances
+---
+description: Historique Internet + connaissances
+---
+sort_key: 1
+---
+stream: yes
+---
+toc: 1
+---
+author: 
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/embed.html' import youtube with context %}
+{% from 'macros/spoiler.html' import beginspoiler, endspoiler, spoiler with context %}
+{% from 'macros/images.html' import image with context %}
+
+{{ alertstart(level="info")}}
+A l'aide des supports d'information ci-dessous, vous devrez répondre au QCM PRONOTE proposé.
+{{ alertend() }}
+
+## 1. Quelques repères historiques
+
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="snt_histoire_internet" frameborder="0" width="1200px" height="675px" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/5ce93e682763660f3077fbc2" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+
+## 2. Internet - IP : un protocole universel ?
+
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=aX3z3JoVEdE&vignette=https://i.ytimg.com/vi/aX3z3JoVEdE/hqdefault.jpg&debut=0&fin=394&largeur=200&hauteur=113&st=fr,fr" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+## 3. A Savoir
+
+**Le protocole TCP/IP**
+
+  - Internet est défini par le protocole **IP (Internet Protocol)**, ensemble de normes qui permettent d'identifier et de nommer de façon uniforme tous les ordinateurs ou objets qui lui sont connectés.
+  - Afin de pouvoir s'identifier, tout ordinateur possède une adresse sur un réseau : son adresse IP.
+  - Une adresse IP est de la forme "74.125.133.94" *(cette adresse IP correspond au serveur de google "google.com")*. Les adresses IP sont de la forme : "a.b.c.d", avec a, b, c et d des entiers compris entre 0 et 255.
+  - IP est accompagné de protocoles de transmission pour transférer l'information par paquets, le principal étant TCP/IP (Transmission Control Protocol).
+
+**Le Routage**
+
+  - Le routage des paquets de leurs émetteurs vers leurs destinataires est effectué par des machines appelées **routeurs**, qui échangent en permanence avec leurs voisins pour établir une carte locale de ce qu'ils voient du réseau. 
+
+{{ image("routage.jpeg") }}
+
+  - Chaque paquet transite par une série de routeurs, chacun l'envoyant à un autre routeur selon sa carte locale et la destination prévue. Les routeurs s'ajustent en permanence et de proche en proche quand on les ajoute au réseau ou quand un routeur voisin disparaît. Il n'y a plus besoin de carte globale, ce qui permet le routage à grande échelle.
+
+{{ image("TCP-Paquets.jpeg") }}
+
+  - Lors du routage, un paquet peut ne pas arriver pour deux raisons : **une panne matérielle d'une ligne ou d'un routeur**, ou **sa destruction**. Chaque paquet contient l'information d'un nombre maximal de routeurs à traverser : pour ne pas encombrer le réseau, il est détruit si ce nombre est atteint. 
+  - C'est le protocole TCP qui fiabilise la communication en redemandant les paquets manquants. Il garantit que tout paquet finira par arriver, sauf panne matérielle incontournable. 
+  - TCP réordonne aussi les paquets arrivés dans le désordre et diminue la congestion du réseau en gérant au mieux les redemandes. **Mais ni Internet ni TCP ne possèdent de garantie temporelle d'arrivée des paquets**, ce qui nuit à la qualité du streaming du son ou des vidéos et de la téléconférence. En effet, dans une vidéo, on peut perdre une image isolée, mais pas le fil du temps.
+
+**Les Machines**
+
+  - Réseau mondial, Internet fonctionne à l'aide de routeurs, de lignes de transmissions à très hauts débits (fibres optiques) entre routeurs, de réseaux de téléphonie mobile, et de réseaux locaux. 
+  - Ses protocoles étant logiciels, il peut s'appuyer sur n'importe quel réseau physique qui les implémente : 4G, Ethernet, ADSL, Wi-Fi, Bluetooth, etc. 
+  - Des mécanismes complexes assurent la continuité de la connexion, par exemple pour passer sans interruption de téléphonie 4G au Wi-Fi, ou son ubiquité, par exemple pour passer de façon invisible d'antenne à antenne avec un téléphone portable quand on voyage.
+
+{{ image("reseaux.jpeg") }}
+
+**Impacts sur les pratiques humaines**
+
+  - Internet a fait progressivement disparaître beaucoup des moyens de communication précédents : télégramme, télex, le courrier postal pour une bonne partie, et bientôt le téléphone fixe grâce à VoIP (voix sur IP). Son trafic en 2021 était de 3 300 milliards de milliards d'octets (3,3 × 1021 octets).
+
+  - Internet a aussi ses problèmes : absence de garantie temporelle sur l'arrivée des paquets et possibilité d'attaques par saturation en envoyant un très grand nombre de messages à un site donné, pour y provoquer un déni de service.
+
+  - **La neutralité du Net**, présente dès l'origine du réseau, exprime l'idée que les routeurs doivent transmettre les paquets indépendamment du type de leur contenu : texte, vidéo, etc. Mais elle est constamment remise en cause par certains lobbies industriels.

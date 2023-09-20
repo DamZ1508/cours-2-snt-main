@@ -1,0 +1,42 @@
+title: Enjeux
+---
+sort_key: 3
+---
+body:
+
+Cette séance dure une heure et demie (mais facilement découpable par une première tranche de 30 minutes, et les suivantes de 10 minutes chacune, donc il est possible de la répartir sur deux séances d'une heure). Elle est présentée ici en fin de séquence, mais il est tout à fait possible de l'intercaler plus tôt, pour varier un peu.
+
+Le but est de faire réfléchir les élèves à quelques enjeux de l'informatique embarquée et des objets connectés.
+
+## Préparation
+
+[Ce fichier](../../../informatique-embarquee-et-objets-connectes/la-securite-et-les-enjeux-des-objets-connectes/exposes.pdf) [*(sources)*](exposes.odt) contient six études de documents, en une page chacune. Imprimer ce fichier pour que chaque élève ait *une seule* page de ce document.
+
+## Déroulement
+
+- *Optionnel :* En fin de séance précédente, donner à lire à la maison l'ensemble des documents aux élèves.
+
+- Lecture des documents, et préparation de micro-présentations (une demi-heure).
+
+  - Les élèves sont répartis en six groupes de quatre élèves (dans une classe de 24). 
+  - Chaque groupe se voit proposer une page du fichier, et a 25 minutes pour en prendre connaissance et préparer une courte présentation (moins de cinq minutes).
+
+- Présentations (six fois dix minutes max, soit une heure).
+
+  - Chaque groupe présente son court exposé. 
+  - Les autres élèves (et le professeur) prennent des notes *(important !)*, et peuvent poser des questions.
+
+Un des buts de cette séance étant la prise de note, le professeur peut commenter (surtout après la première présentation) les notes qu'il est intéressant de prendre ou non. Par exemple, le nom de l'auteur et le titre du document seraient probablement importants dans une présentation de français, mais ici, à moins que l'auteur ne soit connu, cela apporte peu d'information utile.
+
+## Évaluation
+
+Depuis la séance précédente, le professeur a préparé [un QCM](evaluation.pdf) sur les documents présentés. Les élèves répondent à ce QCM en ayant le droit de consulter :
+- les documents qui leur ont présentés ;
+- les notes prises lors des présentations des autres groupes, à condition qu'elles soient individuelles et manuscrites (pas de photocopie des notes d'un camarade).
+
+## Remarques
+
+D'autres articles intéressants :
+
+- [Elle installe une caméra Ring dans la chambre de son enfant pour « sa tranquillité d'esprit ». Un hacker y accède et harcèle sa fille de huit ans.](https://www.washingtonpost.com/nation/2019/12/12/she-installed-ring-camera-her-childrens-room-peace-mind-hacker-accessed-it-harassed-her-year-old-daughter/).
+- [Apple's AirTag uncovers a secret German intelligence agency](https://appleinsider.com/articles/22/01/25/apples-airtag-uncovers-a-secret-german-intelligence-agency)

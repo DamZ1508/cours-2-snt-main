@@ -1,0 +1,59 @@
+Poste de travail
+
+1 b) Ecran, clavier, souris. Imprimante ?
+1 c) Ports USB à repérer
+
+2 b) Windows 10 (possible Windows 7)
+2 c) A voir avec la commande systeminfo
+
+Réseau du lycée
+
+2 a) 3 répertoires
+2 b) clic droit + Propriétés
+
+ENT
+
+3 a) Espace de stockage = 5 Go -> Giga
+3 b) Entrer NOM Prénom et Classe
+
+Connaissances
+
+Réseaux et Internet
+
+1. LAN Genevoix 
+2. LAN = Local Network
+3. 1982
+
+Web
+
+Afficher les codes sources des pages
+
+Données structurées
+
+1. C'est un "tableau". Le délimiter = ;
+2. Difficile...
+3. "SURIN" à ajouter
+
+Photographie numérique
+
+1. Bitmap Image
+2. 660 x 441
+3. 873 234 o
+4. 660 x 441 x 3 = 873 180
+
+Informatique embarquée
+
+Aucun intrus
+
+Localisation
+
+1. Paramètres -> Sécurité et confidentialité
+2 a) Global Positioning System
+2 b) Américaine en 1973
+2 c) 3 satellites
+
+3. Meilleur en prix ? En distance ? En temps ?
+
+Réseaux sociaux
+
+LinkedIn : 2003 -> Facebook : 2004 -> Twitter : 2006 -> Instagram : 2010 -> Snapchat : 2011 -> Tik Tok : 2016

@@ -1,0 +1,36 @@
+- Rendez-vous sur Géoportail, et « jouez » un peu avec : recherchez votre logement, le lycée, le logement de vos grands-parents, etc. Qui est le propriétaire de ce site web ?
+
+Coordonnées GPS
+
+- Où se trouve l'ENSG-Géomatique (école nationale des sciences géomatiques, qui forme des ingénieurs spécialistes de la géomatique, la science des données géographiques) ? Vous donnerez la réponse en degrés décimaux arrondis au dixième près.
+  48,8N ; 2,6E
+
+- Que trouve-t-on aux coordonnées 5°14'25''N, 52°46'6''O ?
+  - La base de lancement de la fusée Ariane ?
+  - Le lac de l'IJssel
+  - L'océan indien
+  - Le Brésil, près du Rio Xingu
+
+- J'ai visité un musée en France dont une des salles contient un outil qui prouve que la Terre tourne. J'avais avec moi un smartphone dont le GPS a enregistré la trame suivante : $GPGLL,4851.58,N,221.19,E,120411,A. Quel est ce musée ?
+  - Le musée des arts et métiers
+  - Le musée du Louvre
+  - Le musée de l'imprimerie
+  - Le musée des arts décoratifs
+
+Géoportail
+
+- Regardez ce tutoriel (https://www.youtube.com/watch?v=rbl2sF7zugk&feature=youtu.be), puis mesurez la superficie de la parcelle cadastrale du lycée ? Répondre en mètres carrés, arrondis à la dizaine de milliers.
+
+
+- On souhaite organiser une sortie vers Bocapole. Quelle est la distance à vol d'oiseau entre le portail du lycée et Bocapole ? Répondre en mètres, arrondis à l'unité.
+  
+
+- Quelle est le dénivelé entre le portail du lycée et Bocapole ? Répondre en mètres.
+
+- En utilisant les fonds de carte, déterminer à quelle période a été construit le pont Delattre de Tassigny (devant le musée) ?
+  Avant 1800
+  Entre 1800 et 1866
+  Entre 1866 et 1950
+  Après 1950
+
+- Qu'y avait-il à la place de votre logement au XIXe siècle ? Des champs, des forêts, des habitations, autre chose ?

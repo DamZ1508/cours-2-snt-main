@@ -1,0 +1,20 @@
+title: Les données structurées et leur traitement
+---
+description: Séquence d'enseignement sur le thème « Les Données structurées et leur traitement ».
+---
+image: the-babbage-engine.jpg
+---
+sort_key: 7
+---
+stream: true
+---
+tags:
+
+accueil
+theme
+---
+body:
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}

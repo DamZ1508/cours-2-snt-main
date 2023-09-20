@@ -1,0 +1,46 @@
+Combien de câbles sous-marins connectent le monde ?
+
+- 428
+
+En quelle année a été posé le premier câble sous-marin ?
+
+- 1851
+
+Quelle longueur de câbles sous-marins (en kilomètres) y avait-il dans le monde en 1900 ?
+
+- 200000
+
+Comment s'appelle le premier câble sous-marin téléphonique, déployé en 1956 ?
+
+- TAT1
+- Minitel
+- Tél56
+
+Quelle est la particularité du câble TAT8 ?
+
+- C'est le premier câble à fibre optique.
+- C'est le plus long câble sous-marin au monde.
+- C'est le premier câble transatlantique.
+
+Qui contrôle ces câbles sous-marin ?
+
+- Principalement quelques acteurs privés.
+- Principalement les États-Unis et la Chine.
+- L'ONU.
+
+Quel pourcentage des données numériques est transmis par satellite ?
+
+- Moins de 0,4%.
+- Environ 1%.
+- Environ un quart.
+- Plus de la moitié.
+
+Qu'appelle-t-on un « hub » de câbles ?
+
+- Un endroit qui concentre un grand nombre de câbles vers de nombreuses destinations différentes.
+- Un bateau spécialement conçu pour réparer les câbles cassés.
+- Un pays qui n'est connecté à aucun câble sous-marin.
+
+Quelle quantité de données circulent dans le monde en 2016 (en gigaoctets) ?
+
+26600

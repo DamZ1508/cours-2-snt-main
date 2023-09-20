@@ -1,0 +1,13 @@
+title: Réalisation d'une calculatrice en ligne (30 minutes)
+---
+sort_key: 3
+---
+body:
+
+Pour aller plus loin sur le modèle client/serveur, et pour intégrer un peu de Python, les élèves réalisent une calculatrice en ligne, c'est-à-dire un site web qui demande deux nombres et une opération, et dont le serveur calcule le résultat.
+
+Après une courte introduction par le professeur (et la démonstration de l'usage de la calculatrice), les élèves travaillent individuellement, en suivant [cet énoncé](/le-web/3-calculatrice/).
+
+**Fin de séance**
+
+En fonction du temps restant disponible, le professeur dirige les élèves vers la [tâche finale](../../../le-web/8-tache-finale)

@@ -1,0 +1,25 @@
+title: Les données structurées et leur traitement
+---
+image: /les-donnees-structurees-et-leur-traitement/the-babbage-engine.jpg
+---
+description: Séquence d'enseignement sur le thème « Les Données structurées et leur Traitement » — Ressources pour le professeur.
+---
+stream: no
+---
+toc: 
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+Tous les documents du chapitre : [Données structurées](donnees.zip)
+
+## Déroulement
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}
+---
+_discoverable: yes
+---
+sort_key: 6

@@ -1,0 +1,65 @@
+title: TP : Simulation d'un réseau
+---
+sort_key: 4
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info")}}
+Merci à David Roche, pour cette activité, publiée sous licence Creative Commons Zero.
+{{ alertend() }}
+
+### I. Simulation Réseau
+
+Après la théorie, passons maintenant à la pratique. Il est un peu difficile de mettre en place un réseau pour effectuer quelques tests. À la place nous allons utiliser un simulateur de réseau. Il existe différents types de simulateurs : du plus simple au plus "professionnel". Nous allons utiliser un simulateur relativement simple à prendre en main, mais suffisamment performant : `Filius` (la page web est en allemand, mais le logiciel est disponible en français).
+
+Avant de visionner une petite vidéo qui devrait vous aider à prendre en main `Filius`, quelques petites indications …
+ 
+- Nous allons utiliser deux commandes dans la vidéo :
+
+  - `ipconfig` qui permet de connaitre la configuration réseau de la machine sur laquelle est exécutée cette commande (`ipconfig` est une véritable commande sous `Windows` de `Microsoft`, sous les systèmes de type `Unix` (`Linux` ou `macOS` par exemple), la commande équivalente est `ifconfig`) 
+  - `ping` qui permet d'envoyer des paquets de données d'une `machine A` vers une `machine B`. Si la commande est exécutée sur la `machine A`, le `ping` devra être suivi par `l'adresse IP de la machine B` *(par exemple, si l'adresse IP de B est `192.168.0.2`, on aura `ping 192.168.0.2`)* 
+
+- Autre chose à retenir, vous allez apercevoir dans cette vidéo un `netmask` *(masque de réseau en français)*, vous devez juste savoir que :
+
+    - pour une adresse IP qui se termine par `/8`, on a un `netmask` qui est `255.0.0.0` 
+    - pour une adresse IP qui se termine par `/16`, on a un `netmask` qui est `255.255.0.0` 
+    - pour une adresse IP qui se termine par `/24`, on a un `netmask` qui est `255.255.255.0` 
+
+Vous pouvez maintenant visionner la vidéo :
+
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=nzuRSOwdF5I&vignette=https://i.ytimg.com/vi/nzuRSOwdF5I/hqdefault.jpg&debut=0&fin=215&largeur=200&hauteur=113" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+#### A Faire n°1 :
+
+0. En utilisant le logiciel `Filius`, créez un réseau de 4 machines (`M1`, `M2`, `M3` et `M4`). L'adresse IP de la machine `M1` est `192.168.1.1/24`, choisissez les adresses IP des machines `M2`, `M3` et `M4`.
+
+0. Effectuez un `ping` de la machine `M2` vers la machine `M4`.
+
+Dans la vidéo ci-dessous, nous allons utiliser la commande `traceroute` : la commande `traceroute` permet de suivre le chemin qu'un paquet de données va suivre pour aller d'une machine à l'autre.
+
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=xyK6ThdQeR0&vignette=https://i.ytimg.com/vi/xyK6ThdQeR0/hqdefault.jpg&debut=0&fin=260&largeur=200&hauteur=113" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+#### A Faire n°2 :
+
+En utilisant le logiciel Filius, créez 3 réseaux de 2 machines chacun. Ces 3 réseaux seront reliés par un routeur. Après avoir effectué toutes les opérations de configuration nécessaires, effectuez un `ping` entre deux machines de deux réseaux différents.
+
+#### A Faire n°3
+
+Nous allons maintenant travailler sur un réseau plus complexe :
+
+0. À l'aide du logiciel `Filius`, ouvrez le fichier [snt_sim_res.fls](snt_sim_res.fls)
+0. Faites un `traceroute` entre l'ordinateur `M14` et l'ordinateur `M9` *(n'oubliez pas de faire un `ipconfig` sur la machine `M9` afin d'obtenir son adresse IP)*. 
+0. Notez le chemin parcouru pour aller de la machine `M14` à la machine `M9`.
+0. Supprimez le câble réseau qui relie le routeur `F` au routeur `E` *(simulation de panne)*, refaites un `traceroute` entre `M14` et `M9`. Que constatez-vous ?
+
+ATTENTION : cela peut ne pas fonctionner du premier coup, car la mise à jour des tables de routage n'est pas immédiate : vous pouvez essayer de faire un `ping` entre `M14` et `M9`, si cela ne fonctionne pas *(timeout)*, attendez quelques secondes et recommencez. Une fois que le `ping` fonctionne, vous pouvez faire le `traceroute`.
+
+### II. Simulation DNS
+
+#### A Faire n°4 :
+
+En vous aidant de la vidéo ci-dessous, modifiez l'architecture réseau proposée dans le fichier [snt_sim_dns.fls](snt_sim_dns.fls) *(fichier à ouvrir depuis le logiciel `Filius`)*, afin que la machine `M5` réponde à la commande `ping M5` *(cette commande sera exécutée depuis l'ordinateur `M2`)*.
+
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=K3GGmiLwB6U&vignette=https://i.ytimg.com/vi/K3GGmiLwB6U/hqdefault.jpg&debut=0&fin=134&largeur=200&hauteur=113" allowfullscreen frameborder="0" width="700" height="394"></iframe>

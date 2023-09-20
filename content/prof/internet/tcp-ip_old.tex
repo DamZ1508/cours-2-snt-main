@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2022 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[11pt]{article}
+
+\usepackage{2122-pablo}
+\usepackage{2122-pablo-paternault}
+
+\usepackage[
+  a6paper,
+  landscape,
+  margin=5mm,
+  headsep=5mm,
+  includehead,
+]{geometry}
+\usepackage{2122-pablo-header}
+\fancyhead[L]{\textsc{Snt --- Internet}}
+\fancyhead[R]{\textsc{3 --- Modèle TCP/IP}}
+
+\begin{document}
+
+Les données qui transitent sur Internet sont découpées en petits morceaux, transmis séparément.
+
+\paragraph{Préparation (protocole TCP) :} Les données sont découpées en \emph{paquets}, qui contiennent : les données, et le numéro du paquet.
+
+\paragraph{Transmission (protocole IP) :} Ces paquets sont envoyés au destinataire, séparément : les différents paquets peuvent emprunter des chemins différents, arriver dans le désordre, être perdus et ré-envoyés, etc.
+
+Le destinataire est identifié par son \emph{adresse IP}, de la forme :
+\begin{itemize}
+  \item pour l'IPv4 : \texttt{185.75.143.24} (quatre nombres entre 0 et 255) ;
+  \item pour l'IPv6 : \texttt{2a02:ec80:600:ed1a::1} (huit groupes de 16 bits, représentés en hexadécimal).
+  \end{itemize}
+
+\paragraph{Réception (protocole TCP) :} Les paquets sont reçus, remis dans le bon ordre (grâce aux numéros contenus dans les paquets), et assemblés pour reconstituer les données d'origine.
+
+\end{document}

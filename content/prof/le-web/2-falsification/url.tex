@@ -1,0 +1,192 @@
+\input{preambule_damien2.tex}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[{$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%}\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{minted}
+%
+%\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+%\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+%\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+%\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{html}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{css}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTÍtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\setlength{\headheight}{40pt} % Haut de page
+\renewcommand{\headrulewidth}{0.0pt}
+\setlength{\textheight}{26cm}
+\lhead{}
+%\chead{\thepage/\pageref{LastPage}}
+\rhead{}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT}
+\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{xspace}
+\newcommand{\ellipse}{[...]\xspace}
+
+% mdframed
+\usepackage{mdframed}
+\mdfdefinestyle{citationstyle}{%
+  outerlinewidth=.5em,
+  outerlinecolor=white,%
+  leftmargin=-1em,
+  rightmargin=-1em,%
+  middlelinewidth=1.2pt,
+  roundcorner=5pt,
+  linecolor=black,
+  skipbelow=10cm,
+  innerbottommargin=5pt,
+  innerleftmargin=5pt,
+  innerrightmargin=5pt,
+  innertopmargin=5pt,
+}
+%%%%%%%
+
+\begin{document}
+
+\begin{titre}{2NDE}{Seconde - SNT}
+\centering
+{\Large \textsc{\textbf{Thème : Le web --- Adresse URL}}}
+\end{titre}
+
+\begin{definition}
+URL signifie \textbf{Uniform Resource Locator} soit en français, \og localisateur uniforme de ressource \fg{}.
+
+C'est l'adresse d'une ressource donnée, unique sur le Web qui permet d'identifier une ressource comme une page web, un fichier pdf, une image...
+\end{definition}
+
+\begin{multicols}{2}
+\begin{exemple}
+Les URL sont utilisées notamment dans :
+\begin{itemize}
+	\item la barre d'adresse des navigateurs
+	\item les liens hypertextes dans les pages web
+	\item les marques-pages des navigateurs
+	\item les cartes de visites, publicités, QR-code
+\end{itemize}
+\end{exemple}
+
+\columnbreak
+
+\begin{remarque}
+La ressource représentée par l'URL et l'URL elle-même sont gérées par un \textbf{serveur web}.
+\end{remarque}
+\end{multicols}
+
+\section*{Découpage d'une URL}
+
+\begin{center}
+\includegraphics[scale=0.5]{url.eps} 
+\end{center}
+
+\begin{enumerate}
+	\item \textbf{\large \red{http://}} correspond au protocole. Cela indique au navigateur le protocole qui doit être utilisé pour récupérer le contenu. Généralement, ce protocole sera \textbf{HTTP} ou sa version sécurisée \textbf{HTTPS}.
+
+Le Web fonctionne autour de ces deux protocoles mais le navigateur peut parfois gérer d'autres protocoles comme \textbf{mailto} qui permet d'ouvrir un client de messagerie électronique ou \textbf{ftp:} qui permet de transférer des fichiers.
+
+	\item \textbf{\large \color{deepgreen}{www.unsite.fr}} correspond au nom de domaine. Il indique le serveur web auquel le navigateur s'adresse pour échanger le contenu. 
+	
+%	¿ la place du nom de domaine, on peut utiliser une adresse IP, ce qui est moins pratique et donc moins utilisÈ sur le Web.
+		\item \textbf{\large \color{violet}{:1337}} correspond au port utilisé sur le serveur web. Il indique la \og porte \fg{} technique à utiliser pour accéder aux ressources du serveur. Généralement, ce fragment est absent car le navigateur utilise les ports standards associés aux protocoles (80 pour HTTP, 443 pour HTTPS). %Si le port utilisÈ par le serveur n'est pas celui par dÈfaut, il faudra l'indiquer.
+		
+		\item \textbf{\large \color{blue!75}{/intro}} \textbf{\large \color{orange}{/page.html}} est le chemin, sur le serveur web, vers la ressource. 
+		
+		%Aux dÈbuts du Web, ce chemin correspondait souvent ? un chemin physique rÈellement existant sur le serveur. De nos jours, ce chemin n'est qu'une abstraction qui est gÈrÈe par le serveur web.
+		
+		\item \textbf{\large \color{gray}{\#chap1}} correspond à une ancre. Celle-ci désigne un endroit donné de la ressource. Une ancre représente, en quelque sorte, un marque-page à l'intérieur de la ressource. 
+		
+		%Ajouter une ancre ? une URL permet au navigateur d'afficher la ressource ? l'endroit de ce marque page. 
+%	\begin{itemize}
+%		\item Pour un document HTML, par exemple, le navigateur dÈfilera la page jusqu'au niveau de l'ancre
+%		\item Pour un document audio ou vidÈo, le navigateur ira se placer ? l'instant reprÈsentÈ par l'ancre.
+%	\end{itemize}			
+\end{enumerate}
+
+%\begin{multicols}{2}
+\begin{remarque}
+Dans les URL on ne peut pas utiliser n'importe quel caractère. La norme RFC1378 définit les 3 possibilités :
+\begin{enumerate}
+	\item des caractères alphanumériques : 0 $\rightarrow$ 9, a $\rightarrow$ z, A $\rightarrow$ Z ;
+	\item des caractères spéciaux : \$ - \_ . + ! * ( ) ;
+	\item des caractères encodés : \%C3\%A0 pour à, \%C3\%A9 pour é, \dots
+\end{enumerate}
+
+Concernant les caractères encodés, ils sont construits en récupérant leurs codes UTF-8 en hexadécimal (base 16), puis en préfixant chaque octet d'un caractère \% (voir 1\up{ère} Spécialité NSI).
+\end{remarque}
+%
+%\columnbreak
+%
+%\begin{attention}
+%Bien qu'il n'existe pas de limite précise pour la longueur des URL, il est recommandé de ne pas dépasser \np{2048} caractères pour s'assurer une bonne compatibilité avec tous les outils du web (serveur, client, robot d'indexation, \dots)
+%\end{attention}
+%\end{multicols}
+
+\end{document}

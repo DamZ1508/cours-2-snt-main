@@ -1,0 +1,175 @@
+\input{preambule_damien2.tex}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[{$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%}\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{minted}
+%
+%\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+%\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+%\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+%\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{html}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{css}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTÍtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\setlength{\headheight}{40pt} % Haut de page
+\renewcommand{\headrulewidth}{0.0pt}
+\setlength{\textheight}{26cm}
+\lhead{}
+%\chead{\thepage/\pageref{LastPage}}
+\rhead{}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT}
+\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{etude}
+
+\usepackage{xspace}
+\newcommand{\ellipse}{[...]\xspace}
+
+% mdframed
+\usepackage{mdframed}
+\mdfdefinestyle{citationstyle}{%
+  outerlinewidth=.5em,
+  outerlinecolor=white,%
+  leftmargin=-1em,
+  rightmargin=-1em,%
+  middlelinewidth=1.2pt,
+  roundcorner=5pt,
+  linecolor=black,
+  skipbelow=10cm,
+  innerbottommargin=5pt,
+  innerleftmargin=5pt,
+  innerrightmargin=5pt,
+  innertopmargin=5pt,
+}
+%%%%%%%
+
+\begin{document}
+
+\begin{titre}{2NDE}{Seconde - SNT}
+\centering
+{\Large \textsc{\textbf{Thème : Le web --- Droit d'auteur}}}
+\end{titre}
+
+\vspace*{-0.5cm}
+
+\section*{Etude de documents ---  Bilan}
+
+\begin{enumerate}
+	\item \emph{J'ai envie d'imprimer une image trouvée sur le site web de l'auteur·e pour l'afficher dans ma chambre.}
+\begin{enumerate}
+	\item \emph{En ai-je le droit ?}
+
+		Oui. D'après l'article L122-5 du Code de la propriété intellectuelle, \enquote{lorsque l'\oe uvre a été divulguée, l'auteur ne peut interdire \ellipse{} les copies ou reproductions réalisées à partir d'une source licite et strictement réservées à l'usage privé du copiste et non destinées à une utilisation collective}.
+
+		Donc puisque :
+		\begin{itemize}
+			\item l'\oe uvre a été publiée (je n'ai pas été la voler dans l'atelier secret le d'auteur) ;
+			\item la source est licite (je n'ai pas téléchargé illégalement l'\oe uvre) ;
+			\item l'utilisation se fait dans le cadre privé ;
+		\end{itemize}
+		alors j'ai le droit de l'afficher chez moi, dans mon agenda, en fond d'écran de mon téléphone, etc.
+	\item \emph{La loi autorise-t-elle l'auteur·e à autoriser ou interdire cet usage ?}
+
+		L'auteur ne peut pas l'interdire. J'ai le droit de faire un usage privé de l'\oe uvre, même si l'auteur·e n'est pas d'accord : l'article cité précédemment précise que \enquote{l'auteur ne peut interdire} les utilisations privées.
+\end{enumerate}
+\item \emph{J'ai envie d'utiliser une image trouvée sur le site web de l'auteur·e pour illustrer un article du journal du lycée.}
+\begin{enumerate}
+	\item \emph{En ai-je le droit ?}
+
+		A priori, non. L'article L122-4 du Code de la propriété intellectuelle précise que \enquote{toute représentation ou reproduction intégrale ou partielle faite sans le consentement de l'auteur \ellipse{} est illicite}. Donc si l'auteur n'a pas donné son accord, c'est interdit.
+
+		Étudions plus précisément les trois exemples.
+		\begin{description}
+			\item[Laurel] Ses mentions légales ne disent rien de plus que \enquote{\textcopyright{} 2003-2019 Laurel}. Elle n'a pas donné son accord, je n'ai pas le droit d'utiliser ses dessins.
+			\item[Manu Larcenet] Il dit sur son blog que \enquote{la seule \enquote{règle} [qu'il demande] de respecter [est] de ne pas copier les images pour aller les mettre ailleurs}. Donc je n'ai pas de droit d'utiliser ses dessins.
+			\item[David Revoy] Le document explique que ses dessins \enquote{ont été placés depuis l'origine sous la licence Creative Commons BY (Paternité)}. Dans le texte de cette licence, on trouve que \enquote{
+					le Donneur de licence [David Revoy] Vous autorise à exercer pour le monde entier, à titre gratuit \ellipse{} les Droits accordés par la licence afin de \ellipse{} reproduire et Partager l'\oe uvre sous licence, en tout ou partie}. Donc David Revoy autorise le monde entier à réutiliser ses \oe uvres : nous pouvons l'utiliser dans le journal de l'école, et ailleurs.
+		\end{description}
+	\item \emph{La loi autorise-t-elle l'auteur·e à autoriser ou interdire cet usage ?}
+
+		Oui : d'après la loi, l'autorisation de représentation et reproduction de l'\oe uvre se fait selon le consentement de l'auteur, qui peut autoriser ou interdire cet usage.
+\end{enumerate}
+\item \emph{Rémunération}
+\begin{enumerate}
+	\item \emph{Les lecteurs payent-ils pour voir les dessins publiés sur le site web ?}
+
+		Dans les trois exemples, les dessins sont lisibles librement, intégralement, gratuitement, sans inscription.
+	\item \emph{L'auteur·e gagne-t-il·le de l'argent avec la publication des dessins sur son site web ?}
+
+		Dans aucun des trois cas les auteure et auteurs ne gagnent d'argent par la publication de dessins sur son site web :
+		\begin{description}
+			\item[Manu Larcenet] gagne de l'argent en vendant des BD de manière classique, sans lien avec son site web ;
+			\item[Laurel] gagne de l'argent en vendant ses BD pourtant librement accessibles sur son site web (et pour différentes raisons, des gens les achètent quand même) ;
+			\item[David Revoy] gagne de l'argent par les dons : beaucoup de gens donnent quelques euros par mois pour soutenir cet artiste, et comme ils sont nombreux, cela fait une somme finale conséquente.
+		\end{description}
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,57 @@
+title: Les réseaux sociaux
+---
+image: /les-reseaux-sociaux/the-root.jpg
+---
+description: Séquence d'enseignement sur le thème « Les Réseaux sociaux » — Ressources pour le professeur.
+---
+toc: 1
+---
+sort_key: 3
+---
+author: 
+---
+stream: true
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="")}}
+Cette séquence a été préparée, en grande majorité, par Louis Paternault et  François Paoli. Merci !
+{{ alertend() }}
+
+Tous les documents à imprimer et à distribuer aux élèves : [Les Réseaux sociaux](reseaux.zip)
+
+## Déroulement
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}
+
+## Découpage
+
+### Séance n°1 : 
+* 40' : [Partie 1 (Présentation)](1-taxonomie/)
+* 40' : [Partie 2 (Modèle économique)](2-modele-economique/)
+* Devoirs pour préparer la partie suivante : 
+  * Regarder la vidéo sur l'histoire des réseaux sociaux : [https://ladigitale.dev/digiview/#/v/64f09759a0114](https://ladigitale.dev/digiview/#/v/64f09759a0114)
+  * Regarder à la maison l'épisode 2 du documentaire [« L'intox, c'est nous »](https://ladigitale.dev/digiview/#/v/64f09ab9bdb0c). 
+  * Évaluation par un [QCM](QCM/l-intox-c-est-nous-episode2.txt) sur Pronote pour s'assurer que le documentaire a été regardé.
+
+### Séance n°2 : 
+* 1h : [Partie 3 (Fake news)](3-fake-news/)
+  * Devoirs pour la séance suivante : Finir le paragraphe argumenté.
+* 20' : [Partie 4 (Bulles de filtres)](4-bulles-de-filtres/)
+
+### Séance n°3 : 
+* 20' : [Partie 4 (Bulles de filtres) - FIN](4-bulles-de-filtres/)
+* 50' : [Partie 5 (Graphes et Petit monde)](5-graphes/) La vidéo ([Milgram et la notion de réseau](https://www.youtube.com/watch?v=2yVPoL8xVSI)) est regardée à la fin, s'il reste du temps.
+* Devoirs pour la séance suivante :
+  * Regarder la vidéo ([Milgram et la notion de réseau](https://www.youtube.com/watch?v=2yVPoL8xVSI)) si ça n'a pas été fait.
+  * S'assurer qu'ils savent déterminer le centre, rayon, etc. d'un graphe.
+
+### Séance n°4 : 
+* 10' : Questions/Réponses sur les graphes (suite aux devoirs).
+* 1h20 : [Partie 6 (Cyberharcèlement)](6-cyberviolence/)
+
+* Plus tard : [Évaluation](5-graphes/devoirs.zip)

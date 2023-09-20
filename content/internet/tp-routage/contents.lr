@@ -1,0 +1,26 @@
+title: TP : Routage
+---
+sort_key: 2
+---
+stream: yes
+---
+toc: 1
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/embed.html' import youtube with context %}
+{% from 'macros/spoiler.html' import beginspoiler, endspoiler, spoiler with context %}
+{% from 'macros/images.html' import image with context %}
+
+{{ alertstart(level="info")}}
+Toute cette partie (ou presque) se fait avec l'invite de commande Windows.
+{{ alertend() }}
+
+0. Ouvrez l'invite de commande Windows : `Windows + R` puis tapez `cmd` 
+0. Entrez la commande : ``tracert google.fr``. 
+
+{{ image("tracert1.jpeg") }}
+
+  0. Relever le nombre d'adresses IP qui apparaît et en déduire le nombre de routeurs intermédiaires.
+  0. Ouvrir un navigateur et saisir la dernière adresse IP obtenue dans la liste : sur quel site arrivez-vous ?

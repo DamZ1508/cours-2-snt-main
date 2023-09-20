@@ -1,0 +1,14 @@
+title: Tutoriels
+---
+description: Quelques manipulations sur les ordinateurs du lycée
+---
+image: walk-this-way.jpg
+---
+body:
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}
+
+---
+tags: 

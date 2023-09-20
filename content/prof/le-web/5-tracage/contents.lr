@@ -1,0 +1,47 @@
+title: Traçage et Identification (30 minutes)
+---
+sort_key: 5
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+*Remarque : Cette activité est très largement inspirée d'une présentation faite lors de la formation de SNT du 11 avril 2019 à Grenoble, dont je n'ai malheureusement pas noté l'auteur.*
+
+> ⚠️ *Attention* ⚠️ Il faut absolument réaliser ce travail sur les ordinateurs du lycée *avant* de le faire devant les élèves. En effet, beaucoup de choses peuvent mal se passer… Il est même essentiel de créer les profils avant le début de la séance !!!
+
+>   - visiter la page about:profiles doit permettre de gérer les profils (créer un profil, lancer une nouvelle instance). 
+
+Le but de cette activité est de montrer aux élèves comment les entreprise du web (les GAFAM en particulier) peuvent connaître nos centres d'intérêt.
+
+Toute cette activité se fait en frontal : le professeur parle, parle, parle, et les élèves écoutent avec passion, en répondant aux questions du professeur.
+
+0. Au préalable, le professeur a préparé deux profils Firefox :
+
+   - un premier (appelé *profil vierge* par la suite), sur lequel a été installée uniquement l'extension [greenbeam](https://addons.mozilla.org/fr/firefox/addon/greenbeam/) ;
+   - un second (appelé *profil protégé* par la suite), sur lequel ont été installées les extensions [greenbeam](https://addons.mozilla.org/fr/firefox/addon/greenbeam/), [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), et [Privacy Badger](https://addons.mozilla.org/fr/firefox/addon/privacy-badger17/).
+
+0. Première navigation, sur le profil vierge.
+  0. Sur l'ordinateur vidéo-projeté, le professeur visite les sites suivants :
+    - il recherche "leboncoin" sur Google, puis recherche un vélo à acheter ;
+    - il recherche "L'équipe" sur Google, puis consulte un article sur une course de vélo.
+  0. Le professeur ouvre le panneau Lightbeam, puis explique aux élèves ce qu'il voit :
+    - le site web visité, et tous les autres sites web visités à son insu ;
+    - Facebook et Amazon ont été visité (à notre insu) depuis http://leboncoin.fr et/ou depuis http://lequipe.fr
+    - les liens créés entre les deux sites
+  0. Question : Quelles sont les conséquences ? Facebook sait désormais que j'aime le vélo, et va m'afficher des publicités sur le vélo.
+
+0. On recommence, sur le profil protégé.
+  0. Le professeur montre qu'il a installé un bloqueur de publicité (par exemple [ublock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/))  et un bloqueur de mouchards (par exemple [privacy badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/)).
+  0. Il recommence la navigation, et on observe sur LightBeam que cette fois-ci, beaucoup moins de sites web sont visités, et quasiment aucun n'est commun aux deux sites http://leboncoin.fr et http://lequipe.fr.
+
+0. Question : Comment les sites web peuvent-ils savoir que c'est la même personne qui a consulté les petites annonces et le journal sportif ?
+  - Beaucoup d'informations sont fournies par le navigateur : (voir par exemple https://amiunique.org/).
+  - Mon adresse IP permet de me localiser assez précisément : (voir par exemple https://www.mon-ip.co/localiser-ip).
+  - Des cookies sont stockés. Pour ce dernier point, après avoir expliqué leur fonctionnement, il est possible d'aller observer dans les préférences de Firefox (dans le profil vierge) que bien que nous n'ayons *jamais* visité http://facebook.com, un cookie a bien été déposé.
+
+0. Pour finir (et pour faire la transition avec l'activité suivante), sur le profil vierge, on fait la recherche `acheter un vélo` sur Google. Demander ensuite :
+  - Google me propose des magasins près de chez moi : Comment sait-il où j'habite ?
+  - Comment Google trie les sites web qu'il me propose ? Deux réponses : la publicité, et la popularité des sites web.
+    - Pour la publicité, comment Google sait-il si oui ou non on a cliqué sur une publicité (pour facturer cela) ? Montrer que l'adresse fournie n'est pas directement celle du marchand, mais qu'elle passe par les serveurs de Google.
+    - Pour la popularité des sites web, c'est l'objet de l'activité suivante.

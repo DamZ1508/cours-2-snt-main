@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2021 Louis Paternault --- http://ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{2122-pablo}
+\usepackage{2122-pablo-paternault}
+\usepackage{2122-pablo-math}
+
+\usepackage[
+	includehead,
+	a5paper,
+	margin=1cm,
+]{geometry}
+\usepackage{2122-pablo-header}
+\fancyhead[C]{\textsc{Ex. 9 p. 75 --- Correction}}
+
+\begin{document}
+
+\begin{exercice}[Exercice 9 page 75]~
+	\begin{enumerate}
+		\item Le graphe est composé de neuf sommets (les \enquote{cercles}) et huit arêtes (les \enquote{traits}).
+		\item Calculons l'écartement de chacun des sommets. Par exemple, les sommets les plus éloignés de 1 sont 7, 8 et 9, à une distance de 3, donc l'écartement de 1 est 3 ; le sommet le plus éloigné de 7 est 9, à une distance de 6, donc l'écartement de 9 est 6.
+\begin{center}\begin{tabular}{r*{9}{c}}
+\toprule
+	Sommet & 1&2&3&4&5&6&7&8&9 \\
+\midrule
+	Écartement & 3&4&4&5&5&5&6&6&6 \\
+\bottomrule
+\end{tabular}\end{center}
+\item Le centre du graphe est le sommet qui a le plus petit écartement : c'est donc 1.
+	\end{enumerate}
+\end{exercice}
+
+\end{document}

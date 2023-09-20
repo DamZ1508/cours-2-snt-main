@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block morehead %}
+<meta http-equiv="Refresh" content="0; url={{ this.url }}" />
+{% endblock %}
+
+{% block title %}Redirection{% endblock %}
+
+{% block body %}
+<p>
+Redirection vers <a href="{{ this.url }}">{{ this.url }}</a>…
+</p>
+{% endblock %}

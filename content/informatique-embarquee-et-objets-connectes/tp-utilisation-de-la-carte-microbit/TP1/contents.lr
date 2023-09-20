@@ -1,0 +1,100 @@
+title: TP1 — Apprendre à flasher et débugger la carte micro:bit
+---
+sort_key: 1
+---
+toc: 1
+---
+image: bug.jpg
+---
+body:
+
+Le but de ce programme est de se familiariser avec la programmation sur carte micro:bit, à savoir :
+
+* Comment « charger » un programme sur la carte ?
+* Comment *débugger* un programme (identifier et corriger les erreurs) ?
+
+## Préparer son environnement de travail.
+
+0. Si ce n'est pas déjà fait, créez un dossier `SNT` dans votre répertoire personnel.
+0. Créez un sous-dossier `microbit` dans ce dossier `SNT`. Tous les programmes de ce thème seront enregistrés dans ce dossier.
+0. Lancez le logiciel `Mu`.
+
+## Flasher un programme
+
+0. Téléchargez le fichier [TP1-1.py](TP1-1.py), et ouvrez-le avec le logiciel ``Mu``.
+
+0. Assurez-vous que la carte micro:bit est branchée à l'ordinateur.
+
+0. « Flashez » le programme sur la carte (c'est-à-dire y transférez le programme), en cliquant sur le bouton *Flasher*.
+
+  <figure class="figure mx-auto">
+  <img src="flash.png" class="img-thumbnail" alt="Bouton « Flasher »." width=100>
+  </figure>
+
+0. Votre carte doit afficher un visage qui sourit ; lorsque vous la secouez, le visage fait une grimace ;
+
+   - si c'est le cas, passez à la partie suivante ;
+   - si ce n'est pas le cas, appelez le professeur.
+
+## Vérifier un programme
+
+Il est rare qu'un programme fonctionne comme prévu du premier coup : il contient souvent des erreurs, que l'ordinateur ne sait pas corriger tout seul.
+
+0. Téléchargez le fichier [TP1-2.py](TP1-2.py), et ouvrez-le avec le logicile ``Mu``.
+
+0. Vérifiez le programme, en cliquant sur le bouton *Vérifier* :
+
+  <figure class="figure mx-auto">
+  <img src="check.png" class="img-thumbnail" alt="Bouton « Vérifier »." width=100>
+  </figure>
+
+  Le logiciel doit vous indiquer plusieurs erreurs, à partir de la ligne 5.
+
+0. Première correction :
+
+  - Corrigez l'erreur de la ligne 5 : Que manque-t-il à la fin d'une ligne ``while`` ?
+  - Ne corrigez pas les erreurs des ligne suivantes : la plupart d'entre elles vont disparaître toutes seules. Le logiciel vous indique d'autres erreurs parce qu'il n'a pas réussi à corriger l'erreur à la ligne précédente.
+
+0. Cliquez à nouveau sur le bouton *Vérifier* pour enlever les avertissements, puis cliquez encore une fois dessus pour relancer la vérification. Une autre erreur est indiquée. Corrigez-la (comparez la ligne erronée à la ligne précédente).
+
+0. Recommencez jusqu'à ce qu'il ne reste aucune erreur.
+
+0. Assurez-vous que la carte micro:bit est branchée à l'ordinateur.
+
+0. Flashez le programme sur la carte. Les pixels de la carte doivent scintiller :
+
+   - si c'est le cas, passez à la partie suivante ;
+   - si ce n'est pas le cas, appelez le professeur.
+
+
+## Identifier les erreurs à l'exécution
+
+La méthode précédente permet de repérer quelques erreurs avant de flasher le programme sur la carte, mais de nombreuses erreurs ne peuvent pas être détectées de cette manière[^arret].
+
+[^arret]: C'est mathématiquement prouvé : vous aurez un aperçu de ce genre de raisonnements si vous suivez la spécialité NSI en terminale générale.
+
+Nous souhaitons dessiner sur la carte micro:bit, pixel par pixel, la lettre **S** (comme *Science*).
+
+0. Téléchargez le fichier [TP1-3.py](TP1-3.py), et ouvrez-le avec le logiciel ``Mu``.
+
+0. Corrigez les erreurs indiquées avec le bouton *Vérifier*.
+
+0. Flashez le programme sur la carte.
+   Le programme ne fonctionne pas. La carte affiche le message : ``Line 11: ValueError: Index out of bounds.``
+
+0. La ligne contenant l'erreur est la ligne 11:
+
+   ~~~python
+   display.set_pixel(5, 3, 9)
+   ~~~
+
+   Recherchez dans [la documentation de micropython pour micro:bit](https://microbit-micropython.readthedocs.io/fr/latest/display.html)[^micro] la fonction ``display.set_pixel()``, et essayez de comprendre la description (recherchez si nécessaire les mots inconnus sur un dictionnaire anglais-français).
+   En regardant l'image en haut de la page (de la documentation), essayez de comprendre et corriger l'erreur.
+
+0. Flashez à nouveau le programme sur la micro:bit.
+
+0. Corrigez les éventuelles erreurs suivantes.
+
+0. Lorsque votre programme fonctionne (que la micro:bit affiche la lettre **S**), appelez le professeur pour vérifier votre travail, puis passez à la partie suivante.
+
+[^micro]: C'est la variante du langage de programmaton Python adaptée à la carte micro:bit.

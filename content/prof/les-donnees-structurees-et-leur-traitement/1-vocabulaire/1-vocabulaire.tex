@@ -1,0 +1,61 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020-2023 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{calc}
+\usepackage[
+includehead,
+paperwidth=21cm,
+paperheight={297mm/3},
+margin=5mm,
+headsep=3mm,
+]{geometry}
+
+\usepackage{textcomp}
+\usepackage[francais]{babel}
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{\textsc{SNT > Les Données structurées et leur Traitement}}
+\fancyhead[R]{\textsc{Activité : Un peu de vocabulaire…}}
+\fancyfoot[C]{}
+
+\begin{document}
+
+% Cette séance est au départ inspirée de la ressource publiée sur Éduscol : Les Données structurées et leur Traitement — VOCABULAIRE.
+% https://cache.media.eduscol.education.fr/file/SNT/93/8/RA19_Lycee_G_SNT_2nd_vocabulaire_donnees_1151938.pdf
+
+\begin{enumerate}
+  \item Choisissez un livre, puis décrivez-le en une ligne, afin qu'un camarade puisse l'identifier et aller le retrouver dans une bibliothèque.
+    \item On considère le livre dont la notice est projetée au tableau.
+    \begin{enumerate}
+    \item Quelles données (ou ensemble de données) permettent de l'identifier de manière unique ?
+    \item Quelles données sont plutôt destinées aux humains ? Quelles données sont plutôt destinées aux ordinateurs ?
+    \item Quels sont les types de données utilisées ?
+    \end{enumerate}
+  \item On souhaite identifier votre sac à dos parmi une collection d'objet (dans le catalogue d'un grand magasin par exemple).
+  Donnez les descripteurs que vous pouvez utiliser, ainsi que leur type, et quelques exemples de valeurs.
+  \item On souhaite \emph{vous} identifier parmi l'ensemble de la populaton française.
+  Donnez les descripteurs que vous pouvez utiliser, ainsi que leur type, et quelques exemples de valeurs.
+  \item Comment peut-on l'ensemble de la collection de la première question (les livres) dans un fichier informatique ?
+\end{enumerate}
+
+
+
+\end{document}

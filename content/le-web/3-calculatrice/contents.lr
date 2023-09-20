@@ -1,0 +1,44 @@
+title: Création d'une calculatrice en ligne
+---
+sort_key: 3
+---
+image: macro-mondays-plastic.jpg
+---
+body:
+
+L'objet de la séance est de réaliser une calculatrice en ligne, c'est-à-dire un site web qui effectue les calculs demandés.
+
+## Mise en place de l'environnement de travail
+
+0. Téléchargez le fichier [`calculatrice.py`](calculatrice.py) dans le dossier `SNT/web`.
+0. Ouvrir ce fichier avec le logiciel EduPython.
+0. Exécutez le programme, et connectez vous à l'adresse http://localhost:8000. Effectuez une addition, et observez que le résultat correct est calculé.
+0. Vous pouvez arrêter le programme avec le bouton `🛑 STOP`.
+
+Les autres opérations ne fonctionnent pas encore. Nous allons corriger cela.
+
+## Analyse et modification du code
+
+Lorsque le programme `calculatrice.py` est exécuté, il *« écoute »* l'adresse http://localhost:8000, c'est-à-dire qu'il attend que quelqu'un utilise sont navigateur web pour se connecter à cette adresse. Il analyse alors les paramètres qui lui ont été passés (les deux nombres, et l'opération), et il répond en envoyant le code HTML des lignes 49 à 72, en remplaçant les chaînes de caractères `{nombre1}`, `{nombre2}`, `{resultat}` par les deux nombres, et le résultat calculé.
+
+Le résultat est calculé dans la fonction `calcule()` (lignes 9 à 16).
+
+- Les premières lignes (reproduites ci-dessous) correspondent au traitement spécial si aucune opération n'a été sélectionnée (la première fois que l'on consulte la page).
+
+    ~~~python
+    if operation is None:
+        return None
+    ~~~
+
+- Les lignes suivantes signifient que si l'opération est une addition, alors la somme des deux nombres est calculée, et renvoyée : elle sera alors affichée dans la page web renvoyée à l'utilisateur.
+
+    ~~~python
+    if operation == "+":
+        return nombre1 + nombre2
+    ~~~
+
+À vous de jouer :
+
+0. Complétez cette fonction (à la suite de la ligne 14) pour traiter chacune des quatre opérations possibles.
+0. Appelez le professeur pour vérifier votre travail.
+0. Rendez votre fichier Python sur l'espace Classe -> Devoirs

@@ -1,0 +1,120 @@
+_discoverable: no
+---
+title: Protocole TCP-IP et Routage
+---
+sort_key: 1
+---
+image: french-post-box.jpg
+---
+toc: 1
+---
+description: Internet comme un réseau de réseaux : le protocole TCP-IP.
+---
+morehead:
+
+<link rel="stylesheet" href="/static/sublist.css">
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/embed.html' import youtube with context %}
+{% from 'macros/images.html' import image with context %}
+
+## Tous et toutes connectées
+
+{{ alertstart(level="info", title="")}}
+Un compte-rendu <em>individuel</em> de cette partie est demandé (réponses aux questions marquées d'un crayon ✏️), et sera ramassé à la prochaine séance en présentiel.
+{{ alertend() }}
+
+Un groupe de neuf amies souhaite connecter leurs ordinateurs ensemble pour jouer. Elles les connectent en utilisant un réseau filaire (en utilisant des câbles).
+
+Elles s'interrogent sur le nombre de câbles et la sécurité de leurs futur réseau, et étudient plusieurs schémas de connexion possibles. Plus précisément, leurs interrogations sont :
+
+- Comment utiliser le moins de câbles possibles ?
+- Comment faire pour que si un des ordinateur tombe en panne, ou un des câbles est coupé, les autres ordinateurs puissent toujours communiquer ensemble ?
+- Comment faire pour éviter qu'une des joueuses puisse tricher en écoutant les communications entre les autres joueuses ?
+- Comment faire pour éviter qu'une des joueuses puisse tricher en bloquant les communications entre les autres joueuses ?
+
+Nous allons essayer de trouver la meilleure configuration possible (sachant qu'il n'existe pas de configuration parfaite).
+
+### Réseau centralisé
+
+La première configuration que les joueuses essayent est centralisée : l'ordinateur de la joueuse A est au centre de la pièce, et chacun des autres ordinateurs est relié à l'ordinateur A, comme dans l'illustration suivante (à cinq ordinateurs, où quatre câbles sont utilisés). Par exemple, pour communiquer ensemble, les ordinateurs B et D vont envoyer un message passant par l'ordinateur A.
+
+{{ image(
+  "graphe-centralise-5.png",
+  ) }}
+
+0. ✏️ Faire un schéma du réseau à neuf ordinateurs (A, B, C, D, E, F, G, H, I) : l'ordinateur A est toujours au centre, et chacun des autres ordinateurs est relié directement à lui par un seul câble.
+0. ✏️ Combien de câbles sont alors nécessaires ?
+
+On remarque également deux choses :
+
+- Si un câble est coupé (par exemple celui entre A et B), l'ordinateur B est exclu et ne peut plus communiquer avec les autres.
+- Toutes les communications passent par l'ordinateur A. Donc en cas de panne de l'ordinateur A, plus aucune communication n'est possible.
+- Toutes les communications passent par l'ordinateur A. Celui-ci peut donc tricher en interdisant à des ordinateurs de communiquer entre eux, ou en espionnant les communications entre les autres ordinateurs.
+
+Nous allons essayer de corriger cela dans les autres configurations.
+
+### Réseau décentralisé
+
+Les amies essayent alors de « décentraliser » le réseau, comme dans le schéma suivant.
+
+{{ image("graphe-decentralise-9.png") }}
+
+0. ✏️ Combien de câbles sont nécessaires ?
+0. ✏️ Un ordinateur peut-il être exclu du réseau en cas de coupure d'un câble ?
+0. Triche
+   0. ✏️ Par où passe un message allant de E à C ?
+   0. ✏️ Par où passe un message allant de G à H ?
+   0. ✏️ Toutes les communications passent-elles encore par le même ordinateur ? Justifier.
+0. Panne
+   0. ✏️ Donnez un exemple d'ordinateur qui, s'il tombe en panne, empêche d'autres ordinateurs de communiquer.
+   0. ✏️ Donnez un exemple d'ordinateur qui, s'il tombe en panne, n'affecte pas les autres ordinateurs.
+
+Cette configuration est un peu meilleure que la précédente : il n'y a plus un seul ordinateur qui contrôle l'ensemble des communications (et dont la panne paralyse l'ensemble du réseau), mais certains ordinateurs ont quand même plus d'importance que les autres.
+
+### Graphe complet
+
+Les joueuses décident maintenant que chaque ordinateur est connecté directement à chacun des autres, comme dans l'exemple suivant (à cinq ordinateurs).
+
+{{ image("graphe-complet-5.png") }}
+
+Par exemple, en message allant de A à B peut soit emprunter directement le câble entre A et B, soit « faire un détour » en passant par C.
+
+0. ✏️ Faire un schéma du réseau à neuf ordinateurs (A, B, C, D, E, F, G, H, I), où chaque ordinateur est relié directement par un câble à chacun des autres.
+0. ✏️ Combien de câbles sont nécessaires pour relier ces neuf ordinateurs ?
+0. ✏️ Le câble entre A et B est coupé. Donner deux exemples de chemins qui peuvent être utilisés pour envoyer un message entre A et B.
+0. ✏️ Triche : Un ordinateur contrôle-t-il l'ensemble des communications, comme dans les exemples précédents ?
+0. ✏️ Panne : Si un ordinateur tombe en panne, cela affecte-t-il les communications entre les autres ordinateurs ?
+
+Nous avons vu que ce réseau est très robuste : aucun ordinateur n'a plus de contrôle que les autres, et il est très résistant aux pannes. L'inconvénient est qu'il faut un très grand nombre de câbles.
+
+### Réseau acentré
+
+Dans cet exemples, les joueuses commencent par constituer des petits réseaux, au sein desquels tous les ordinateurs sont connectés à la plupart des autres : le premier groupe est A, B, C, le second est D, E, F, le troisième est G, H, I. Puis ces trois réseaux sont connectés entre eux, en reliant entre eux des ordinateurs de chaque petit réseau.
+
+{{ image("graphe-acentre-9.png") }}
+
+0. ✏️ Combien de câbles sont nécessaires ?
+0. ✏️ Le câble entre A et D, et celui entre A et B, sont coupés. Donner un chemin possible pour envoyer un message de B à F.
+0. ✏️ Triche : Un ordinateur contrôle-t-il l'ensemble des communications, comme dans les exemples précédents ?
+0. ✏️ Panne : Si un ordinateur tombe en panne, cela affecte-t-il les communications entre les autres ordinateurs ?
+
+Ce réseau est à la fois relativement peu coûteux en câbles, et résistant aux pannes et aux triches : si un câble est coupé, il existe d'autres chemins, et aucun ordinateur ne contrôle totalement une connexion ; si l'on se rend compte qu'un ordinateur triche ou est en panne, il est le plus souvent possible d'emprunter un autre chemin pour communiquer.
+
+### Bilan
+
+En anglais, *net* signifie réseau. Le mot *Internet* est donc un « réseau de réseaux ». Le modèle qui a été mis en œuvre dans notre exemple dans la dernière configuration (réseau acentré : des petits réseaux sont constitués, et eux-mêmes mis en réseau) est le modèle utilisé pour connecter les ordinateurs du monde entier à Internet. Il a l'avantage d'être résistant aux pannes, sans avoir besoin de connecter tous les ordinateurs du monde directement entre eux, sans quoi des millions de câbles devraient être reliés à chaque ordinateur !
+
+Ce type de réseau n'est pas pour autant parfaitement mis en place. Par exemple, quasiment toutes les connexions entre l'Arménie et le reste du monde passent par une fibre optique ([coupée accidentellement par une vieille femme en 2011](https://www.numerama.com/magazine/18504-une-femme-de-75-ans-coupe-tout-l-internet-en-armenie.html), coupant tout le pays d'Internet). Dans d'autre pays, c'est volontairement que toutes les communications passent un nombre limité de connexions, ce qui permet au gouvernement de les contrôler.
+
+Dans notre exemple, les joueuses de jeux vidéos souhaitaient éviter qu'un ordinateur ait trop de pouvoir pour limiter la triche. Ce genre de pratiques est mise en œuvre sur Internet. Par exemple, en 2019 en Iran, [Internet a été coupé pour lutter contre des manifestations dans le pays](https://www.lemonde.fr/pixels/article/2019/11/20/internet-coupe-en-iran-le-niveau-de-sophistication-de-ce-blocage-est-une-premiere_6019883_4408996.html). En Arabie Saoudite, [l'État filtre les communcations depuis et vers le reste du monde](https://opennet.net/studies/saudi). En France, les services de renseignement peuvent [analyser des communications faites par Internet](https://www.lemonde.fr/pixels/article/2017/11/14/les-boites-noires-de-la-loi-sur-le-renseignement-sont-desormais-actives_5214596_4408996.html).
+
+## IP, un protocole universel ?
+
+Visionnez la vidéo suivante, puis répondez au QCM correspondant sur Pronote. L'ordre des questions du QCM suit la vidéo : je vous conseille donc de faire le QCM tout en regardant la vidéo, pour répondre aux questions au fur et à mesure.
+
+  {{ youtube(src="aX3z3JoVEdE")}}
+

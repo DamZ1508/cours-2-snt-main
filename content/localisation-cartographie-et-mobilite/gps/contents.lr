@@ -1,0 +1,57 @@
+_discoverable: yes
+---
+title: GPS : trilatération
+---
+sort_key: 2
+---
+image: nasa-small-satellite-duo-deploys-from-space-station-into-earth-orbit.jpg
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">
+<link rel="stylesheet" href="/static/spoiler.css">
+---
+toc: 1
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+{% from 'macros/spoiler.html' import spoiler with context %}
+
+## Fonctionnement du GPS : Théorie
+
+Regardez la vidéo suivante, puis répondez au QCM sur Pronote.
+
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=WoqpQbWdacQ&vignette=https://i.ytimg.com/vi/WoqpQbWdacQ/hqdefault.jpg&debut=0&fin=290&largeur=200&hauteur=113&st=fr,en,fr" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+
+## Fonctionnement du GPS : Une illustration en deux dimensions GEOGEBRA
+- En vacances chez sa grand-mère dans le petit village de Bougon dans les Deux-Sèvres, Léa s'en va faire une balade dans la campagne en emportant une carte au 1/25 000 de la région. Au bout d'un certain temps, elle ne sait plus vraiment où elle est.
+
+{{ image("carte_eglises.png") }}
+
+- Elle sait juste qu'elle est située dans un triangle formé par Bougon, La Mothe-Saint-Héray et Exoudun. Elle entend midi sonner aux différentes églises environnantes et elle a le réflexe de regarder à quelle heure précise elle entend sonner chacune des églises :
+
+    - elle entend sonner l'église Saint-Édouard d'Exoudun à 12 h 00 min et 3 s ;
+    - elle entend sonner l'église Saint-Héray à 12 h 00 min et 6 s ;
+    - elle entend sonner l'église Saint-Pierre de Bougon à 12 h 00 min et 7 s.
+
+- *Sachant que :*
+    - *ces trois églises sont synchronisées*
+    - *Léa a réglé sa montre sur l'heure donnée par l'église Saint-Pierre de Bougon en arrivant chez sa grand-mère*
+    - *le son se propage dans l'air à la vitesse de 340 m/s*
+
+**Question : déterminer l'emplacement approximatif de Léa sur la carte.**
+
+*Pour vous aider, vous avez [ici à disposition](https://www.geogebra.org/classic/ws4zvwzu) un fichier GéoGebra pour les constructions.*
+
+Indices :
+
+0. {{ spoiler("déterminer la distance entre Léa et chacune des 3 églises.") }}
+0. {{ spoiler("avec l'échelle de la carte sur GéoGebra, convertir les distances.") }}
+0. {{ spoiler("L'ensemble des points situés à une même distance d'un autre point est un cercle. Sur GéoGebra, utiliser l'outil Cercle (centre-rayon) pour dessiner un cercle dont on connaît le centre et le rayon.") }}
+
+## TP
+- Travail sur le document distribué par votre professeur

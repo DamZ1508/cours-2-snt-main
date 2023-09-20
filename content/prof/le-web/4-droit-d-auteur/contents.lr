@@ -1,0 +1,67 @@
+title: Un peu de droit d'auteur (1 heure)
+---
+sort_key: 4
+---
+body:
+
+Sous la forme d'une étude de document, cette activité vise à faire réfléchir les élèves aux droits d'auteurs (en particulier sur le web), en se posant les questions suivantes :
+- Ai-je le droit d'utiliser une image trouvée sur internet ?
+- Les auteurs qui publient en accès libre des œuvres sur internet se privent-ils de tout revenu ?
+
+## Documents
+
+Voici les études de documents à imprimer et distribuer aux élèves (chaque élève n'étudie qu'un seul des trois auteurs).
+
+- [Laurel](laurel.pdf)
+- [Larcenet](larcenet.pdf)
+- [Revoy](revoy.pdf)
+
+## Déroulé
+
+Cette réflexion se fait en étudiant trois auteurs de bande dessinée qui publient (ou ont publié) leurs œuvres en accès libre sur internet :
+
+- [Laurel](https://bloglaurel.com/) qui a récolté 650000€ en financement participatif pour la publication au format papier de deux bandes dessinées intégralement lisibles sur internet ;
+- [Manu Larcenet](https://web.archive.org/web/20140529104433/http://www.manularcenet.com/blog/) qui a arrêté la publication de son blog car les internautes continuaient à copier ses dessins, malgré son interdiction ;
+- [David Revoy](https://www.peppercarrot.com/fr/) qui publie ses dessins sous licence *Creative Commons by 4.0* (qui autorise la réutilisation, même commerciale), et qui arrive malgré cela à vivre de son art[^controverse].
+
+[^controverse]: Remarquez que j'utilise comme document [cet article](https://scinfolex.com/2016/08/30/pepper-et-carrot-une-bande-dessinee-open-source-publiee-chez-glenat/), qui fait l'éloge de la publication par Glénat des planches de David Revoy. Cet avis n'est pas partagé, puisque qu'en lisant les commentaires de l'article, on se rend compte que des auteurs comme [Béhé](http://www.josephbehe.net/) et [Boulet](http://www.bouletcorp.com/), s'ils reconnaissent le droit de David Revoy de diffuser ses œuvres comme il l'entend, critiquent l'éditeur Glénat pour la faible rémunération qu'il verse à l'auteur, alors que sa prise de risque est minime : si les actions de Glénat sont légales, elles n'en sont pas moins (toujours selon Béhé et Boulet) immorales.
+
+  C'est sans doute la première fois que les élèves de seconde vont réfléchir un peu au droit d'auteur, donc je laisse cette polémique de côté.
+
+Le déroulement est le suivant :
+
+0. Le professeur explique la problématique.
+
+0. Le professeur distribue les documents. Chaque élève (ou binôme d'élève) se voit distribuer l'une des trois feuilles concernant [Laurel](laurel.pdf), [Larcenet](larcenet.pdf), ou [Revoy](revoy.pdf) (il y a trop de documents pour que chaque élève étudie l'ensemble : avec ce système, chaque élève s'intéresse à un auteur, et les réflexions sont mises en commun ensuite).
+
+    Les élèves lisent les documents, et répondent aux questions (qui sont les mêmes pour les trois auteurs).
+
+0. [Bilan en grand groupe](bilan.pdf) : avec le professeur, la classe fait le bilan, et compare les licences utilisées par les auteurs, en mettant cela en lien avec le droit d'auteur.
+
+Voici (dans les grandes lignes) le bilan que j'attends.
+
+- Usage privé
+
+  L'usage privé (dans ma chambre, sur mon agenda, etc.) est toujours légal. L'auteur ne peut pas d'y opposer.
+
+- Usage public
+
+  Les auteurs sont libres de diffuser ou non leurs œuvres gratuitement, et d'autoriser ou non leur rediffusion par les lecteurs (voire leur réutilisation dans le cas de David Revoy qui utilise une licence Creative Commons).
+
+  Cela signifie que copier une œuvre trouvée sur internet n'est pas, toujours légal, ou toujours illégal. Cela dépend :
+
+  - de la volonté de l'auteur (et de l'éventuelle licence attachée à l'œuvre) ;
+  - de l'usage qui en est fait (simple rediffusion, modification, vente…).
+
+  Par défaut (si l'auteur n'a pas précisé autre chose), l'usage public est interdit.
+
+- Commercialisation
+
+  Contrairement à ce que le « bon sens » pourrait nous souffler, il est tout à fait possible de gagner de l'argent en vendant des œuvres disponibles gratuitement par ailleurs. Outre les cas de Laurel et David Revoy étudiés ici, nous pouvons citer :
+
+  - tous les classiques de la littérature (Molière, Voltaire, Hugo…) dont on achète souvent les livres alors qu'ils sont dans le domaine public ;
+  - *Radiohead*, qui en 2007 a vendu trois millions d'exemplaires (physiques et numériques) de son album *In Rainbows* publié sous licence Creative Commons (et donc téléchargeable gratuitement et légalement)[^radiohead] ;
+  - *Nine Inch Nails*, qui en 2008 a vendu 750000 exemplaires de son album *Ghosts I-IV*, qui s'est également placé à la première place des vente numériques sur Amazon, alors qu'il pouvait être téléchargé légalement et gratuitement[^nineinchnails].
+
+[^radiohead]: Voir [L'expérience Radiohead a fait un énorme carton financier](https://www.numerama.com/magazine/10864-l-experience-radiohead-a-fait-un-enorme-carton-financier.html), de Guillaume Champeau (de Numérama).
+[^nineinchnails]: Voir [Nine Inch Nails, gratuit et best-seller ](https://www.liberation.fr/ecrans/2009/01/06/nine-inch-nails-gratuit-et-best-seller_949471?page=article), d'Astrid Girardeau (de Libération).

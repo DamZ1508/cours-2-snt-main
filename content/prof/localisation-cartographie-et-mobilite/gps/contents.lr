@@ -1,0 +1,24 @@
+title: Coordonnées géographiques et Cartographie (1h30)
+---
+sort_key: 1
+---
+image: latitude-longitude.svg
+---
+body:
+
+## Introduction (à la maison)
+
+- Les élèves regardent cette vidéo : https://ladigitale.dev/digiview/#/v/64e4729c3ddca
+- Les élèves répondent à ce QCM : **à préparer**
+
+## GPS et Coordonnées géographiques : 1 heure
+
+- Par groupe ou en classe entière, les élèves suivent [ce document](gps.pdf) [*(source)*](gps.tex)).
+- Il est possible de différer les exercices 3 et 4 à la maison
+
+## Géoportail : 30 min
+
+Pour « jouer » avec [Géoportail](https://www.geoportail.gouv.fr/), les élèves répondent à des questions dont les réponses sont à chercher en utilisant l'outil.
+
+0. Au tableau, le professeur présente l'outil : Qu'est-ce que Géoportail ? Comment choisir des fonds de carte ? Comment chercher ou afficher des coordonnées GPS ? Comment mesurer des distances, des surfaces ?
+0. Les élèves répondent à [ce QCM](QCM.txt), sur Pronote, non noté.

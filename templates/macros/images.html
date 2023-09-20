@@ -1,0 +1,79 @@
+{% macro image(src, caption="", url="", prefix="") -%}
+   <div class="row-fluid">
+     <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+       {%- set image = site.get(this.path + "/" + src) %}
+       <figure class="figure mx-auto">
+         <a href="{% if image.url %}{{ image.url }}{% elif url %}{{ url }}{% else %}{{ image|url }}{% endif %}">
+           <img src="{{ image|url }}" class="img-thumbnail" alt="{{ image.alt }}" style="width:100%">
+         </a>
+         <figcaption class="figure-caption">
+           {%- if caption -%}
+           {{ caption|safe }}
+           {%- elif image.html_caption -%}
+           {{ image.html_caption|safe}}
+           {%- endif -%}
+         </figcaption>
+       </figure>
+     </div>
+   </div>
+{%- endmacro %}
+
+{% macro carousel(images, caption="") -%}
+  <div class="row-fluid">
+    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+      {% set carouselid = get_random_id() %}
+      <div id="myCarousel{{ carouselid }}" class="carousel slide bg-inverse" >
+        <!--
+        <ol class="carousel-indicators">
+          {% for image in images %}
+            <li data-target="#myCarousel{{ carouselid }}" data-slide-to="{{ loop.index0 }}" {% if loop.first %} class="active" {% endif %}></li>
+          {% endfor %}
+        </ol>
+        -->
+        <div class="carousel-inner" role="listbox">
+          {%- for image in images -%}
+            {% set image = site.get(this.record.path + "/" + image) %}
+            <div class="carousel-item {% if loop.first %} active {% endif %}">
+              <img class="d-block w-100" src="{{ image|url }}" alt="First slide">
+              <div class="carousel-caption">
+                {% if image.html_caption -%}
+                  <p>{{ image.html_caption }}</p>
+                {%- endif %}
+              </div>
+            </div>
+          {%- endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel{{ carouselid }}" role="button" data-slide="prev" style="left: -3em;">
+          <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+          <span class="text-primary" style="font-size: xx-large; font-weight: bold;">⮜</span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel{{ carouselid }}" role="button" data-slide="next" style="right: -3em;">
+          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+          <span class="sr-only">Next</span>
+          <span class="text-primary" style="font-size: xx-large; font-weight: bold;">⮞</span>
+        </a>
+        {% if caption -%}
+          <p class="caption">
+            {{ caption|safe }}
+          </p>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
+{%- endmacro %}
+
+{% macro iframe(src, caption="") -%}
+<div class="row-fluid">
+  <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+    <div class="border px-2 pt-2 mb-3 mx-auto">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{ src }}"></iframe>
+      </div>
+      <p class="caption">
+        {{ caption|safe }}
+      </p>
+    </div>
+  </div>
+</div>
+{%- endmacro %}

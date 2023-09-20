@@ -1,0 +1,90 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2023 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{textcomp}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\usepackage{calc}
+\usepackage[
+  paperwidth={21cm},
+  paperheight={29.7cm/3},
+  includehead,
+  headsep=3mm,
+  margin=8mm]{geometry}
+
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage{fancyhdr}
+\fancyhead[L]{\textsc{SNT > Informatique embarquée > TP3}}
+\fancyfoot{}
+\pagestyle{fancy}
+
+\usepackage{xcolor}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+\setlength{\parindent}{0pt}
+
+% Merci gernot
+% https://tex.stackexchange.com/a/332124
+\newcommand\fillin[1][3cm]{\makebox[#1]{\dotfill}}
+
+\begin{document}
+
+\begin{tblr}{XX}
+\textbf{Votre nom : \dotfill}
+&
+\textbf{Nom de votre partenaire : \dotfill}
+\\
+\end{tblr}
+
+\vfill
+
+\begin{tblr}{
+    colspec={Xr},
+    row{even} = {lightgray},
+    row{1, 4} = {font=\bfseries\large},
+    cell{2-3}{1} = {
+      halign=l,
+      valign=h,
+    },
+    cell{2-3}{2} = {
+      halign=r,
+      valign=h,
+    },
+  }
+  \toprule
+  Questions & …/2 \\
+  {
+    Écrire la ligne permettant de tester si le bouton $A$ est appuyé.\\[4mm]
+    \texttt{if \fillin[5cm]}\\[4mm]
+} & …/1 \\
+{
+  Compléter le test suivant pour qu'il vérifie si les deux conditions sont vraies en même temps.\\[4mm]
+  \texttt{if \emph{condition1} \fillin[2cm] \emph{condition2}:}\\[4mm]
+} & …/1 \\
+  \midrule
+  Programme : Compteur & …/2 \\
+  Le compteur diminue lorsqu'on appuie sur le bouton $B$. & …/1 \\
+  Le compteur est remis à zéro lorsqu'on appuie sur les deux boutons en même temps. & …/1 \\
+  \bottomrule
+\end{tblr}
+
+\end{document}

@@ -1,0 +1,46 @@
+title: Moteurs de recherche (45 minutes)
+---
+sort_key: 6
+---
+body:
+
+{% include 'macros/mathjax.html' %}
+
+*Inspiré de [Mesure de popularité d'une page web](http://icnisnlycee.free.fr/index.php/51-snt/le-web), de Julien Launay.*
+
+Matériel nécessaire : un dé à six faces par binôme.
+
+0. Avant le début de l'activité, le professeur a mis a disposition via PRONOTE le fichier permettant de synthétiser les résultats de l'ensemble de la classe ou a prévu de l'ouvrir sur son ordinateur pour que les élèves y accèdent au fur et à mesure de la séance : [pagerank.ods](pagerank.ods)
+
+0. Le professeur distribue [le sujet](pagerank.pdf) ([source](pagerank.tex)), et lit avec les élèves l'énoncé.
+
+0. À la main, avec le dé, par binômes, les élèves simulent une marche aléatoire sur le graphe. Le professeur les laisse chercher quelques minutes, puis il parcours la salle pour :
+  - dire à chaque binôme (dés que la place est libre) qu'il peut aller reporter ses résultats sur l'ordinateur du professeur ou sur un autre PC si les élèves ont le lien...
+  - ramasser son dé.
+
+   À la fin de l'activité, sur le fichier, le score *PageRank* de l'ensemble du graphe est disponible.
+
+   > Remarque : Le score *PageRank* devrait[^matrice] être (arrondi au centième) :
+   > $$\begin{array}{cccccc}
+   >   A & B & C & D & E & F & G & H \\\\
+   >   \hline
+   >   0,17 & 0,09 & 0,20 & 0,25 & 0,03 & 0,21 & 0,04 & 0,01 \\
+   > \end{array}$$
+
+0. Les élèves répondent d'abord seuls, puis en faisant le bilan en grand groupe avec le professeur, à la suite de l'activité (parties *Analyse* et *Search Engine Optimization*).
+
+   La réponse attendue à la dernière question est que l'on peut créer trois nouvelles pages web qui forment une clique avec le sommet F (c'est-à-dire que chaque sommet de F et des trois nouveaux sommets pointe vers les autres). Cela augmente artificiellement la popularité de ces pages, et permet de faire de F la page la plus populaire du graphe.
+
+[^matrice]:
+    Calculé ([fichier Xcas](pagerank.xws)) comme le résultat approximatif de : $\begin{pmatrix}1&0&0&0&0&0&0\end{pmatrix}\times M^{1000}$, où $M$ est la matrice de transition du graphe probabiliste correspondant (les sommets ayant été triés par ordre alphabétique) :
+
+    $$M = \begin{pmatrix}
+      0 & 0 & 0 & 1/2 & 0 & 1/2 & 0 & 0 \\\\
+      1/3 & 0 & 0 & 0 & 1/3 & 0 & 1/3 & 0 \\\\
+      1/2 & 0 & 0 & 1/2 & 0 & 0 & 0 & 0 \\\\
+      0 & 0 & 1/2 & 0 & 0 & 1/2 & 0 & 0 \\\\
+      1/3 & 0 & 0 & 0 & 0 & 0 & 1/3 & 1/3 \\\\
+      0 & 1/3 & 1/3 & 1/3 & 0 & 0 & 0 & 0 \\\\
+      1/2 & 1/2 & 0 & 0 & 0 & 0 & 0 & 0 \\\\
+      1/3 & 0 & 1/3 & 0 & 0 & 0 & 1/3 & 0 \\\\
+      \end{pmatrix}$$

@@ -1,0 +1,22 @@
+title: Tableur (1h30)
+---
+sort_key: 3
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+{% from 'macros/spoiler.html' import spoiler with context %}
+
+En autonomie, sur machine, les élèves suivent [ces instructions](../../../les-donnees-structurees-et-leur-traitement/3-tableur/).
+
+## Partie 1 : Apprendre à trier et à filtrer (25 min)
+
+## Partie 2 : TP Application (55 min)
+- En autonomie, ce TP peut être noté.
+- La correction est consultable sur [ce document](Corr_act_3.pdf) [*(source)*](Corr_act_3.odt)
+
+## Partie 3 : Tâche complexe
+- A faire à la maison ou sur une autre séance ou dans le même séance : il faudra sans doute tester !
+- La correction est incluse dans le même [document](Corr_act_3.pdf) [*(source)*](Corr_act_3.odt)
+

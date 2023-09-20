@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2022 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{2122-pablo}
+\usepackage{2122-pablo-paternault}
+\usepackage{2122-pablo-math}
+
+\usepackage[
+  a4paper,
+  margin=10mm,
+  %headsep=5mm,
+  includehead,
+]{geometry}
+\usepackage{2122-pablo-header}
+\fancyhead[L]{\textsc{Snt --- Internet}}
+\fancyhead[R]{\textsc{5 --- Réseau physique : Débit}}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\begin{document}
+
+\begin{enumerate}
+  \item
+    \begin{enumerate}
+      \item \emph{Convertir en octets : \SI{1}{ko}, \SI{1}{Mo}, \SI{1}{Go}, \SI{1}{To}.}
+
+        \begin{itemize}
+          \item \SI{1}{ko} = \enquote{1 kilooctets} = \numprint{1000} octets ;
+          \item \SI{1}{Mo} = \enquote{1 mégaoctets} = \numprint{1000} kilooctets = \numprint{1000000} (un million) octets ;
+          \item \SI{1}{Go} = \enquote{1 gigaoctets} = \numprint{1000} mégaoctets = \numprint{1000000000} (un milliard) octets ;
+          \item \SI{1}{To} = \enquote{1 téraoctets} = \numprint{1000} gigaoctets = \numprint{1000000000} (mille milliards) octets.
+        \end{itemize}
+      \item \emph{Convertir en gigaoctets : \SI{2345,6}{ko}.} On utilise un tableau de conversion d'unités (que vous avez découvert en école primaire, mais qui reste un excellent outil).
+
+        \begin{center}\begin{tabular}{*{13}{|p{6mm}}}
+            To &&& Go &&& Mo &&& ko &&& o \\
+            &&&  \red{0,} &\red{0}&\red{0}&   2&3&4&5,&6&&
+        \end{tabular}\end{center}
+        Donc $\SI{2345,6}{ko}=\SI{0,0023456}{Go}$.
+    \end{enumerate}
+  \item Commençons par remarquer que si : $\text{débit}=\frac{\text{taille}}{\text{temps}}$, alors :
+    \[\text{temps}=\frac{\text{taille}}{\text{débit}} \text{ et } \text{taille}=\text{débit}\times\text{temps}\]
+    Il faudra vérifier que les unités sont cohérentes entre elles.
+    \begin{enumerate}
+      \item \emph{Pendant une vidéo \emph{live} de deux minutes avec un débit de \SI{1,5}{Mo/s}, quelle quantité de données a été transmise ?}
+
+        On connait la durée du téléchargement (deux minutes, soit 120 secondes), ainsi que la vitesse (\SI{1,5}{Mo/s}). La quantité de données transmises est donc $120\times1,5=\SI{180}{Mo}$.
+      \item \emph{Dans les années 90, la plupart des foyers se connectaient à Internet avec des \enquote{modems \SI{56}{k}}, qui avaient un débit théorique maximum de \SI{56}{ko/s}. Combien de temps fallait-il pour télécharger une photo de \SI{2}{Mo} ?}
+
+        On connait la quantité de données (\SI{2}{Mo}, soit \SI{2000}{ko}), ainsi que le débit (\SI{56}{ko/s}). La durée de téléchargement est donc :
+        $\frac{2000}{56}\approx35,7$. Il fallait donc \numprint{35,7} secondes environ pour télécharger cette image.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

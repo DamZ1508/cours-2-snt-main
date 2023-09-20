@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2018-2020 Louis Paternault --- http://ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{textcomp}
+\RequirePackage{fontspec}
+\RequirePackage[french]{babel}
+\RequirePackage{hyperref}
+\RequirePackage{tabularx}
+\RequirePackage{booktabs}
+\RequirePackage{amssymb}
+\RequirePackage[table]{xcolor}
+\RequirePackage{etoolbox}
+
+\RequirePackage{fancyhdr}
+\fancyfoot{}
+\fancyhead[L]{\textbf{Noms :}}
+\fancyhead[R]{\textsc{\@title\strut}}
+\pagestyle{fancy}
+
+\definecolor{lightgray}{gray}{0.95}
+\RequirePackage{colortbl}
+\newcommand{\tabtitle}[1]{%
+  \rowcolor[gray]{1}\multicolumn{2}{l}{\hspace{1em}\textbf{#1}}%
+  \global\rownum=0\relax%
+  \\%
+  \midrule%
+}
+\newcommand{\balise}[1]{\texttt{<#1>}}
+\setlength{\parindent}{0pt}

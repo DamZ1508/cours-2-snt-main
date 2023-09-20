@@ -1,0 +1,23 @@
+title: La Photographie numérique
+---
+image: /la-photographie-numerique/paint.jpg
+---
+description: Séquence d'enseignement sur le thème « La Photographie numérique » — Ressources pour le professeur.
+---
+body:
+
+## Déroulement
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}
+
+## Évaluation
+
+Une petite évaluation est faite pour la première partie, pour laquelle les élèves peuvent utiliser leur compte-rendu. Voir [la description](1-pixels).
+
+## Enjeux
+
+Malheureusement, aucun enjeu de la photographie numérique ne m'est venu, et je n'ai pas pris le temps de chercher davantage. C'est donc un chapitre purement technique…
+---
+sort_key: 4

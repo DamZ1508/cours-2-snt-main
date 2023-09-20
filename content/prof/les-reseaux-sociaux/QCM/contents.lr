@@ -1,0 +1,7 @@
+_model: redirect
+---
+url: ..
+---
+title: QCM
+---
+_discoverable: false

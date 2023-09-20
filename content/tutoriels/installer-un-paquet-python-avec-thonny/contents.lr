@@ -1,0 +1,49 @@
+title: Installer une bibliothèque avec Thonny
+---
+description: Comment installer une nouvelle bibliothèque Python avec le logiciel Thonny.
+---
+image: packages.jpg
+---
+body:
+
+{% from 'macros/images.html' import image with context %}
+
+Dans tout ce tutoriel, nous installons la bibliothèque `pillow` (qui se charge en utilisant ``import PIL``). Si vous souhaitez installer une autre bibliothèque, remplacez simplement toutes les occurences de `pillow` par la bibliothèque que vous souhaitez intaller.
+
+Les captures d'écran sont faites avec un logiciel en anglais ; le vôtre est peut-être configuré en français, mais les boutons sont au même endroit.
+
+0. Vérifiez que la bibliothèque n'est pas déjà installée.
+
+   Dans le shell (la partie basse de la fenêtre), écrivez ``import pillow`` et validez.
+
+   - Si un message d'erreur s'affiche, qui se termine par ``ModuleNotFoundError: No module named 'PIL'``, suivez les instructions suivantes pour installer la bibliothèque.
+
+     {{ image("import-error.png") }}
+
+   - Si aucun message ne s'affiche (ou plus probablement, rien ne s'affiche du tout), la bibliothèque est déjà installée. Pas besoin d'aller plus loin.
+
+0. Allez dans le menu `Tools`, puis `Manage packages…`.
+
+   {{ image("tools-manage.png") }}
+
+0. Dans la fenêtre qui s'ouvre, inscrivez `Pillow`, lancez la recherche.
+
+   {{ image("find.png") }}
+
+0. Puis cliquez sur le bouton `Install` pour l'installer.
+
+   {{ image("result.png") }}
+
+0. Une nouvelle fenêtre s'ouvre. Patientez jusqu'à ce qu'elle se ferme.
+
+   {{ image("installing.png") }}
+
+0. La bibliothèque est installée (elle apparaît dans la liste de gauche, et il y a un bouton pour la désinstaller). Fermez la fenêtre `Manage packages`.
+
+   {{ image("installed.png") }}
+
+0. Dans le shell, écrivez à nouveau ``import PIL``. Si rien ne s'affiche, tout a été installé correctement. Sinon, appelez à l'aide.
+
+   {{ image("import-ok.png") }}
+---
+_discoverable: no

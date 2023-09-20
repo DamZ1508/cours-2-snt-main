@@ -1,0 +1,177 @@
+title: Qu'est ce que l'informatique embarquée ?
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/images.html' import image with context %}
+
+{{ alertstart(level="danger", title="Travail à faire")}}
+Vous devez prendre connaissance des informations ci-dessous à la maison, lisez attentivement les documents, regardez la vidéo, essayez de comprendre les schémas.
+{{ alertend() }}
+
+{{ alertstart(level="warning", title="")}}
+N'hésitez pas à prendre des notes.
+A la suite, en classe, vous devrez répondre à un QCM.
+{{ alertend() }}
+
+
+
+## 1. Définition
+
+Un **système informatique embarqué** est un système de traitement de l’information **autonome** ne possédant **pas d’entrée et sortie standard** comme le clavier et l’écran. 
+
+Les informations sont reçues de l’extérieur par le biais de **capteurs**, elles sont traités par **un processeur** et selon le programme du système des actions physiques peuvent être déclenchées avec des **actionneurs**. 
+
+Les signaux capturés sont fonction du phénomène : par exemple la rotation de l’axe d’un anémomètre qui mesure la vitesse du vent sur une station météo. 
+
+Pour être traités par le processeur, ils sont **numérisés** c’est-à-dire transformés en un nombre fini d’informations codées par des 0 et des 1 *(voir cours sur le binaire)*. 
+
+Les ordinateurs miniatures des systèmes embarqués s’appellent des **microcontrôleurs`** : ils ont une mémoire, un processeur, des entrées-sorties comme un ordinateur mais se caractérisent par une miniaturisation accrue, une plus faible consommation électrique et des performances moindres, mais suffisantes pour des applications toujours plus nombreuses avec les progrès techniques.
+
+Aujourd'hui, l'informatique embarquée est présente partout :
+- Automobile
+- Réseau ferroviaire et transports urbains
+- Domotique
+- Robotique
+- Appareils électroménager
+- Téléphone portable
+- Télévision
+etc…
+
+Voici une vidéo de Gérard BERRY (membre de l'académie des sciences et professeur au collège de France) qui présente les systèmes embarqués et les défis informatiques qu'ils génèrent : 
+
+<center><iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=H9iKiqeivg0&vignette=https://i.ytimg.com/vi/H9iKiqeivg0/hqdefault.jpg&debut=0&fin=131&largeur=200&hauteur=113" allowfullscreen frameborder="0" width="700" height="394"></iframe></center>
+
+## 2. Quelques repères historiques 
+
+### 1967 : premier système embarqué de guidage lors de la mission lunaire Apollo
+
+#### Un ordinateur “miniature” et « léger »
+
+Les ordinateurs des années 50 et 60 étaient des monstres par leurs poids et leurs dimensions. L'énorme défi était de créer un matériel capable d'être utilisable dans l'espace sans surpoids pour la capsule et le module lunaire. L'ordinateur devait pouvoir exécuter le programme principal et les sous-routines pour réaliser des doubles ou triples opérations. La mémoire fixe (la ROM donc) était vitale car elle embarquait en dur le logiciel, avec, en plus, une mémoire effaçable. La mémoire, appelée rope memory, contenait les programmes, les données, les coordonnées. La mémoire non fixe faisait le lien entre l'interface (saisie et écran) et les programmes / données en mémoire fixe. On a du mal à imaginer l'incroyable défi technique pour miniaturiser l'ordinateur (en dimensions et en poids) et y installer les programmes. Il a fallu inventer l'ordinateur moderne.
+{{ image("appolo_4.jpg") }}
+
+### 1971 : premier processeur produit par Intel
+
+Marcian Hoff a formulé l'architecture du microprocesseur (une architecture de bloc et un jeu d'instructions). Le premier microprocesseur commercialisé, le 15 novembre 1971 , est l'Intel 4004 4 bits , suivi par l'Intel 8008 à 8 bits qui servit initialement à fabriquer des contrôleurs graphiques en mode texte.
+{{ image("Intel_4004.jpg") }}
+
+### 1984 : sortie de l'Airbus A320, premier avion équipé de commandes électriques informatisées
+
+Cockpit d'un A320, complètement en commande de vol électrique, et non plus en commande mécanique par câbles.
+{{ image("Airbus_A320.jpg") }}
+
+### 1998 : mise en service du métro informatisé sans conducteur Météor (ligne 14 à Paris)
+
+La ligne 14 du métro de Paris est l'une des seize lignes du réseau métropolitain et la seule exploitée de manière complètement automatique dès sa mise en service. Elle relie la station Saint-Lazare à la station Olympiades en traversant le centre de Paris selon une diagonale nord-ouest / sud-est. Ouverte le 15 octobre 1998, elle est la ligne la plus récente du réseau et la première ligne du métro parisien à conduite intégralement automatisée. Elle est également utilisée comme vitrine du savoir-faire de la RATP, via la filiale Systra, d'Alstom pour le matériel roulant et de Siemens Transportation Systems pour les automatismes, lorsque ces entreprises répondent à des appels d'offres internationaux pour la réalisation de métros. La ligne est aussi connue sous son nom de projet : Meteor pour « MÉTro Est-Ouest Rapide ».
+{{ image("metro_ligne_44.jpg") }}
+
+### 1999 : introduction de l'expression « internet des objets » par Kevin Ashton
+
+Un objet connecté est un objet contenant un système informatique embarqué avec une fonctionnalité supplémentaire : la possibilité de se connecter à Internet. On estime qu'en 2020, 50 milliards d'objets connectés circuleront dans le monde. Les enjeux posés par ces dispositifs sont énormes, tant sur le plan économique que sur le plan social ou juridique.
+{{ image("objets_connectes_1.jpg") }}
+
+### 2007 : arrivée du Smartphone
+
+Les smartphones deviennent les IHM (Interface Homme Machine) des objets connectés. Le téléphone n'est pas en lui-même un objet connecté mais l'utilisation de certaines applications en font un (par exemple l'aide à la navigation).
+{{ image("smartPhone.jpg") }}
+
+## 3. Architecture d'un système embarqué
+
+Un système informatique embarqué reçoit des informations du monde réel par le moyen de capteurs. Il mémorise et traite ces informations avec des algorithmes. Il agit sur le monde réel par le moyen d'actionneurs.
+
+### Définition capteur
+Les capteurs sont des dispositifs destinés à obtenir des informations du monde réel et les envoyer sous forme numérique à un ordinateur. Exemple : Capteur de température, pression, vitesse, interrupteur…
+
+### Capteur optique de type barrage
+
+{{ image("barrage.gif") }}
+
+Émetteur et récepteur sont situés dans deux boîtiers séparés. C'est le système qui autorise les plus longues portées, jusqu'à 30 m pour certains modèles. Le faisceau est émis en infrarouge. A l'exception des objets transparents qui ne bloquent pas le faisceau lumineux, il peut détecter des objets de toutes natures (opaques, réfléchissants ...), ceci avec une excellente précision grâce à la forme cylindrique de la zone utile du faisceau.
+
+### Capteur optique de type reflex
+
+{{ image("reflex.gif") }}
+
+Émetteur et récepteur sont regroupés dans un même boîtier. En l'absence de cible, le faisceau émis en infrarouge par l'émetteur est renvoyé sur le récepteur par un réflecteur. Celui-ci est constitué d'une multitude de trièdres tri-rectangles à réflexion totale et dont la propriété est de renvoyer tout rayon lumineux incident dans la même direction. La détection est réalisée lorsque la cible bloque le faisceau entre l'émetteur et le réflecteur. C'est donc un système qui n'est pas adapté pour la détection d'objets réfléchissants qui pourraient renvoyer une quantité plus ou moins importante de la lumière sur le récepteur.
+
+### Capteur optique de type proximité
+
+{{ image("proxi.gif") }}
+
+Comme pour le système reflex, émetteur et récepteur sont regroupés dans un même boîtier. Le faisceau lumineux, émis en infrarouge, est renvoyé vers le récepteur par tout objet suffisamment réfléchissant qui pénètre dans la zone de détection. La portée d'un système proximité est inférieure à celle d'un système reflex.
+
+### Capteur inductif de proximité
+
+{{ image("inductif.gif") }}
+
+Les capteurs inductifs sont des capteurs produisant un champ magnétique à leur extrémité, et qui permettent de détecter n'importe quel objet conducteur situé à une distance dépendante du type de capteur. Si un matériau conducteur se trouve dans la zone d'action du capteur, celui-ci sera automatiquement détecté.
+
+### Capteur de position
+
+{{ image("contact.gif") }}
+
+Les capteurs de position sont des capteurs de contact. Ils peuvent être équipé d'un galet, d'une tige souple, d'une bille. L'information donnée par ce type de capteur est de type tout ou rien et peut être électrique ou pneumatique.
+
+### Définition actionneur
+
+Les actionneurs sont chargés d'agir sur le monde réel en fonction d'informations reçues de l'ordinateur. Dans une machine, un actionneur est un objet qui transforme l'énergie qui lui est fournie en un phénomène physique qui fournit un travail, modifie le comportement ou l'état d'un système. (wikipédia).
+
+Exemple : Lampe, Vanne, Vérin, moteur, radiateur, sirène…
+
+### Vérin pneumatique équipé de capteurs de position ILS
+
+{{ image("verin.gif") }}
+
+Un vérin pneumatique est un actionneur linéaire dans lequel l'énergie de l'air comprimé est transformée en travail mécanique.
+Un piston muni d'une tige se déplace librement à l'intérieur d'un tube. Pour faire sortir la tige, on applique une pression sur la face avant du piston, et sur la face arrière pour faire rentrer la tige. 
+Un vérin peut être équipé de deux capteurs de position de type ILS (Interrupteur à lame souple) qui vont détecter le champ magnétique délivré par le piston.
+
+### Moteur électrique de portail automatisé
+
+{{ image("moteur4.gif") }}
+
+C'est un actionneur qui permet, à partir d'un courant électrique continu, de faire tourner un mécanisme. L'actionneur moteur transforme une énergie électrique en une énergie mécanique.
+
+### Définition IHM
+
+Une **IHM (Interface Homme Machine)** est un ensemble de moyens physiques *(boutons, manettes)* ou *logiciels (interface graphique)* qui permettent à un humain d’échanger des informations avec une machine. 
+
+[*Douglas Engelbart*](https://fr.wikipedia.org/wiki/Douglas_Engelbart) est un des pionniers des IHM en informatique avec son système NLS qui introduit **la première souris**.
+
+### La programmation d'un sytème embarqué
+
+Un algorithme de contrôle fréquent sur un système informatique embarqué *(carte programmable)* consiste en une boucle infinie où s’enchaînent **capture d’événements par les capteurs**, **traitement** puis action par les **actionneurs** *(ex: moteurs)*.
+
+```
+Tant que Vrai
+    Lire les informations des capteurs
+	Lire les informations des IHM
+    Traiter ces informations
+    Décider des ordres à tranmettre aux actionneurs
+    Transmettre ces ordres aux actionneurs
+```
+
+{{ image("prog.jpg") }}
+
+**Une carte programmable** est un composant électronique avec un **microcontrôleur**, lequel permet de contrôler la carte en question grâce à un programme informatique : `le code`.
+
+La carte programmable est également équipée d’autres éléments de connectique qui lui servent à communiquer avec l’ensemble du système, à lui envoyer des informations. 
+
+Elle est donc en quelque sorte son cerveau, et à ce titre, doit pouvoir être reliée à un ordinateur.
+
+Cette connexion préalable est obligatoire pour ajouter le programme *(le code informatique)* dans la carte. Pour rappel, sans code un système ne peut effectuer aucune action.
+{{ image("arduino_1.png") }}
+---
+image: ../internet-des-objets.jpg
+---
+toc: 1
+---
+morehead:
+
+<link rel="stylesheet" href="/static/sublist.css">
+<link rel="stylesheet" href="/static/spoiler.css">
+---
+sort_key: 1
+---
+stream: yes

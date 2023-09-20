@@ -1,0 +1,85 @@
+title: Informatique embarquée et objets connectés
+---
+image: /informatique-embarquee-et-objets-connectes/internet-des-objets.jpg
+---
+description: Séquence d'enseignement sur le thème « Informatique embarquée et Objets connectés » — Ressources pour le professeur.
+---
+stream: true
+---
+toc: 1
+---
+sort_key: 6
+---
+tags:
+
+theme
+accueil
+
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+## Carte `micro:bit`
+
+Nous avons acheté au lycée un ensemble de cartes [`micro:bit`](https://microbit.org/). La partie pratique de ce chapitre consiste à manipuler cette carte.
+
+{{ alertstart(level="success", title="Disponibilité")}}
+Les cartes sont disponibles en salle de SI (demander à L. Campos). Au vu du nombre de cartes disponibles, il serait souhaitable de s'organiser entre enseignant de SNT pour ne pas travailler ce thème tous en même temps !
+{{ alertend() }}
+
+## Évaluation des TP
+
+À la fin de chaque TP (hormis le premier) les élèves doivent remplir une fiche bilan qui est notée. Cela permet aussi de les forcer à faire un petit bilan sur ce qu'ils ont appris lors de ce TP, pour être réutilisé dans les travaux suivants.
+
+[Les fiches bilan](bilan.pdf) [*(source)*](bilan.tex)
+
+Seules les notes des trois meilleurs TP sont prises en compte :
+
+- si un élève n'a fait que deux TP : on considère qu'il a eu 0 au troisième ;
+- si un élève a fait exactement trois TP : toutes les notes comptent ;
+- si un élève a fait plus de trois TP : seules les trois meilleures notes sont prises en compte.
+
+Cela permet de récompenser les élèves qui avancent vite, sans pénaliser les autres.
+
+Lorsqu'un élève termine son TP :
+- il appelle le professeur qui vient avec la fiche d'évaluation pour vérifier les points de code
+- il complète ensuite la partie questions
+- il rend sa fiche, sauvegarde son TP et peut ensuite passer au TP suivant
+
+A la fin des TP :
+- L'élève compresse son dossier en suivant [le tutoriel](../../tutoriels/creer-une-archive)
+- il peut le déposer dans l'espace de restitution de devoirs
+
+{{ alertstart(level="danger", title="A vérifier")}}
+En fonction du nombre de cartes disponibles, il peut être nécessaire de faire travailler les élèves en binôme.
+{{ alertend() }}
+
+## Détail des séances
+
+Voici la répartition pour 4 séances d'une heure et demie. La durée des TP est libre : un élève qui a terminé peut commencer le TP suivant ; un élève qui n'a pas terminé le TP précédent peut le finir avant de passer au suivant.
+
+* Séance 1
+  * Les élèves ont consulté [cette page](../../informatique-embarquee-et-objets-connectes/quest-ce-que-linformatique-embarquee) à la maison et ont pris des notes suite à leur lecture et à la consultation de la vidéo
+  * 30' : Les élèves répondent au [QCM Pronote](QCM.txt)
+  * 20' : [Présentation de la carte `micro:bit`](2-TP/)
+  * 30 : [Début des TP](2-TP) en autonomie
+  * Travail pour la prochaine séance : lire les informations et regarder la vidéo sur [les objets connectés](../../informatique-embarquee-et-objets-connectes/de-linformatique-embarquee-aux-objets-connectes)
+
+* Séance 2
+
+  * 1h30' : [Suite des TP](2-TP/)
+  * Devoirs pour la prochaine séance : 
+    * Lire le document (une page par élève) pour préparer la séance suivante.
+    * Lire la page sur [la sécurité et les enjeux des objets connectés](../../informatique-embarquee-et-objets-connectes/la-securite-et-les-enjeux-des-objets-connectes)
+    * *Optionnel :* Faire les lire à la maison les [tous documents pour la séance suivante](../../informatique-embarquee-et-objets-connectes/la-securite-et-les-enjeux-des-objets-connectes)
+
+* Séance 3 : [Enjeux](3-enjeux/)
+
+  * 30' : Présentation du travail ; lecture des documents en petits groupes.
+  * 1h : Passage des 6 groupes.
+
+* Séance 4
+
+  * 20' : [Évaluation sur les enjeux](3-enjeux/evaluation.pdf) [*(source)*](3-enjeux/evaluation.tex)
+  * 1h10' : [Fin des TP](2-TP/)

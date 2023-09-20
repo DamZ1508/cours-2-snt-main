@@ -1,0 +1,29 @@
+title: Introduction au HTML : les balises (30 minutes)
+---
+sort_key: 2
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="")}}
+Très inspiré du travail de <a href="http://irem.univ-reunion.fr/spip.php?article1022#ongl_0">l'IREM de la Réunion</a>.
+{{ alertend() }}
+
+## Strucure d'une page et balises
+
+En utilisant [ce diaporama](balises.pdf), le professeur explique la structure d'une page HTML, et le principe des balises.
+
+Pour les balises, il introduit la notion de pile : 
+0. on empile une balise ouvrante par le haut de la pile
+0. lorsqu'on croise la balise fermante correspondante, on dépile la balise : si ce n'est pas la bonne dans la pile, il y a erreur !
+
+Le professeur distribue également [le memo](/le-web/8-tache-finale/memo-html.pdf), à coller dans le cours.
+
+## Manipulation par les élèves
+
+Les élèves, par binôme, se voient distribuer des [morceaux de code HTML](html.pdf).
+
+Ils doivent, pour chacun, utiliser la pile pour vérifier si les extraits de code sont valides ou non.
+
+Lorsqu'ils ont terminé, ils appelent le professeur, qui vérifie leur travail, et les envoie sur ordinateur pour le début du [TP Calculatrice en ligne](../3-calculatrice).

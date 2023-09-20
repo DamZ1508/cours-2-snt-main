@@ -1,0 +1,48 @@
+/* Citations */
+
+blockquote {
+  border: 1px solid #eee;
+  border-left: .25rem solid #F39C12;
+  border-radius: .25rem;
+  margin: 1.25rem;
+  padding: 1.25rem;
+}
+
+blockquote > p:last-child {
+  margin-bottom: 0pt;
+}
+
+/* Logo */
+#logo {
+	animation-name: rotation;
+	animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;;
+	animation-iteration-count: infinite;
+	/* animation-delay: 5s; */
+	animation-play-state: paused;
+}
+#logo:hover {
+	animation-play-state: running;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg) scale(1.5, 1.5);
+	}
+}
+
+/* Notes de bas de page */
+div.footnotes>hr:first-child::before {
+  content: "Notes";
+  color: black;
+  font-size: 2em;
+  display: block;
+}
+
+div.footnotes>hr:first-child {
+  padding-bottom: 2em;
+}

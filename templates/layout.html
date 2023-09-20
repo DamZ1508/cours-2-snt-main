@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ "/static/bootstrap.min.css"|asseturl }}">
+
+    <!-- CSS Perso (aussi peu que possible) -->
+    <link rel="stylesheet" href="{{ "/static/style.css"|asseturl }}">
+
+    <!-- pygment css -->
+    <link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
+
+    <!-- Favicon. Généré avec https://realfavicongenerator.net-->
+    <link rel="apple-touch-icon" href="{{ "/static/apple-touch-icon.png"|asseturl }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/static/apple-touch-icon.png"|asseturl }}">
+    <link rel="apple-touch-icon" sizes="160x160" href="{{ "/static/apple-touch-icon-160.png"|asseturl }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/static/favicon-32x32.png"|asseturl }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/static/favicon-16x16.png"|asseturl }}">
+    <link rel="icon" href="{{ "/static/favicon.png"|asseturl }}">
+    <link rel="manifest" href="{{ "/static/site.webmanifest"|asseturl }}">
+    <link rel="mask-icon" href="{{ "/static/safari-pinned-tab.svg"|asseturl }}" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ "/static/favicon.png"|asseturl }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{ "/static/browserconfig.xml"|asseturl }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>{% block title %}Bienvenue{% endblock %} — SNT</title>
+    <!-- Open graph protocol -->
+    {% block opengraph %}
+      <meta name="description" content="Site consacré à l'enseignement de la SNT." />
+      <meta name="author" content="{{ config.PROJECT.author }}" />
+
+      <meta property="og:title" content="{{ config.PROJECT.name }}" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="{{ this|url(external=true) }}" />
+      <meta property="og:image" content="{{ "/static/logo.svg"|url(external=true) }}" />
+      <meta property="og:description" content="Site consacré à l'enseignement de la SNT." />
+      <meta property="og:locale" content="{{ config.PROJECT.locale }}" />
+      <meta property="og:site_name" content="{{ config.PROJECT.name }}" />
+
+      <meta name="twitter:card" content="summary_large_image">
+    {% endblock %}
+
+    <!-- Plus de CSS -->
+    {% block morehead %}{% endblock %}
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand {% if this._path == '/' %}active{% endif %}" href="{{ '/'|url }}">
+        <img id="logo" alt="Logo" src="{{ "/static/logo.svg"|asseturl }}" height=24>
+        &nbsp;
+        SNT
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="theme" aria-expanded="false">Thèmes<span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="theme">
+                {% for item in site.query().filter(F.tags.contains("theme")) if not "seance" in item.tags %}
+                <a class="dropdown-item" href="{{ item.url_path|url }}">{{ item.title }}</a>
+                {% endfor %}
+              </div>
+            </li>
+<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="tutoriels" aria-expanded="false">Tutoriels<span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="tutoriels">
+                {% for item in site.get('/tutoriels').children %}
+                <a class="dropdown-item" href="{{ item.url_path|url }}">{{ item.title }}</a>
+                {% endfor %}
+              </div>
+            </li>
+
+          {% for href, title in [
+            ['/exposes', 'Exposés'],
+		    ['/prof', 'Pour les profs'],
+            ['/apropos', 'À propos'],
+          ] %}
+          <li class="nav-item {% if this.is_child_of(href) %}active{% endif %}">
+            <a class="nav-link" href="{{ href|url }}">
+              {{ title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+
+    <ol class="breadcrumb mb-0">
+        {% if site.get('/') == this %}
+            <li class="breadcrumb-item active">Accueil</li>
+        {% else %}
+            <li class="breadcrumb-item"><a href="{{ site.get('/').url_path|url }}">Accueil</a></li>
+        {% endif %}
+        {% set parents = this.path.split("/")[1:-1] %}
+        {% for page in parents %}
+          {% if "@" in page %}
+            <li class="breadcrumb-item">{{ page }}</li>
+          {% else %}
+            <li class="breadcrumb-item"><a href="{{ site.get("/" + "/".join(parents[:loop.index])).url_path|url }}">{{ page }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if site.get('/') != this %}
+            <li class="breadcrumb-item active">{{ this.path.split("/")[-1] }}</li>
+        {% endif %}
+    </ol>
+
+    <div class="container-fluid px-0 mx-0 ">
+    {% block body %}{% endblock %}
+
+    {% if this.parent.stream %}
+        <div class="row mx-0">
+            <div class="mx-auto">
+                <ul class="pagination">
+                    {% if this.has_prev() %}
+                    <li class="page-item">
+                        <a
+                          class="page-link"
+                          href="{{ this.get_siblings().prev_page.url_path|url }}"
+                          title="{{ this.get_siblings().prev_page.title|safe }}"
+                          >Précédent</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Précédent</a>
+                    </li>
+                    {% endif %}
+
+                    {% for page in this.parent.children %}
+                    <li class="page-item {% if page == this %} active {% endif %}">
+                        {% if page == this %}
+                        <a
+                          class="page-link"
+                          href="#"
+                          title="{{ page.title|safe }}"
+                          >{{ loop.index }}</a>
+                        {% else %}
+                        <a
+                          class="page-link"
+                          href="{{ page.url_path|url }}"
+                          title="{{ page.title|safe }}"
+                          >{{ loop.index }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+
+                    {% if this.has_next() %}
+                    <li class="page-item">
+                        <a
+                          class="page-link"
+                          href="{{ this.get_siblings().next_page.url_path|url }}"
+                          title="{{ this.get_siblings().next_page.title|safe }}"
+                          >Suivant</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Suivant</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+    </div>
+
+    <div class="form-group">
+      &nbsp;
+    </div>
+
+    <footer class="text-center footer mb-3" id="footer">
+      <a href="/apropos">&copy; 2023 - </a>
+      {% if this.author %}
+        {{ this.author }}
+      {% else %}
+        Collectif SNT - Genevoix
+      {% endif %}
+
+      —
+
+      Publié sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">Creative Commons by-sa 4.0</a>.
+
+      <br/>
+
+      Construit avec <a href="http://getlektor.com">Lektor</a> ;
+      thème <a href="http://bootswatch.com/litera/">Litera</a>,
+      basé sur <a href="http://getbootstrap.com/">Bootstrap</a>.
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(["setDoNotTrack", true]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://stats-web.gresille.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '23']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript><p><img src="https://stats-web.gresille.org/matomo.php?idsite=23&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Matomo Code -->
+
+  </body>
+</html>

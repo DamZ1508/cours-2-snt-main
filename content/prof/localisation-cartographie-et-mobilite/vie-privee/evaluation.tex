@@ -1,0 +1,71 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2023 Louis Paternault --- http://ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[10pt]{article}
+
+\usepackage[
+	a6paper,
+	margin=5mm,
+	landscape,
+]{geometry}
+
+\usepackage{2223-pablo}
+\usepackage{2223-pablo-paternault}
+\usepackage{2223-pablo-math}
+
+\newlist{reponses}{itemize}{2}
+\setlist[reponses]{label=$\square$}
+
+\begin{document}
+\textbf{Nom : ............} \hfill \textsc{SNT --- Devoir}
+\smallskip
+\hrule
+\medskip
+
+\begin{enumerate}
+	\item\textbf{Une application de fitness dévoile par mégarde la localisation de bases militaires secrètes} Pourquoi la collecte de données était-elle légale ?
+		\begin{reponses}
+		\item Les lois sur la protection des données ne s'appliquent pas là où sont installées les bases militaires.
+		\item Les militaires ont donné leur accord en validant les conditions d'utilisation.
+		\item Strava est une entreprise étrangère, qui n'est pas soumise aux mêmes lois sur la protection des données.
+		\end{reponses}
+	\item\textbf{Une application de fitness dévoile par mégarde la localisation de bases militaires secrètes} Parmi ces propositions, laquelle \emph{n'est pas} évoquée dans l'article pour éviter que le problème ne se reproduise ?
+		\begin{reponses}
+		\item Les militaires devraient désactiver l'application.
+		\item Strava devrait cacher certaines localisation.
+		\item Toute publication de données devrait être d'abord validée par le gouvernement.
+		\end{reponses}
+	\item\textbf{On s'est aperçu que Google maps mentait} Pourquoi certains pays ne sont-ils pas d'accord sur la position des frontières ?
+		\begin{reponses}
+		\item Certains accords internationaux n'ont pas été appliqués dans l'un des deux pays.
+		\item Les deux pays revendiquent la même zone géographique.
+		\item Les géographes de l'un des deux pays ont fait des erreurs de mesure.
+		\end{reponses}
+	\item\textbf{On s'est aperçu que Google maps mentait} Pourquoi Google n'affiche-t-il pas les mêmes frontières selon le pays ?
+		\begin{reponses}
+		\item Pour ne vexer aucun des deux pays, et ne pas subir de sanctions commerciales.
+		\item Pour respecter les recommandations de l'ONU.
+		\item Parce que les cartes des deux pays n'ont pas été mises à jour au même moment.
+		\end{reponses}
+	\item\textbf{Les AirTag d'Apple sont-ils utilisés pour suivre des gens ?}  Quelle utilisation des AirTag est décrite dans le document ?
+		\begin{reponses}
+		\item Des gens aident d'autres personnes à retrouver des objets perdus.
+		\item Des gens s'en servent pour localiser d'autres personnes à leur insu.
+		\item La police s'en sert pour retrouver des personnes disparues.
+		\end{reponses}
+	\item\textbf{Les AirTag d'Apple sont-ils utilisés pour suivre des gens ?}  Quelle est la réponse de d'Apple au problème soulevé dans le document ?
+		\begin{reponses}
+		\item L'entreprise travaille avec la police pour résoudre le problème.
+\item L'entreprise ignore ce problème.
+\item L'entreprise désactive les AirTag utilisés.
+		\end{reponses}
+\end{enumerate}
+
+\end{document}

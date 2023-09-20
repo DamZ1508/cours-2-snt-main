@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2019 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[tikz]{standalone}
+
+\definecolor{bleu}{RGB}{5, 20, 64}
+\definecolor{blanc}{RGB}{255, 255, 255}
+\definecolor{rouge}{RGB}{236, 25, 32}
+
+\begin{document}
+
+\begin{tikzpicture}[very thick]
+  \fill[bleu] (0, 0) rectangle ++(1, 2);
+  \fill[blanc] (1, 0) rectangle ++(1, 2);
+  \fill[rouge] (2, 0) rectangle ++(1, 2);
+  \foreach \x in {0, ..., 2} {
+    \draw (\x, 0) -- ++(0, 2);
+    \draw ({\x+.5}, 2) node[above]{$\x$};
+  }
+  \foreach \y in {0, ..., 1} {
+    \draw (0, \y) -- ++(3, 0);
+    \draw (0, {1.5-\y}) node[left]{$\y$};
+  }
+  \draw (0, 0) rectangle (3, 2);
+\end{tikzpicture}
+
+\end{document}

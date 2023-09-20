@@ -1,0 +1,90 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2023 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{textcomp}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{french}
+\usepackage{calc}
+\usepackage[
+  paperwidth={21cm},
+  paperheight={29.7cm/3},
+  includehead,
+  headsep=3mm,
+  margin=7mm]{geometry}
+
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage{fancyhdr}
+\fancyhead[L]{\textsc{SNT > Informatique embarquée > TP4}}
+\fancyfoot{}
+\pagestyle{fancy}
+
+\usepackage{xcolor}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+\setlength{\parindent}{0pt}
+
+% Merci gernot
+% https://tex.stackexchange.com/a/332124
+\newcommand\fillin[1][3cm]{\makebox[#1]{\dotfill}}
+
+\begin{document}
+
+\begin{tblr}{XX}
+\textbf{Votre nom : \dotfill}
+&
+\textbf{Nom de votre partenaire : \dotfill}
+\\
+\end{tblr}
+
+\vfill
+
+\begin{tblr}{
+    colspec={Xr},
+    row{even} = {lightgray},
+    row{1, 4} = {font=\bfseries\large},
+    cell{2-3}{1} = {
+      halign=l,
+      valign=h,
+    },
+    cell{2-3}{2} = {
+      halign=r,
+      valign=h,
+    },
+  }
+  \toprule
+  Questions & …/2 \\
+  {
+    Écrire la commande permettant de choisir au hasard et d'afficher un élément de la liste \texttt{LISTE}. \\[4mm]
+    \texttt{\fillin[5cm]}\\[4mm]
+} & …/1 \\
+{
+  Écrire la condition permettant de tester si la carte est secouée.\\[4mm]
+  \texttt{if \fillin[4cm]:}\\[4mm]
+} & …/1 \\
+  \midrule
+  Programme : Choixpeau & …/2 \\
+  Une des quatre maisons défile au hasard quand la carte est secouée. & …/1 \\
+  Cela fonctionne plusieurs fois à la suite, en affichant un point d'interrogation en attendant. & …/1 \\
+  \bottomrule
+\end{tblr}
+
+\end{document}

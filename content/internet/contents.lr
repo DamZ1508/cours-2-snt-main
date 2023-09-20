@@ -1,0 +1,40 @@
+title: Internet
+---
+sort_key: 2
+---
+image: fishing-nets-youghal.jpg
+---
+description: Séquence d'enseignement sur le thème « Internet ».
+---
+stream: yes
+---
+tags:
+
+theme
+accueil
+
+---
+body:
+
+
+
+***
+
+{% for item in this.children -%}
+0. [{{ item.title }}]({{ item.path }}/)
+{% endfor %}
+
+
+***
+#### En fin de chapitre : Exposés par groupe 
+
+#### Les sujets possibles :
+
+0. Bilan carbone d'Internet : l'utilisation d'e-mails, de moteurs de recherche, ... est-elle anodine pour l'environnement ?
+0. Très Haut Débit : de quoi parle-t-on ? les avantages ? les inconvénients ? qui investit ?
+0. Internet : vers le média universel. Un seul média est-ce plus simple ? plus sûr ? moins coûteux ? plus écologique ?
+0. Neutralité du Web : les principes ? la situation dans le monde ? les avantages ? les risques ?
+
+Pour information, au grand oral du bac, vous serez évalués avec cette grille : [lycée général](https://www.education.gouv.fr/bo/20/Special2/MENE2002780N.htm?cid_bo=149115), [lycée technologique](https://www.education.gouv.fr/bo/20/Special2/MENE2002781N.htm?cid_bo=149116). 
+
+En classe, vous serez évalués avec des critères un peu plus concrets : [grille d'évaluation](../exposes/evaluation.pdf).

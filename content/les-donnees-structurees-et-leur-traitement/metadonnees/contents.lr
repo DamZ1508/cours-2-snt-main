@@ -1,0 +1,88 @@
+title: Métadonnées
+---
+sort_key: 2
+---
+image: coccinelle.jpg
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+## Exemple n°1 : Consulter les métadonnées d’un tableur
+
+0. `Enregistrer` le fichier suivant dans votre espace personnel : [`Exemple n°1 - Tableur`](Ex1_Tableur.ods)
+0. A l’aide de l’explorateur Windows, ouvrir le dossier contenant le fichier et faire un clic droit puis choisir `Propriétés`. 
+0. Aller dans l’onglet `Détails` et lire la valeur des métadonnées *(titre, objet, mots clés et commentaires)*
+0. Ouvrir le fichier avec `LibreOffice`. 
+0. Aller dans le menu `Fichier → Propriétés`. Dans l’onglet `Général`, vous trouverez la date de création du fichier, la date de la dernière modification ainsi que le temps passé sur le fichier. 
+0. Dans l’onglet `Description`, vous retrouvez les informations précédemment consultées.
+
+## Exemple n°2 : Consulter les métadonnées d’une photographie numérique
+
+0. `Enregistrer` le fichier suivant dans votre espace personnel : [`Exemple n°2 - Photographie`](Ex2_Photographie.jpg)
+0. `Lire` la valeur des métadonnées en utilisant l’explorateur Windows.
+0. Il existe des sites qui permettent de lire et de modifier/supprimer les métadonnées des photographies. Par exemple :
+    0. allez sur le site [`verexif.com`](https://www.verexif.com/fr/], 
+    0. `chargez le fichier` précédemment enregistré, 
+    0. cliquez sur `Afficher Exif` et lisez la valeur des métadonnées. 
+    0. Chercher le nom de la commune où a été prise la photographie.
+
+## TP en autonomie
+
+{{ alertstart(level="danger", title="Compte-rendu")}}
+Un compte-rendu numérique, à rendre sur l'ENT, est attendu à la fin de la séance. Il devra impérativement être rendu au format PDF (aucun autre format de document ne sera accepté).
+{{ alertend() }}
+
+### Préparation du compte-rendu :
+
+0. Ouvrez le traitement de texte `LibreOffice`
+0. Écrivez votre nom, votre prénom, la date, le titre de la séance.
+0. Modifiez les métadonnées de votre compte-rendu (`Fichier → Propriétés → Description`) :
+
+  - Titre : *TP : Métadonnées*
+  - Sujet : *Compte-rendu de l'activité "Métadonnées".*
+  - Mots-clés : *SNT, métadonnées*
+0. Enregistrez le document dans votre répertoire personnel en le nommant sous la forme `NOM_prenom_metadonnees.odt`
+
+### Lecture de métadonnées
+
+Pour chacune des questions suivantes :
+
+- `télécharger` le ou les fichiers de la question ;
+- `lire` les métadonnées ;
+- `répondre à la question posée en lisant les métadonnées.
+
+0. Donner le titre, l'interprète, l'album, l'année de publication du morceau de musique suivant : [`musique.mp3`](musique.mp3).
+
+0. Quel logiciel a été utilisé pour rédiger le document suivant : [`droits-des-enfants.pdf`](droits-des-enfants.pdf) ?
+
+0. Un professeur de mathématiques a ramassé les devoirs de Peter et Judy : [`devoir-peter.ods`](devoir-peter.ods) et [`devoir-judy.ods`](devoir-judy.ods).
+   Les devoirs sont identiques : l'un des deux a triché et s'est contenté de faire un copier-coller du travail de son camarade. Lequel ? Justifier votre réponse.
+
+0. Télécharger le fichier [`coccinelle.jpg`](coccinelle.jpg).
+
+   0. Quel est l'auteur de la photo ?
+   0. Le flash était-il allumé ?
+   0. À quelle date a été prise la photo ?
+   0. Quelle est la marque de l'appareil photo utilisé ?
+
+0. *(facultatif)* Ouvrir la page d'accueil du [ministère de l'éducation nationale](https://www.education.gouv.fr/) dans un nouvel onglet et afficher les sources (`Menu → Outils supplémentaires → Outils de développement web`),  regarder les métadonnées listées dans la partie `<head>`.
+
+   0. Quelle est la description de la page (à afficher par les moteurs de recherche, par exemple) ?
+   0. Lorsque cette page est *twittée*, quelle image devrait utiliser Twitter pour l'illustrer ?
+
+### Rendu
+
+0. Vérifiez que les métadonnées modifiées à la première question sont toujours correctes.
+0. Enregistrer votre travail puis convertir votre compte-rendu au format pdf : `Fichier → Exporter vers…` et choisir `Exporter directement au format PDF`.
+0. Déposer votre compte-rendu au format pdf sur le réseau du lycée, dans l'espace partagé de la classe, dans le dossier `Restitution de devoirs`.
+
+---
+TODO An prochain: Faire de l'autocorrectif à coup de javascript ?
+---
+toc: 1

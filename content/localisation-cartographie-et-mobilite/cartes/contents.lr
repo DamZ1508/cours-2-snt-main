@@ -1,0 +1,60 @@
+_discoverable: yes
+---
+title: Coordonnées géographiques et Cartographie
+---
+image: globe.jpg
+---
+toc: 1
+---
+sort_key: 1
+---
+morehead:
+
+<link rel="stylesheet" href="/static/spoiler.css">
+<link rel="stylesheet" href="/static/sublist.css">
+---
+body:
+
+{% from 'macros/embed.html' import youtube with context %}
+{% from 'macros/images.html' import image with context %}
+{% from 'macros/spoiler.html' import spoiler %}
+
+## Introduction : à la maison
+
+Vous prendrez le temps de regarder la vidéo ci-dessous puis de répondre au QCM Pronote associé.
+
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=iTfNhcC2vBA&vignette=https://i.ytimg.com/vi/iTfNhcC2vBA/hqdefault.jpg&debut=0&fin=374&largeur=200&hauteur=113&st=fr,fr" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+## Coordonnées géographiques : 
+- Travail sur le document distribué par votre professeur
+
+## Cartographie
+
+De nombreux services en ligne permettent de visualiser et manipuler des cartes :
+
+- des services commerciaux ([Google Maps](https://www.google.com/maps), [Bing Cartes](https://www.bing.com/maps/), [Apple Plans](https://www.apple.com/fr/maps/)) ;
+- des services libres, gratuit et coopératifs ([OpenStreetMap](https://www.openstreetmap.org)) ;
+- des services publics ([Géoportail](https://www.geoportail.gouv.fr/)).
+
+Nous allons manipuler dans cette partie ce dernier service : [Géoportail](https://www.geoportail.gouv.fr/).
+
+0. Rendez-vous sur [Géoportail](https://www.geoportail.gouv.fr/), et « jouez » un peu avec : recherchez votre maison, le lycée, la maison de vos grands-parents, etc.
+
+0. Répondez au QCM Pronote associé
+
+---
+On modélise les cartes par des graphes, où les sommets sont des intersections, et les arêtes sont des routes, et on utilise l'algorithme de Dijkstra (du nom d'un [informaticien et mathématicien néerlandais du XXᵉ](https:
+
+//fr.wikipedia.org/wiki/Edsger_Dijkstra)).
+
+Par exemple, le graphe suivant représente les distances des trajets entre les sept villes de Bourg-en-Bresse, Annecy, Chambéry, Lyon, Grenoble, Saint-Étienne et Valence (les villes ne sont pas correctement positionnées les unes par rapport aux autres, mais cette information n'est pas nécessaire ici). Par exemple, Valence est à 90 km de Grenoble, et à 120 km de Saint-Étienne.
+
+{{ image("villes.png") }}
+
+0. En regardant ce graphe, déterminez l'itinéraire le plus court pour aller de Bourg-en-Bresse jusqu'à Valence ? {{ spoiler("Bourg-en-Bresse — Annecy — Chambéry — Grenoble — Valence : 330 km.") }}
+
+0. Regardez la vidéo suivante pour comprendre un algorithme qui permet de résoudre ce problème pour d'énormes graphes.
+
+   {{ youtube(src="JDPf1os8Ul8")}}
+
+0. Retrouvez l'itinéraire le plus court pour aller de Bourg-en-Bresse à Valence en utilisant l'algorithme de Dijkstra expliqué dans la vidéo.

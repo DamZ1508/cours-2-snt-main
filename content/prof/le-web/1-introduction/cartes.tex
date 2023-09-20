@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Compiler avec lualatex:
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+%\usepackage{2021-pablo}
+%\usepackage{2021-pablo-paternault}
+
+%\usepackage[
+%  margin=.5cm,
+%  paperheight={21cm/4},
+%  paperwidth={29.7cm/4},
+%]{geometry}
+
+\newcommand{\balise}[1]{%
+  \newpage%
+  \vspace*{\stretch{1}}%
+  \begin{center}%
+    {\fontsize{50}{0}\selectfont%
+    \textbf{\texttt{<#1>}}%
+  }%
+  \end{center}
+  \vspace*{\stretch{1}}%
+}
+
+\begin{document}
+\topskip0pt
+
+\balise{h1}
+\balise{h2}
+\balise{em}
+\balise{em}
+\balise{u}
+\balise{u}
+\balise{b}
+\balise{b}
+\balise{ul}
+\balise{ul}
+\balise{li}
+\balise{div}
+\balise{div}
+\balise{p}
+\balise{a}
+\balise{a}
+
+\end{document}

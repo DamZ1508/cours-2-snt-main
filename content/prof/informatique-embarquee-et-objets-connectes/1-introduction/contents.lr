@@ -1,0 +1,15 @@
+title: Séance n°1
+---
+sort_key: 1
+---
+body:
+
+### QCM (20 min)
+- Les élèves ont travaillé sur [ces instructions](../../../informatique-embarquee-et-objets-connectes/quest-ce-que-linformatique-embarquee), à la maison, préalablement à. la séance.
+- Ils doivent prendre des notes, qu'ils pourront consulter pour [le QCM Pronote](QCM.txt) qui à lieu en début de séance.
+
+### Première prise de contact avec la carte `Micro:bit` (30 min)
+- Les élèves suivent en autonomie [ces instructions](../../../informatique-embarquee-et-objets-connectes/de-linformatique-embarquee-aux-objets-connectes)
+- Début des [TP](../../../informatique-embarquee-et-objets-connectes/tp-utilisation-de-la-carte-microbit/)
+---
+_discoverable: no

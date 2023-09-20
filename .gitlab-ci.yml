@@ -1,0 +1,26 @@
+image: paternal/ababsurdo
+
+variables:
+  GIT_DEPTH: 1
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  XDG_CACHE_HOME: "$CI_PROJECT_DIR/.cache"
+
+default:
+  cache:
+    paths:
+      - public
+      - .cache
+
+before_script:
+  - (cd /usr/share/pablo/texmf-dist/tex/latex/pablo && git pull)
+
+pages:
+  script:
+    - make build
+  cache:
+    untracked: true
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

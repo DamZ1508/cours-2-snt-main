@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2022 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[11pt]{article}
+
+\usepackage{2122-pablo}
+\usepackage{2122-pablo-paternault}
+\usepackage{2122-pablo-math}
+
+\usepackage[
+  a5paper,
+  margin=6mm,
+  headsep=5mm,
+  includehead,
+]{geometry}
+\usepackage{2122-pablo-header}
+\fancyhead[L]{\textsc{Snt --- Internet}}
+\fancyhead[R]{\textsc{5 --- Réseau physique : Câbles}}
+
+\usepackage{xspace}
+\newcommand{\ellipse}{[…]\xspace}
+
+% mdframed
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{citationstyle}{%
+  outerlinewidth=.5em,
+  outerlinecolor=white,%
+  leftmargin=-1em,
+  rightmargin=-1em,%
+  middlelinewidth=1.2pt,
+  roundcorner=5pt,
+  linecolor=black,
+  skipbelow=10cm,
+  innerbottommargin=5pt,
+  innerleftmargin=5pt,
+  innerrightmargin=5pt,
+  innertopmargin=5pt,
+}
+%%%%%%%
+
+\begin{document}
+
+\begin{mdframed}[style=citationstyle]
+  \textbf{Sébastien Gavois. \emph{TAT-14 : le câble transatlantique qui a fait toussoter internet cette nuit}. Next Impact, 20 mai 2014.}
+  %\url{https://www.nextinpact.com/article/12702/87646-tat-14-cable-transatlantique-qui-a-fait-toussoter-web-cette-nuit}
+  ~\hrule~
+
+Cette nuit, plusieurs sites et services comme Amazon, CloudFlare, Dropbox ou encore Twitter ont connu des difficultés. En cause, un problème sur un câble sous-marin qui relie les États-Unis à une partie de l'Europe du Nord, dont la France. \ellipse
+
+Afin de desservir les différents pays à travers les cinq continents, internet passe bien souvent par des câbles sous-marins. Ces derniers transportent les données via un réseau de fibres optiques, assurant à la fois rapidité et très haut débit. L'un d'entre eux, TAT-14, qui revendique une bande passante de 3,2 Tb/s, a été victime d'un incident provoquant quelques ralentissements de ce côté de l'Atlantique. \ellipse
+
+Parmi les services touchés, on peut notamment citer Twitter (qui a publié une alerte), Amazon, CloudFlare \ellipse, Dropbox, etc. Pour autant, la situation n'était pas catastrophique, car fort heureusement ce n'est pas le seul câble transatlantique de disponible, et il était donc possible de passer par une autre route afin que tout rentre dans l'ordre.
+\end{mdframed}
+
+\begin{mdframed}[style=citationstyle]
+  \emph{Traffic Internet mondial par année}, CISCO VNI, 2018.
+  ~\hrule~
+
+    \begin{center}
+      \begin{tabular}{rr@{\,}lrr@{\,}l}
+    \toprule
+    1992 & 100 & \si{Go/jour} & 2007 & 2000 & \si{Go/s} \\
+    1997 & 100 & \si{Go/h}    & 2017 & 46600 & \si{Go/s} \\
+    2002 & 100 & \si{Go/s}    & 2022 & 150700 & \si{Go/s} \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+\end{mdframed}
+
+Répondre aux questions suivantes à partir du document ou de vos connaissances personnelles.
+
+\begin{enumerate}
+  \item Comment sont transmises physiquement plus de 99~\% du traffic Internet et téléphone ?
+  \item Pourquoi y a-t-il davantage de câbles sous-marins entre les États-Unis et l'Europe, qu'entre l'Amérique du Sud et l'Afrique ?
+  \item Citez d'autres moyens de communication utilisés pour les communications par Internet.
+  \item Par combien a été multiplié le traffic Internet mondial entre 1992 et 2002 ? Entre 2002 et 2022 ?
+  \item Si la progression de 2002 à 2022 reste la même, quelle sera le traffic Internet mondial en 2042 ?
+\end{enumerate}
+
+\end{document}

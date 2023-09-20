@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2022 Louis Paternault --- http://ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Compiler avec lualatex:
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{2223-pablo}
+\usepackage{2223-pablo-paternault}
+
+\usepackage[
+  a4paper,
+  includehead,
+  margin=15mm,
+  ]{geometry}
+\usepackage{2223-pablo-header}
+
+\fancyhead[L]{\textsc{SNT > Internet > DNS}}
+\fancyhead[R]{\textsc{Corrigé}}
+
+\begin{document}
+
+\section{Mise en œuvre}
+
+\begin{enumerate}
+  \item
+\begin{enumerate}
+  \item Le nom de domaine \texttt{snt.ababsurdo.fr} est un alias vers \texttt{lpaternault.frama.io}, lui-même un alias pour \texttt{frama.io}.
+  \item Son adresse IP est \texttt{176.9.183.74}.
+\end{enumerate}
+\item 
+  \begin{enumerate}
+    \item L'adresse IP de \texttt{snt.entraide-ella.fr} est \texttt{176.9.183.74}.
+    \item C'est la même adresse IP, donc on peut en déduire que les deux sites web sont probablement hébergés sur le même serveur.
+  \end{enumerate}
+\item 
+  \begin{enumerate}
+    \item Le nom de domaine de l'ENT du lycée est \texttt{ella-fitzgerald.ent.auvergnerhonealpes.fr}.
+    \item Il a quatre adresses IP :
+      \texttt{80.247.224.245},
+      \texttt{80.247.238.65},
+      \texttt{80.247.238.66},
+      \texttt{80.247.224.244}.
+    \item Ce nom de domaine est un alias vers \texttt{rra-prod.nfrance.com}. Puisque \texttt{nfrance.com} est une entreprise, NFrance, proposant de l'hébergement web, l'ENT du lycée est probablement hébergé par cette entreprise.
+  \end{enumerate}
+\item 
+  \begin{enumerate}
+    \item En accédant au site web avec \texttt{https://www.ac-grenoble.fr}, le navigateur commence par rechercher l'adresse IP associée à ce nom de domaine (en utilisant le DNS), puis contacte cette adresse IP pour demaneder la page d'accueil. En y accédant en utilisant l'adresse IP, la première partie (recherche de l'adresse IP avec le DNS) est ignorée, puisque l'adresse IP est déjà connue.
+    \item Puisque le serveur qui héberge \texttt{https://snt.ababsurdo.fr} héberge plusieurs sites web, en contactant directement l'adresse IP avec la requête \enquote{Je veux la page d'accueil du site web}, le serveur ne sait pas de quel site web on parle, donc ne peut pas renvoyer la bonne page web.
+  \end{enumerate}
+\end{enumerate}
+
+\section{Choix d'un nom de domaine}
+
+Les réponses dépendent ici du nom de domaine choisi.
+
+\begin{enumerate}
+  \item Je choisis \texttt{famille-paternault.fr}.
+  \item Le \texttt{.fr} signifie que le nom de domaine est lié à la France.
+  \item Chez Gandi, ce nom de domaine coûte \SI{14,96}{€} par an.
+  \item Il est fourni avec deux boîtes mail.
+\end{enumerate}
+
+\section{Censure}
+
+\begin{enumerate}
+  \item En bloquant l'URL, la justice demande aux fournisseurs d'accès à Internet de configurer leur résolveur DNS pour que, lorsqu'une personne demande l'adresse IP associée à un site web interdit, le résolveur DNS ne réponde pas. Il est possible de contourner cela en configurant son ordinateur pour utiliser un résolveur DNS étranger, ou en contactant le site web en utilisant directeument son adresse IP.
+  \item Pour couper les serveurs à l'étranger, la justice française doit demander à la justice des autres pays d'ordonner aux responsables des serveurs de les couper. Cette procédure, au mieux, prend beaucoup de temps, et au pire, ne fonctionne pas car la justice étrangère refuse d'appliquer cette décision de la justice française.
+\end{enumerate}
+
+\end{document}

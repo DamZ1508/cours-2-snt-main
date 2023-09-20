@@ -1,0 +1,270 @@
+\input{preambule_damien2.tex}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[{$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%}\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{minted}
+
+\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+
+\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+
+\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+
+\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+
+\newmintinline{html}{fontfamily=courier, fontsize=\small}
+
+\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+
+\newmintinline{css}{fontfamily=courier, fontsize=\small}
+
+\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTÍtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\setlength{\headheight}{40pt} % Haut de page
+\renewcommand{\headrulewidth}{0.8pt}
+\setlength{\textheight}{26cm}
+\lhead{\em NOM : }
+%\chead{\thepage/\pageref{LastPage}}
+\rhead{\em Bilan TP2}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT}
+\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\section*{Questions : 2,5 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+%\renewcommand{\arraystretch}{4}
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Comment s'appelle le logiciel utilisé pour programmer la carte \texttt{micro:bit} ? & \dots/0,5 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+Écrire la commande permettant d'effacer l'écran de la carte \texttt{micro:bit}.  & \dots/0,5 \\
+ & \\
+ & \\
+ & \\
+\rowcolor{lightgray} Écrire la commande permettant d'afficher un c\oe ur. & \dots/0,5 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+Écrire la commande permettant d'attendre une seconde. & \dots/0,5 \\
+& \\
+& \\
+&  \\
+\rowcolor{lightgray} Écrire la commande permettant de faire défiler le texte \texttt{Bonjour}. & \dots/0,5 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\end{tabularx} 
+\end{center}
+
+{\black\rule{\linewidth}{2pt}}
+
+\section*{Programme Compte à rebours : 1,5 points}
+
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Le compte à rebours va de 5 à 0 & \dots/0,5 \\
+Le programme attend une seconde après chaque chiffre & \dots/0,5 \\
+\rowcolor{lightgray} Le programme fait défiler \texttt{Partez !} à la fin & \dots/0,5 \\
+\end{tabularx} 
+\end{center}
+
+\sautpage
+
+\rhead{\em Bilan TP3}
+\section*{Questions : 2 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Écrire la ligne permettant de tester si le bouton $A$ est appuyé. & \dots/1 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} \texttt{if \dots \dots \dots} & \\
+\rowcolor{lightgray} & \\
+Compléter le test suivant pour qu'il vérifie si les deux conditions sont vraies en même temps. & \dots/1 \\
+ & \\
+\texttt{if \emph{condition1} \dots \dots \emph{condition2}:} & \\
+& \\
+\end{tabularx} 
+\end{center}
+
+\section*{Programme Compteur : 2 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Le compteur diminue lorsqu'on appuie sur le bouton $B$. & \dots/1 \\
+Le compteur est remis à zéro lorsqu'on appuie sur les deux boutons en même temps. & \dots/1 \\
+\end{tabularx} 
+\end{center}
+
+\vspace*{2cm}
+
+
+{\em NOM :} \hspace*{15cm} {\em Bilan TP4}
+
+{\black\rule{\linewidth}{0.8pt}}
+
+\section*{Questions : 2 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Écrire la commande permettant de choisir au hasard et d'afficher un élément de la liste \texttt{LISTE}. & \dots/1 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+Écrire la condition permettant de tester si la carte est secouée. & \dots/1 \\
+ & \\
+\texttt{if  \dots \dots \dots} & \\
+& \\
+\end{tabularx} 
+\end{center}
+
+\section*{Programme Choixpeau : 2 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Une des quatre maisons défile au hasard quand la carte est secouée. & \dots/1 \\
+  Cela fonctionne plusieurs fois à la suite, en affichant un point d'interrogation en attendant. & \dots/1 \\
+\end{tabularx} 
+\end{center}
+
+\sautpage
+
+\rhead{\em Bilan TP5}
+\section*{Questions : 3 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Écrire la commande permettant de configurer la radio pour utiliser le canal 42. & \dots/1 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+Écrire la commande permettant d'envoyer le message \texttt{"Bonjour"}. & \dots/1 \\
+ & \\
+ & \\
+& \\
+\rowcolor{lightgray} Écrire la commande permettant de recevoir un message, et de tester si ce message est \texttt{"Bonjour"} (une ou deux lignes). & \dots/1 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\end{tabularx} 
+\end{center}
+
+\section*{Programme - Bracelet, Clignotant, Station météo : 1 point}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+Le programme fonctionne comme attendu. & \dots/1 \\
+\end{tabularx} 
+\end{center}
+
+\vspace*{2cm}
+
+
+{\em NOM :} \hspace*{15cm} {\em Bilan TP6}
+
+{\black\rule{\linewidth}{0.8pt}}
+
+\section*{Graphe : 2 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Recopier et compléter le graphe représentant la machine à états & \dots/2 \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\rowcolor{lightgray} & \\
+\end{tabularx} 
+\end{center}
+
+\section*{Programme Clignotant : 2 points}
+
+{\black\rule{\linewidth}{2pt}}
+
+\begin{center}
+\begin{tabularx}{0.98\linewidth}{p{16cm}X}
+\rowcolor{lightgray} Le programme affiche (ou non) les flèches correctement selon les boutons appuyés. & \dots/1 \\
+  Les flèches clignotent. & \dots/1 \\
+\end{tabularx} 
+\end{center}
+\end{document}

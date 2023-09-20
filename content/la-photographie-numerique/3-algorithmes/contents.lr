@@ -1,0 +1,7 @@
+_model: redirect
+---
+url: ../algorithmes/
+---
+title: Traitement d'image
+---
+_discoverable: false

@@ -1,0 +1,18 @@
+title: Réseaux pair-à-pair
+---
+sort_key: 5
+---
+image: jolly-roger.jpg
+---
+body:
+
+{% from 'macros/embed.html' import youtube with context %}
+
+1. Lire la page suivante : [Pair à pair](https://fr.vikidia.org/wiki/Pair_%C3%A0_pair).
+
+   Vous pouvez également regarder la vidéo suivante, qui explique différemment ce qu'est le pair-à-pair (ou *peer to peer*, abrégé *p2p*, en anglais).
+
+   {{ youtube("6ZazbI8faqw") }}
+
+2. Répondez au QCM correspondant sur Pronote. L'ordre des questions du QCM suit à peu près l'article : je vous conseille donc de faire le QCM tout en lisant l'article, pour répondre aux questions au fur et à mesure.
+

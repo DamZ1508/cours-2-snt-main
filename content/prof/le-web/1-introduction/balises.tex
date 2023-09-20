@@ -1,0 +1,154 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[14pt]{beamer}
+\usetheme{PaloAlto}
+\usepackage[latin9]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usefonttheme[onlymath]{serif}
+\usepackage{pstricks,pst-plot,pst-text,pst-tree,pst-eps,pst-fill,pst-eucl,pst-node,pst-math,pst-blur}
+\input{tabvar.tex}
+\usepackage{pstricks-add}
+\usepackage{pst-3dplot}				% schma 3D
+\usepackage{pst-func} % rep\'esentation loi binomiale, normale
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage[autolanguage,np]{numprint}
+\usepackage{cancel}    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{minted}
+%
+\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+
+\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+
+\newmintinline{html}{fontfamily=courier, fontsize=\small}
+
+\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+
+\newmintinline{css}{fontfamily=courier, fontsize=\small}
+
+\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%\usepackage{2021-pablo}
+%\usepackage{2021-pablo-beamer}
+%\usepackage{2021-pablo-paternault}
+%\usepackage{2021-pablo-listings}
+
+\title{Introduction au HTML}
+%\setbeamertemplate{navigation symbols}{} 
+\institute{\textbf{\Large 2GT --- SNT}} 
+\subtitle{Les Balises HTML} 
+\date{}
+
+\begin{document}
+\begin{frame}[fragile]{Structure générale d'une page web}
+\begin{html}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Titre</title>
+  </head>
+  <body>
+    Bonjour !
+  </body>
+</html>
+\end{html}
+\end{frame}
+
+\begin{frame}[fragile]{Explication des balises}
+  Des mots \underline{soulignés}, \textbf{gras} ou en \emph{italique}.
+
+  \vfill
+
+\begin{html}
+<p>Des mots
+<u>soulignés</u>,
+<b>gras</b>,
+ou en <em>italique</em>.
+</p>
+\end{html}
+\end{frame}
+%
+\begin{frame}[fragile]{Exemple avec la pile}
+\begin{minipage}{0.6\textwidth}
+\begin{html}
+<p>
+Tous les <u>êtres humains</u>
+naissent <em>libres
+et <b>égaux</b></em>
+<b>en dignité et en
+<u>droits</u></b>.
+</p>
+\end{html}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\psset{unit=0.35cm}
+ \begin{pspicture}(-2,-5)(2,15)
+  \psline(-1,12)(-1,-4)(1,-4)(1,12)
+    \end{pspicture}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]{Exemple d'erreurs - 1}
+\begin{minipage}{0.6\textwidth}
+\begin{html}
+<p>
+Ils sont <b>doués de
+<em>raison</b>
+et de conscience</em>.
+</p>
+\end{html}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\psset{unit=0.35cm}
+ \begin{pspicture}(-2,-5)(2,15)
+  \psline(-1,12)(-1,-4)(1,-4)(1,12)
+    \end{pspicture}
+\end{minipage}
+\end{frame}
+
+\begin{frame}[fragile]{Exemple d'erreurs - 2}
+\begin{minipage}{0.6\textwidth}
+\begin{html}
+<b>Tout</b> individu
+a <em>droit à la <u>vie</u>.
+\end{html}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\psset{unit=0.35cm}
+ \begin{pspicture}(-2,-5)(2,15)
+  \psline(-1,12)(-1,-4)(1,-4)(1,12)
+    \end{pspicture}
+\end{minipage}
+\end{frame}
+
+\end{document}

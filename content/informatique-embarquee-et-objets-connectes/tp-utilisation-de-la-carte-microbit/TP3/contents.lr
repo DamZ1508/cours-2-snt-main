@@ -1,0 +1,48 @@
+title: TP3 — Manipuler les boutons
+---
+sort_key: 3
+---
+toc: 1
+---
+morehead: <link rel="stylesheet" href="/static/numbered-h2.css">
+---
+image: loose-button.jpg
+---
+body:
+
+La carte *micro:bit* a deux boutons *A* et *B* situés à gauche et à droite de l'écran. On peut détecter s'ils sont pressés en utilisant les deux fonctions suivantes :
+
+- [`button_a.is_pressed()`](https://microbit-micropython.readthedocs.io/fr/latest/button.html#Button.is_pressed) qui renvoit `True` (vrai) si le bouton *A* est pressé au moment où cette fonction est exécutée, et `False` (faux) sinon ;
+- [`button_a.was_pressed()`](https://microbit-micropython.readthedocs.io/fr/latest/button.html#Button.was_pressed) qui renvoit `True` (vrai) si le bouton *A* a été pressé depuis que la carte a été allumée, ou depuis le dernier appel de cette fonction, et `False` (faux) sinon ;
+- `button_b.is_pressed()` et `button_b.was_pressed()` a la même signification, mais pour l'autre bouton.
+
+Les deux fonctions semblent à première vue très proche. Une différence apparaîtra en exécutant une action dans une boucle si le bouton est appuyé. Si le bouton est appuyé longtemps (plus d'un centième de secondes) :
+
+- avec `is_pressed()`, l'action risquera d'être exécutée plusieurs fois ;
+- avec `was_pressed()`, l'action ne sera exécutée qu'une seule fois.
+
+En pratique, vous aurez peu à vous soucier de cette différence.
+
+## Horloge
+
+1. Téléchargez le programme [`horloge.py`](horloge.py) dans votre répertorie personnel, et exécutez-le sur votre carte *micro:bit*.
+2. Vérifiez qu'en appuyant sur le bouton de droite, l'aiguille s'arrête de tourner, et qu'en appuyant sur le bouton de gauche, elle se remet à tourner.
+3. Lisez et comprenez comment le programme fonctionne.
+4. Modifiez le programme pour inverser le rôle des deux boutons.
+
+## Compteur
+
+1. Téléchargez le programme [`compteur.py`](compteur.py) dans votre répertorie personnel, et exécutez-le sur votre carte.
+2. Vérifiez qu'il fonctionne comme attendu : il doit afficher le nombre 0, et augmenter de 1 à chaque fois que vous appuyez sur le bouton *B*.
+3. Modifiez ce programme pour *diminuer* le compteur de 1 lorsque vous appuyez sur le bouton *A*.
+4. Modifiez ce programme pour remettre le compteur à 0 lorsque vous appuyez sur les deux boutons en même temps. Pour faire ceci, vous devrez :
+
+   - utiliser le mot-clef `and` pour tester deux conditions *en même temps* ;
+   - utiliser, pour ce test, `was_pressed()` plutôt que `is_pressed()`.
+
+5. **Bilan**
+
+   - Demander puis compléter la fiche bilan de ce TP ;
+   - Enregistrez votre programme `compteur.py` ;
+   - Rendez la fiche au professeur ;
+   - Passez au TP suivant.

@@ -1,0 +1,10 @@
+title: Graphes (45 minutes)
+---
+sort_key: 3
+---
+body:
+
+## TP (suite)
+- Le but est d'aborder l'algorithme de Dijkstra avec l'exercice 3 du TP
+
+[^tes]: Nous passions plusieurs séances en spécialité mathématique de feu la filière ES à travailler cet algorithme, et beaucoup d'élèves de termininale n'arrivaient toujours pas à le mettre en œuvre correctement. Je n'attends donc pas cela de mes élèves de seconde.

@@ -1,0 +1,7 @@
+_model: redirect
+---
+url: ../tableur/
+---
+title: Tableur
+---
+_discoverable: false

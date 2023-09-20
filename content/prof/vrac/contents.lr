@@ -1,0 +1,54 @@
+title: Vrac
+---
+image: bazar.jpg
+---
+description: Quelques activités en vrac…
+---
+toc: 1
+---
+body:
+
+Quelques activités, indépendantes, que je fais avec mes élèves de SNT, ou d'autres élèves, ou pas du tout…
+
+## *Documentaire :* Nothing to hide
+
+Ce documentaire (publié sous licence Creative Commons, donc téléchargeable librement, et légalement diffusable en classe) parle de la surveillance de masse sur Internet, par les États et les entreprises. Il correspond donc parfaitement au programme de SNT.
+
+C'est généralement ma dernière séance de l'année avec mes élèves.
+
+Cette année (2022), j'ai commencé par parler en deux mots des discussions en cours à la commission européenne pour [*« [obliger] les fournisseurs de services en ligne [à] détecter, signaler et retirer les images pédopornographiques »*](https://www.monde-diplomatique.fr/2022/06/RIMBERT/64745), et des promoteur de cette loi qui affirment que *« si vous n'avez rien à vous reprocher, vous n'avez rien à cacher »*.
+
+Après de courtes discussions, je leur montre deux exemples de cas où ce que les citoyen·ne·s ont à se reprocher peuvent changer :
+
+- selon le lieu, avec [l'exemple de ce saoudien homosexuel](https://www.lesinrocks.com/actu/pourquoi-il-ne-faut-pas-rire-du-hack-dashley-madison-90032-20-08-2015/), qui craint pour sa vie dans son pays pour avoir eu des relations homosexuelles légales aux États-Unis
+- selon la date, avec [l'exemple des militant anti-avortement](https://www.technologyreview.com/2022/05/31/1052901/anti-abortion-activists-are-collecting-the-data-theyll-need-for-prosecutions-post-roe/) qui collectent des données personnels des salarié·e·s et patientes des cliniques pratiquant l'avortement, en prévision de [la suppression du droit à l'avortement](https://www.lemonde.fr/international/article/2022/05/03/aux-etats-unis-la-cour-supreme-s-appreterait-a-supprimer-le-droit-a-l-avortement_6124528_3210.html).
+
+Puis je projette le documentaire (version originale sous titrée :
+[regarder](https://peertube.cpy.re/w/d2a5ec78-5f85-4090-8ec5-dc1102e022ea),
+ou [télécharger](https://peertube.cpy.re/download/videos/d2a5ec78-5f85-4090-8ec5-dc1102e022ea-1080.mp4).
+
+J'arrête généralement le documentaire cinq à dix minutes avant la fin de la séance (même s'il n'est pas terminé) pour permettre un micro-débat.
+
+Notons que la suite de ce documentaire est disponible sur Arte : [Disparaître — Sous les radars des algorithmes](https://www.arte.tv/fr/videos/100750-000-F/disparaitre-sous-les-radars-des-algorithmes/).
+
+## *Activité débranchée :* Apprentissage automatique
+
+J'ai adapté l'activité [*Quand une machine apprend à jouer au jeu de Nim* de Marie Duflot-Kremer](https://members.loria.fr/MDuflot/files/med/IAnim.html) pour que tout le matériel tienne en une page A4. Cette activité permet de comprendre ce qu'est *l'apprentissage automatique*, à savoir un système qui s'améliore en apprenant de ses succès ou erreurs.
+
+- [Les règles du jeu de Nim](apprentissage-automatique-jeu-de-nim-regles.pdf) ([source](apprentissage-automatique-jeu-de-nim-regles.odp)) ;
+- [La fiche à imprimer et distribuer](apprentissage-automatique-jeu-de-nim.pdf) ([source](apprentissage-automatique-jeu-de-nim.odg)).
+
+Après avoir expliqué la séance, je commence par projeter [les règles](apprentissage-automatique-jeu-de-nim-regles.pdf), et à les laisser jouer pendant quelques minutes pour se familiariser avec les règles. Puis je reprends leur attention pour leur expliquer le système d'apprentissage automatique. Je fais une manche avec eux, puis je les laisse jouer, par groupes de deux ou trois.
+
+## *Étude de documents :* Intelligence artificielle
+
+J'ai enseigné pendant un an une partie de [l'enseignement scientifique](https://lpaternault.frama.io/cours-TermG-enseignementscientifique/), le dernier chapitre traitant de l'intelligence artificielle. Voici quelques documents que j'avais compilé, qui peuvent être étudiés par les élèves :
+
+- Biais de l'intelligence artificielle : [Les personnes noires auraient plus de risques de se faire renverser par une voiture autonome](https://lpaternault.frama.io/cours-TermG-enseignementscientifique/35-intelligence-artificielle/4-biais.pdf)
+- Vidéo : [Algocratie : L'inégalité programmée - #DATAGUEULE 84](https://peertube.datagueule.tv/w/989693db-edcd-4b44-a8b6-22193763f887)
+- Crédit social en Chine : [La Chine en 2020 : la notation des citoyens et des entreprises affole l’Occident](https://lpaternault.frama.io/cours-TermG-enseignementscientifique/35-intelligence-artificielle/4-credit-social.pdf)
+- [Devoir surveillé](https://framagit.org/lpaternault/cours-TermG-enseignementscientifique/-/blob/main/35-intelligence-artificielle/devoir.tex)
+  - Exercice 2 : Des probabilités s'appuyant sur [un article](https://www.media.mit.edu/publications/gender-shades-intersectional-accuracy-disparities-in-commercial-gender-classification/) qui montre que les systèmes de reconnaissance visuelle étudiés identifient mieux les hommes que les femmes.
+  - Exercice 3 : [Comment les biais faussent l'IA](https://www.forbes.com/sites/tomtaulli/2019/08/04/bias-the-silent-killer-of-ai-artificial-intelligence)
+---
+sort_key: 0

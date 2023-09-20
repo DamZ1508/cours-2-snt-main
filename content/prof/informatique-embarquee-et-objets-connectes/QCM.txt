@@ -1,0 +1,79 @@
+Les bonnes réponses sont indiquées par une étoile
+
+1. Qu'est ce qu'un capteur ?
+	- Un (une) élève qui comprend tout, tout de suite.
+	* Un dispositif qui transforme l'état d'une grandeur physique en une grandeur électrique.
+	- Un instrument de mesure (voltmètre, ampèremètre ...)
+
+2. Que fait un actionneur ?
+	* Il transforme l'énergie reçue en un phénomène physique (déplacement, dégagement de chaleur, émission de lumière ...).
+	- Il transforme un phénomène physique (déplacement, dégagement de chaleur, émission de lumière ...) en énergie.
+	- Il stocke l'énergie en vue d'une utilisation ultérieure.
+
+3. Lequel de ces objets n'est pas équipé d’informatique embarquée ?
+	- Un Airbus A380.
+	* Un pigeon voyageur de compétition
+	- Une Renault Twingo
+	- Une formule 1
+
+4. Lequel de ces capteurs détecte le métal ?
+	- l' ILS (Interrupteur à lame souple).
+	- Le capteur barrage.
+	* Le capteur inductif
+	- Le capteur reflex
+
+5. Lequel de ces capteurs ne détecte pas à distance mais nécessite un contact.
+	- l' ILS (Interrupteur à lame souple).
+	- Le capteur reflex
+	- Le capteur inductif.
+	* Le capteur de position à levier et galet
+
+6. Lequel de ces objets n'est pas détecté par un capteur barrage ?
+	- Un objet métallique aimanté
+	* Une vitre transparente
+	- Un objet réfléchissant
+	- Un animal
+
+7. Lequel de ces objets n'est pas un actionneur ?
+	* Un balai d'essuie glace
+	- Un radiateur électrique
+	- L'ampoule d'un phare
+	- Une sirène
+
+8.Quelle est la nature de l'énergie de sortie d'un vérin pneumatique ?
+	- pneumatique
+	- hydraulique
+	- électrique
+	* mécanique
+
+
+9. Sélectionner les capteurs présents sur un smartphone :
+	- détecteur de mensonge
+	* gyromètre
+	* accéléromètre
+	* microphone
+	* anémomètre
+	- magnétomètre
+	- détecteur de pokémon
+	* caméra
+	- capteur de proximité
+
+10. Sélectionner les éléments constitutifs d'un système informatique embarqué *
+	* capteur
+	- souris
+	- clavier
+	* actionneur
+	- écran
+	* processeur
+
+
+11. Que signifie l'acronyme IHM ?
+	- Intervention Humaine sur Machine
+	- Interface Homme Machine
+	- Internationale des Humanoides Modérés
+	- Intelligence Humaine des Machines
+	- Intelligence Homme Machine
+
+12. Capteurs ou actionneurs (à classer) :
+	- capteurs : cellule photorésistante, télécommande, hygromètre
+	- actionneurs : bras articulé, vérin, moteur

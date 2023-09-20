@@ -1,0 +1,318 @@
+\input{preambule_damien2.tex}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[{$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%}\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{minted}
+%
+%\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+%\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+%\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+%\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{html}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{css}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTÍtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\setlength{\headheight}{40pt} % Haut de page
+\renewcommand{\headrulewidth}{0.0pt}
+\setlength{\textheight}{26cm}
+\lhead{}
+%\chead{\thepage/\pageref{LastPage}}
+\rhead{}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT}
+\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{svg}
+
+\begin{document}
+
+\begin{titre}{2NDE}{Seconde - SNT}
+\centering
+{\Large \textsc{\textbf{Thème : Localisation, cartographie et mobilité}}}
+\end{titre}
+
+\section{Coordonnées géographiques : comment ça marche ?}
+
+%\begin{exercice}
+%Dans un repère orthonormé, on cherche les coordonnées d'un point $M$.
+%
+%\begin{enumerate}
+%  \item Ce point $M$ est situé :
+%    \begin{enumerate*}
+%      \item à une distance 7 du point $A(0;2)$;
+%      \item à une distance 5 du point $B(2;-3)$.
+%    \end{enumerate*}
+%    Quelle sont les coordonnées de $M$ ?
+%  \item On sait de plus que ce point doit être situé à une distance 13 de $C\left( -4;7 \right)$. Quelles sont les coordonnées du point $M$?
+%\end{enumerate}
+%\end{exercice}
+%
+%\begin{bilan*}
+%  Pour déterminer la position d'un capteur GPS sur la Terre, ce capteur détermine sa distance par rapport à 4 satellites, et en déduit sa position.
+%\end{bilan*}
+%
+%\section{Coordonnées géographiques}
+
+\begin{center}
+	\includegraphics[scale=1]{latitude_longitude.eps} 
+\end{center}
+
+\begin{definition}
+Tout point à la surface de la Terre est déterminé par \textbf{ses coordonnées géographiques} et par son \textbf{altitude} (élévation par rapport au niveau de la mer).
+\saut 
+L'ensemble de ces notions, auquel on ajoute le centre de la Terre, est utilisé comme système de référence mondial pour déterminer les positions sur la Terre par les systèmes GPS, dont nous parlerons dans la séance 2.
+\end{definition}
+
+\begin{definition}
+Les coordonnées géographiques comprennent :
+\begin{itemize}
+  \item \textbf{la latitude} : angle par rapport à \trou{l'équateur} ;
+    \item \textbf{la longitude} : angle par rapport au \trou{méridien} de référence (celui de Greenwitch) ;
+\end{itemize}
+\end{definition}
+
+\exo[Indiquer des coordonnées géographiques à partir d'une carte]
+
+Indiquer la latitude et la longitude des villes placées sur la carte ci-dessous \textit{(en arrondissant au degré près)} :
+\begin{center}
+	\includegraphics[scale=0.4]{ex1.eps}
+\end{center}
+
+\sautpage
+
+\begin{prop}
+Ces angles peuvent être donnés : 
+\begin{itemize}
+	\item en \textbf{degrés décimaux} \textit{(notation décimale)} (degrés et dixièmes, centièmes\ldots{} de degrés) ;
+	\item en \textbf{degrés-minutes-secondes} \textit{(notation sexadécimale - DMS)} (avec : $1\degre = 60' = \np{3600}''$)
+\end{itemize}
+\end{prop}
+
+\begin{remarque}
+\begin{itemize}
+	\item Une latitude positive donne la direction Nord par rapport à l'équateur et une latitude négative donne Sud.
+	\item Une longitude positive donne la direction Est et une longitude négative donne Ouest.
+\end{itemize}
+\end{remarque}
+
+\begin{exemple}
+Par exemple, les coordonnées de la salle de SNT peuvent être écrites de différentes manières :
+\begin{itemize}
+  \item degrés décimaux : $\coord{46,840381\degre}{-0,485806\degre}$, soit :
+    \begin{itemize}
+      \item 46,840381 degrés au Nord de l'équateur ;
+      \item 0,485806 degrés à l'ouest du méridien de Greenwitch.
+    \end{itemize}
+
+  \item degrés-minutes-secondes : $\coord{46\degre 50' 25.37'' ~ N}{0\degre 29' 8,9'' ~ O}$, soit :
+    \begin{itemize}
+      \item 46 degrés 50 minutes 25,37 secondes au nord de l'équateur ;
+      \item 0 degrés 29 minutes 8,9 secondes à l'ouest du méridien de Greenwitch..
+    \end{itemize}
+\end{itemize}
+\end{exemple}
+
+\begin{methode}
+\begin{enumerate}
+	\item \textbf{Passer des degrés sexagésimaux aux degrés décimaux :}
+
+Les coordonnées de la salle de SNT sont $\coord{46\degre 50' 25.37'' ~ N}{0\degre 29' 8,9'' ~ O}$ :
+\begin{itemize}
+	\item 60' = 1° donc 50'=50/60 ° et 3600' = 1° donc 25,37''=25,37/3600°
+	\item Latitude en degrés décimaux : $46 + \dfrac{50}{60} + \dfrac{25,37}{3600} \approx 46,840381 \degre$
+	\item Longitude en degrés décimaux : $0 + \dfrac{29}{60} + \dfrac{8,9}{3600} \approx 20,485806 \degre$
+\end{itemize}
+
+	\item \textbf{Passer des degrés décimaux aux degrés sexagésimaux :}
+
+Les coordonnées de la salle de SNT sont $\coord{46,840381\degre}{-0,485806\degre}$ en degrés décimaux.
+\vspace*{-0.25cm}\begin{multicols}{2}
+\begin{itemize}
+	\item Latitude en degrés sexagésimaux :
+	\begin{itemize}
+		\item Nord et on garde 46 pour les degrés ;
+		\item $0,840381 \times 60 = 50,42286$ : on garde 50' ;
+		\item $0,42286 \times 60 \approx 25,37$ et on garde 25,37''
+	\end{itemize}
+\columnbreak
+	\item Longitude en degrés sexagésimaux :
+	\begin{itemize}
+		\item Le signe négatif donne Ouest et on garde 0 pour les degrés ;
+		\item $0,485806 \times 60 = 29,14836$ : on garde 29' ;
+		\item $0,14836 \times 60 \approx 8,9$ et on garde 8,9''
+	\end{itemize}
+\end{itemize}
+\end{multicols}
+\end{enumerate}
+\end{methode}
+
+\exo[Passer du système sexagésimal au système décimal et inversement]
+\saut \vspace*{-0.4cm}
+\begin{enumerate}
+	\item On donne les coordonnées suivantes en degrés décimaux : $\coord{40,689253 \degre}{-74,044548 \degre}$. 
+	
+	Convertir ces coordonnées en DMS puis indiquer le lieu désigné.
+	\item On donne les coordonnées en DMS suivantes : $\coord{55 \degre 45' 13''~ N}{37 \degre 37' 17''~ E}$. 
+	
+	Convertir ces coordonnées en coordonnées décimales puis indiquer le lieu désigné.
+\end{enumerate}
+
+\exo[Plus difficile \dots]
+En assimilant la Terre à une sphère de rayon 6371,009 km, calculer la distance, en mètres, correspondant à une longitude de $1 \degre 1' 1''$ à l'équateur, puis à Bressuire (latitude de 46,84 degrés environ).
+
+\exo[Trame NMEA-0183]
+
+La norme NMEA 0183 permet d'échanger des informations concernant les coordonnées géographiques.
+
+\begin{center}
+  \large 
+  $\underbrace{\textsc{\$GPGLL}}_{\text{type de trame}}, \underbrace{\textsc{4619.088593, N}}_{\text{latitude 46°19'5,3156''}}, \underbrace{\textsc{0029.479943, W}}_{\text{longitude 0°29'28,7966''}}, \underbrace{120411}_{\text{heure d'envoi}}$
+  %\textsc{\$GPGLL,4851.96,N,221.32,E,120411,A}
+\end{center}
+
+On suppose que vous êtes au lycée, avec un \emph{smartphone} équipé d'un GPS, en cours de SNT. Écrivez la trame NMEA pouvant être enregistrée par le GPS (vous ferez attention à ce que les coordonnées GPS et l'heure soient cohérentes).
+
+\sautpage
+
+\setcounter{exo}{0}
+
+\section*{Correction}
+
+\exo
+\saut \vspace*{-0.4cm}
+\vspace*{-0.4cm}\begin{multicols}{3}
+	\begin{itemize}
+	\item Sao Paulo $\coord{23\degre ~ S}{45\degre ~ O}$
+	\item Shanghai $\coord{30\degre ~ N}{120\degre ~ E}$
+	\item Saint-Pétersbourg $\coord{60\degre ~ N}{30\degre ~ E}$
+	\item Londres $\coord{50\degre ~ N}{0\degre}$
+	\item {\footnotesize La Nouvelle-Orléans} $\coord{30\degre ~ N}{90\degre ~ O}$
+	\item Le Caire $\coord{30\degre ~ N}{30\degre ~ E}$
+	\item Durban $\coord{30\degre ~ S}{30\degre ~ E}$
+	\item Dhaka $\coord{23\degre ~ N}{90\degre ~ E}$
+\end{itemize}\end{multicols}
+
+\exo
+\saut \vspace*{-0.4cm}
+\begin{enumerate}
+	\item $\coord{40,689253 \degre}{-74,044548 \degre}$
+	\begin{itemize}
+		\item Latitude : $0,689253 \times 60 = 41,35518 \rightarrow 41'$ et $0,35518 \times 60 = 21,3108 \rightarrow 21''$
+		\item Longitude : $0,044548 \times 60 = 2,67288 \rightarrow 2' et 0,67288 \times 60 = 40,3728 \rightarrow 40''$
+		\item Les coordonnées sont $\coord{40\degre~ 41' ~ 21'' ~N}{74\degre ~2'~40''~ O}$. Ce sont les coordonnées de la statue de la liberté.
+	\end{itemize}
+	\item $\coord{55 \degre 45' 13''~ N}{37 \degre 37' 17''~ E}$
+	\begin{itemize}
+		\item Latitude : 55 + 45/60 + 13/3600 = 55,753611° (positif car Nord)
+		\item Longitude : 37+ 37/60 + 17/3600 = 37,621389° (positif car Est)
+		\item Les coordonnées sont $\coord{55,753611\degre}{37,621389\degre}$. Ce sont les coordonnées de la Place Rouge à Moscou.
+	\end{itemize}
+\end{enumerate}
+
+\exo
+\saut
+\begin{minipage}{0.65\linewidth}
+$1 \degre 1' 1'' = 1 + 1/60 + 1/3600 \approx 1,016944\degre$
+\begin{enumerate}
+	\item Au niveau de l'équateur : $\dfrac{6371,009 \times 2\pi \times 1,016944}{360} \approx 113,079$ km
+	\item Au niveau de Vienne (Latitude 46,84°) :
+	\begin{itemize}
+		\item $R = 6371,009 \times \sin(180\degre - 46,84\degre) \approx 4358,0124$ km
+		\item $\dfrac{4358,0124 \times 2\pi \times 1,016944}{360} \approx 77,35$ km
+	\end{itemize}
+\end{enumerate}
+\end{minipage}
+\hfill
+		\begin{minipage}{0.4\textwidth}
+	\centering
+		\begin{pspicture}(-1,0)(3,3)
+		\pstTriangle[PointSymbol=x](-1,0){O}(3,3){V}(-1,3){H}
+		\pstRightAngle[linecolor=red]{O}{H}{V}
+		\pstGeonode[PointSymbol=x](3.359,0){E}
+		\pstLineAB[linestyle=dashed]{O}{E}
+		\pstMarkAngle[linecolor=red, MarkAngleRadius=.9, LabelSep=1.6]{E}{O}{V}{\small $46,84\degre$}
+		\pstMarkAngle[linecolor=red, MarkAngleRadius=.7, LabelSep=1.6]{V}{O}{H}{}
+		\uput[u](1,3){$R$} \uput[d](1.18,0){\small $6371,009$ km} \rput{40}{\uput[u](1.5,0.5){\small $6371,009$ km}}
+		\end{pspicture}
+	\end{minipage}  
+	
+\vspace*{0.7cm}
+	
+\exo
+\saut \vspace*{-0.4cm}
+\begin{itemize}
+	\item Coordonnées de la salle de SNT : $\coord{46\degre 50' 25,37'' ~ N}{0\degre 29' 8,9'' ~ O}$
+	\item A convertir pour la trame NMEA : 
+	\begin{itemize}
+		\item Latitude : $\dfrac{25,37}{60} \approx 0,422833 \rightarrow 4650.0422833$
+		\item Longitude : $\dfrac{8,9}{60} \approx 0,148333 \rightarrow 0029.148333$
+		\item Heure de cours (exemple) : 17h 15min 47s $\rightarrow$ 171547
+	\end{itemize}
+	\item On a donc : \textsc{\$GPGLL,4650.422833,N,0029.148333,W,171547,A}
+\end{itemize}
+\end{document}

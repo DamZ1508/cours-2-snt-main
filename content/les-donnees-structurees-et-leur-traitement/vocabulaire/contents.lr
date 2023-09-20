@@ -1,0 +1,157 @@
+title: Vocabulaire
+---
+_discoverable: false
+---
+sort_key: 1
+---
+image: library-card-catalog.jpg
+---
+toc: 1
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">
+<link rel="stylesheet" href="/static/spoiler.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/spoiler.html' import beginspoiler, endspoiler, spoiler %}
+
+{{ alertstart(level="info", title="Remarques")}}
+<ul>
+<li>Aucun compte-rendu n'est demandé, mais réfléchissez sérieusement aux questions avant de regarder les réponses : sans cela, vous ne retiendrez rien.</li>
+<li>Une parte de l'activité est à recopier dans votre cahier ou classeur de cours (voir plus bas).</li>
+<li>Quelques réponses sont à aller chercher sur internet. Les questions sont alors marquées d'une loupe 🔍.
+</ul>
+{{ alertend() }}
+
+## Identifier un objet
+
+On souhaite identifier précisément une œuvre.
+
+0. Je cherche un film s'appelant *La Guerre des boutons* (inspiré du roman de Louis Pergaud).
+
+  0. 🔍 Pourquoi cette information n'est-elle pas suffisante pour identifier ce film ?
+
+     {{ beginspoiler() }}
+     Il existe <a href="https://fr.wikipedia.org/wiki/La_Guerre_des_boutons">plusieurs films</a> qui portent ce titre.
+     {{ endspoiler() }}
+
+  0. Quelle information devrais-je ajouter à ma recherche pour préciser de quel film il s'agit ?
+
+     {{ spoiler("Préciser la date de sortie, ou le réalisateur, suffit ici à différencier les différents films.") }}
+
+0. 🔍 Je cherche un livre s'appelant *Raisonnements divins*[^dieu], de Martin Aigner et Günter M. Ziegler.
+
+  0. Pourquoi cette information n'est-elle pas suffisante pour identifier ce livre ?
+
+     {{ spoiler("Ce livre a été amélioré au fil des années : il y a plusieurs éditions.") }}
+
+  0. Quelle information devrais-je ajouter à ma recherche pour préciser de quel livre il s'agit ?
+
+     {{ spoiler("Préciser l'année de l'édition devrait suffire.") }}
+
+[^dieu]: Aucun rapport avec la religion : c'est un (excellent) livre de mathématiques ; Dieu n'est ci qu'un trait d'humour.
+
+## Étude des données d'un livre
+
+Dans cette partie, on étudie les données du livre *Histoires et cultures du libre*, de Camille Paloque-Bergès et Christophe Masutti. Sur [sa notice sur le site de la BNF](https://catalogue.bnf.fr/ark:/12148/cb435806273.public), on lit les informations suivantes.
+
+> - *Type(s) de contenu et mode(s) de consultation :* Texte noté : sans médiation
+> - *Titre(s) :* Histoires et cultures du libre [Texte imprimé] : des logiciels partagés aux licences échangées / sous la direction de Camille Paloque-Berges, Christophe Masutti
+> - *Publication :* [Paris] : Framasoft : Inno cube ; [Rocquencourt] : INRIA, DL 2013
+> - *Impression :* impr. aux États-Unis
+> - *Description matérielle :* 1 vol. (XXIII-556 p.) : ill., couv. ill. ; 21 cm
+> - *Collection :* Framabook ; 13
+> - *Note(s) :* Notes bibliogr.
+> - *Autre(s) auteur(s) :*
+>   - Paloque-Bergès, Camille. Directeur de publication
+>   - Masutti, Christophe (1975-....). Directeur de publication
+> - *Sujet(s) :*
+>   - Logiciels libres -- Histoire
+>   - Logiciels libres -- Aspect économique -- Histoire
+> - *Indice(s) Dewey :*  005.3 (23e éd.)
+> - *Numéros :*
+>   - ISBN 978-2-9539187-9-3 (br.) : 25 EUR
+>   - EAN 9782953918793
+> - *Notice n° :*  FRBNF43580627
+
+Toutes les questions de cette partie portent sur ce livre.
+
+0. Quelles données permettent d'identifier exactement le livre ?
+
+   {{ spoiler("Plusieurs réponses possibles : (1) le numéro ISBN, (2) le titre du livre ET les noms des auteurs (3) la collection, et le numéro du livre dans la collection…") }}
+
+0. Quelles données sont plutôt destinées aux humains ; quelles données sont plutôt destinées aux ordinateurs ?
+
+   - Plutôt destinées aux ordinateurs : {{ spoiler("les numéros ISBN et EAN, le numéro de notice.") }}
+   - Plutôt destinées aux humains : {{ spoiler("la description matérielle, le lieu d'impression.") }}
+   - Destinées aux humains et aux ordinateurs : {{ spoiler("les autres données. Par exemple, le nom des auteurs est intéressant pour un humain pour savoir qui a écrit le livre, et pour un ordinateur pour pouvoir rechercher automatiquement tous les livres écrits par cet auteur.") }}
+
+0. Quels sont les types des données ?
+
+  - Texte : {{ spoiler("Quasiment toutes les données ici : nom de l'auteur, titre, etc.") }}
+  - Nombre : {{ spoiler("Numéro EAN.") }}
+
+## Cours : Objets, Descripteurs et Valeur
+
+Faire cette partie dans votre cahier ou classeur de cours.
+
+0. Démarrer un nouveau chapitre en écrivant le titre : *Chapitre 4 : Les Données structurées et leur Traitement*.
+0. Recopier le cours suivant.
+
+   > Un peu de vocabulaire
+   >
+   > - Une **collection** est un ensemble d'objets (concrets ou abstraits) dont on collecte des données, partageant les mêmes descripteurs.
+   > - Un **objet** est un élément de cette collection.
+   > - Un **descripteur** désigne l'aspect de l'objet concerné par la donnée.
+   > - Une **valeur** est l'information elle-même.
+   > - Le **type** d'une valeur est la nature de cette information.
+   >
+   > De plus, si une donnée concerne une personne, on dit que c'est une **donnée personnelle**.
+
+0. Recopier l'exemple suivant.
+
+  > On s'intéresse aux données gérées par une bibliothèques.
+  >
+  > - L'ensemble des usagers de la bibliothèque est une **collection** ; l'ensemble des livres en est une autre.
+  > - Chacun des livres est un **objet** de cette collection.
+  >
+  > On s'intéresse au livre **Les Fleurs du mal**, de Charles Baudelaire. Voici quelques données :
+  >
+  > | Descripteur          | Valeur             | Type                           |
+  > |----------------------|--------------------|--------------------------------|
+  > | Titre                | Les Fleurs du mal  | Chaîne de caractères (lettres) |
+  > | Année de publication | 1857               | Nombre                         |
+  > | Auteur               | Charles Baudelaire | Chaine de caractères (lettres) |
+  >
+  > Remarquons que certaines données sont si spécifiques qu'elles ont leur propre type : le numéro ISBN, par exemple, peut être considéré à la fois comme un descripteur et comme un type de données.
+
+## Applications
+
+0. On considère le sac que vous emenez avec vous au lycée. La collection auquel il appartient est donc l'ensemble des articles vendus par le magasin où vous l'avez acheté.
+
+   Donner quelques descripteurs pouvant s'appliquer à ce sac à dos, ainsi que les valeurs correspondantes.
+
+   * {{ beginspoiler()}}<em>Descripteur :</em> Marque ; <em>Valeur :</em> Eastpak, Vaude, The North Face… ; <em>Type :</em> Chaîne de caractères. {{ endspoiler() }}
+   * {{ beginspoiler()}}<em>Descripteur :</em> Couleur ; <em>Valeur :</em> Bleu, rouge, noir… ; <em>Type :</em> Chaîne de caractères. {{ endspoiler() }}
+   * {{ beginspoiler()}}<em>Descripteur :</em> Contenance ; <em>Valeur :</em> 10L ; <em>Type :</em> Chaîne de caractères (ou nombre, si l'unité est bien définie). {{ endspoiler() }}
+
+0. Dans quelques années, vous allez pouvoir voter. On considère les données vous concernant, dans les listes électorales de votre commune.
+
+   Donner quelques descripteurs pouvant vous concerner, ainsi que les valeurs correspondantes (je prends dans la correction l'exemple d'Emmanuel Macron).
+
+   * {{ beginspoiler()}}<em>Descripteur :</em> Nom et prénom ; <em>Valeur :</em> Emmanuel Macron ; <em>Type :</em> Chaîne de caractères. {{ endspoiler() }}
+   * {{ beginspoiler()}}<em>Descripteur :</em> Adresse ; <em>Valeur :</em> Palais de l'Élysée 55 rue du Faubourg-Saint-Honoré 75008 Paris, France  ; <em>Type :</em> Chaîne de caractères. {{ endspoiler() }}
+   * {{ beginspoiler()}}<em>Descripteur :</em> Année de naissance ; <em>Valeur :</em> 1977 ; <em>Type :</em> Nombre. {{ endspoiler() }}
+   * {{ beginspoiler()}}<em>Descripteur :</em> Numéro de la carte d'identité ; <em>Valeur :</em> 314159265358 ; <em>Type :</em> Nombre. {{ endspoiler() }}
+
+0. On considère les données vous concernant, dans la base de donnée de Pronote.
+
+   Donner quelques descripteurs pouvant vous concerner, ainsi que les valeurs correspondantes.
+
+   * {{ beginspoiler()}}<em>Descripteur :</em> Langue vivante A ; <em>Valeur :</em> Anglais ; <em>Type :</em> Chaîne de caractères.. {{ endspoiler() }}
+   * {{ beginspoiler()}}<em>Descripteur :</em> Niveau ; <em>Valeur :</em> Seconde ; <em>Type :</em> Chaîne de caractères. {{ endspoiler() }}
+   * {{ beginspoiler()}}<em>Descripteur :</em> Numéro de téléphone ; <em>Valeur :</em> 03 14 15 XX XX ; <em>Type :</em> Nombre. {{ endspoiler() }}

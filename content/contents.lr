@@ -1,0 +1,10 @@
+_model: mainpage
+---
+title: Accueil
+---
+body:
+
+#### text-block ####
+text: Ce site présente les séquences de SNT du lycée Maurice Genevoix
+#### subpages-block ####
+subpages: 

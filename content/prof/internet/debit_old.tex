@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2022 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage{2122-pablo}
+\usepackage{2122-pablo-paternault}
+\usepackage{2122-pablo-math}
+
+\usepackage[
+  a6paper,
+  margin=5mm,
+  headsep=5mm,
+  landscape,
+  includehead,
+]{geometry}
+\usepackage{2122-pablo-header}
+\fancyhead[L]{\textsc{Snt --- Internet}}
+\fancyhead[R]{\textsc{5 --- Réseau physique : Débit}}
+
+\usepackage{mdframed}
+
+\begin{document}
+
+Le \emph{débit} d'une transmission de données est la vitesse à laquelle ces données sont transmises sur le réseau. Il est exprimé en \emph{octets par seconde}, noté \si{o/s} (ou \si{ko/s}, \si{Mo/s}, \si{Go/s}…). En anglais \enquote{octet} se dit \enquote{byte}, donc on trouvera aussi la notations \si{Mb/s} (pour \enquote{megabyte per second}, ou \enquote{mégaoctets par seconde}). Le débit se calcule avec la formule :
+\[
+  \text{débit}=\frac{\text{quantité de données}}{\text{durée}}
+\]
+
+\begin{enumerate}
+  \item
+    \begin{enumerate}
+      \item Exprimer en français, puis convertir en octets : \SI{1}{ko}, \SI{1}{Mo}, \SI{1}{Go}, \SI{1}{To}.
+      \item Convertir en gigaoctets : \SI{2345,6}{ko}.
+    \end{enumerate}
+  \item
+    \begin{enumerate}
+  \item Pendant une vidéo \emph{live} de deux minutes avec un débit de \SI{1,5}{Mo/s}, quelle quantité de données a été transmise ?
+  %\item Je veux publier mes \SI{1,3}{Go} de photos de vacances avec ma connexion de \SI{2}{Mo/s}. Combien de temps cela va-t-il prendre (répondre en minutes) ?
+  \item Dans les années 90, la plupart des foyers se connectaient à Internet avec des \enquote{modems \SI{56}{k}}, qui avaient un débit théorique maximum de \SI{56}{ko/s}. Combien de temps fallait-il pour télécharger une photo de \SI{2}{Mo} ?
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

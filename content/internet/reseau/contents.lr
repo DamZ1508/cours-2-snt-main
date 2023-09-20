@@ -1,0 +1,83 @@
+_discoverable: no
+---
+title: Réseau Internet et Réseau physique
+---
+sort_key: 4
+---
+image: the-fancy-flyer.jpg
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2.css">
+<link rel="stylesheet" href="/static/tableaux.css">
+---
+body:
+
+{% include 'macros/mathjax.html' %}
+
+{% from 'macros/embed.html' import lumni, youtube with context %}
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="")}}
+Cette page s'inspire du travail de <a href="https://citescolaire-lannemezan.mon-ent-occitanie.fr/disciplines/sciences-numeriques-et-technologie/7-5-les-reseaux-physiques-54761.htm">Nicolas Tourreau</a>,
+<a href="https://clusseau-drive.mycozy.cloud/public?sharecode=Qu6dggO4Ej3o#/folder/aab44ae9811ac8c79b8e52378cc4fa18">Julien Chu, Cédric Lusseau et Fadi Tamin</a>
+et Julien Peccoud.
+Merci à eux.
+{{ alertend() }}
+
+## Débits
+
+Le débit d'une transmission de données est la vitesse à laquelle ces données sont transmises sur le réseau. Il est exprimé en octets par seconde, noté o/s (ou kilooctets par seconde (ko/s), mégaoctets par seconde (Mo/s), gigaoctets par seconde (Go/s)…). En anglais *octet* se dit *byte*, donc on trouvera aussi la notations Mb/s (pour *megabyte per second*, ou *mégaoctets par seconde*). Il se calcule avec la formule :
+$$\text{Débit}=\frac{\text{taille (en octets)}}{\text{temps (en secondes)}}$$
+
+Pour convertir entre les octets, kilooctets, mégaoctets, etc. on utilisera l'un des tableaux suivants.
+
+* Préfixes
+
+  > | Nom       | Symbole | Valeur                                |
+  > |-----------|--------:|--------------------------------------:|
+  > | kilooctet | ko      | 1 ko = $10^{ 3}$ octets = 1000 octets |
+  > | mégaoctet | Mo      | 1 Mo = $10^{ 6}$ octets = 1000 ko     |
+  > | gigaoctet | Go      | 1 Go = $10^{ 9}$ octets = 1000 Mo     |
+  > | téraoctet | To      | 1 To = $10^{12}$ octets = 1000 Go     |
+
+* Conversion
+
+  Dans le tableau suivant, en mettant un seul chiffre par case, on voit par exemple que 24 gigaoctets est égal à 0,025 téraoctets, ou encore à 24000 mégaoctets.
+
+  > |   |   | To |   |   | Go |   |   | Mo |   |   | ko |   |   | o |
+  > |---|---|----|---|---|----|---|---|----|---|---|----|---|---|---|
+  > |   |   | 0, | 0 | 2 | 4  | 0 | 0 | 0  |   |   |    |   |   |   |
+
+- *Exemple 1 : Je télécharge un fichier de 2Mo en 17 secondes.*
+
+  Le débit de ce téléchargement est :
+  $\frac{2Mo}{17s}=0,11Mo/s=110 ko/s$
+
+- *Exemple 2 : Je télécharge une vidéo de 700Mo avec un débit de 4Mo/s.*
+
+  Le temps de téléchargement est donc :
+  $\frac{700Mo}{4Mo/s}=175s$, soit deux minutes et 55 secondes.
+
+- *Exemple 3 : J'ai mis 3 minutes à télécharger un jeu avec une connexion à 12Mo/s. Quelle est la taille de ce jeu ?*
+
+  On commence par remarquer que 3 minutes correspondent à $3\times 60=180$ secondes, donc la taille du jeu est :
+  $180\times 12=2160Mo=2,16Go$
+
+Avec ces information, répondez au QCM sur pronote.
+
+## Réseau physique
+
+Une grande force d'internet tient en son indépendance par rapport au réseau *physique* : lorsque deux ordinateurs communiquent entre eux sur Internet, ils le font sans se soucier de la manière physique dont sont transmises les données : wifi, câble sous-marin, satellite, câble téléphonique, 4G, 5G, [pigeon voyageur](https://fr.wikipedia.org/wiki/IP_over_Avian_Carriers), etc.
+
+Répondez au QCM sur Pronote tout en regardant la vidéo suivante. Les questions du QCM suivent l'ordre de la vidéo, donc lisez la première question du QCM, regardez la vidéo jusqu'à trouver la réponse, puis lisez la question suivante, et regardez la suite, etc.
+
+La vidéo fait 12 minutes, mais vous n'avez besoin de regarder que 6 minutes et 40 secondes de la vidéo pour répondre aux questions.
+
+{{ youtube(src="-qnFF1AeQpM?start=0&end=401")}}
+
+## Neutralité du net
+
+Répondez au QCM sur Pronote tout en regardant la vidéo suivante. Les questions du QCM suivent l'ordre de la vidéo, donc lisez la première question du QCM, regardez la vidéo jusqu'à trouver la réponse, puis lisez la question suivante, et regardez la suite, etc.
+
+{{ lumni(src="f034edc0483b070cf1a74913ae2f803d") }}

@@ -1,0 +1,30 @@
+title: Programmation
+---
+image: /programmation/green-tree-python.jpg
+---
+description: Séquence d'enseignement sur le thème « Programmation ». Ressources pour le professeur.
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="")}}
+J'ai emprunté plusieurs exercices de cette séquence à mes collègues Stéphane Colomban et Jérémy Chevillot. Merci à eux.
+{{ alertend() }}
+
+Cette séquence est une courte introduction au langage de programmation Python (qui est utilisé en SNT, mathématiques, physique-chimie).
+
+Elle est introduite par une présentation rapide du langage Python et du logiciel [Thonny](http://thonny.org) par le professeur,
+puis suivie de [travaux pratiques](/programmation).
+
+Elle se veut être une introduction à la *programmation* (pas à *l'algorithmique*). J'attend que les élèves fassent les parties 1 à 4 ([introduction](/programmation/1-intro/), [variables](/programmation/2-variables/), [conditionnelles](/programmation/3-conditionnelles/), [boucles](/programmation/4-boucles/)) ; les parties suivantes ([fonctions](/programmation/5-fonctions/), [bonus](/programmation/6-bonus/)) sont des bonus pour les élèves avançant plus vite.
+
+## Bilan (2020/2021)
+
+Ça ne marche pas : avec les classes qui jouent le jeu, ça marchotte ; avec les classes qui ne jouent pas le jeu, ça ne fonctionne pas. Certains élèves restent bloqués à la toute première partie.
+
+Je pense que partir sur un cours de programmation sans avoir fait d'algorithmique (au tableau ou sur papier) ne fonctionne pas. Mais ça demanderait d'y consacrer beaucoup plus que deux séances (c'est normalement fait en cours de math).
+
+À réfléchir…
+---
+_discoverable: no

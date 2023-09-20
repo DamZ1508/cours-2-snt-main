@@ -1,0 +1,51 @@
+title: Tâche finale
+---
+sort_key: 8
+---
+image: H96566k.jpg
+---
+body:
+
+L'objet de cette tâche finale est de créer une page web, à propos d'une grande figure de l'informatique.
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="warning", title="")}}
+Attention ! Ce travail sera noté, mais pour l'évaluation, la <em>forme</em> aura beaucoup plus d'importance que le <em>fond</em>. Pas la peine d'aller chercher beaucoup d'informations sur votre thème : une ou deux phrases par paragraphe suffit.
+{{ alertend() }}
+
+## Préliminaire
+
+- Choisissez un personnage historique important dans l'histoire de l'informatique, par exemple :
+
+  - [Ada Lovelace](http://fr.wikipedia.org/wiki/Ada Lovelace) ;
+  - [Cynthia Dwork](http://fr.wikipedia.org/wiki/Cynthia Dwork) ;
+  - [Dorothy Vaughan](http://fr.wikipedia.org/wiki/Dorothy Vaughan) ;
+  - [Grace Hopper](http://fr.wikipedia.org/wiki/Grace Hopper) ;
+  - [Hedy Lamarr](http://fr.wikipedia.org/wiki/Hedy Lamarr) ;
+  - [Ingrid Daubechies](http://fr.wikipedia.org/wiki/Ingrid Daubechies) ;
+  - [Marie-Paule Cani](http://fr.wikipedia.org/wiki/Marie-Paule Cani) ;
+  - [Shafi Goldwasser](http://fr.wikipedia.org/wiki/Shafi Goldwasser).
+
+- Lisez la [grille d'évaluation](eval_web.pdf) pour voir comment vous serez notés.
+
+- Ouvrez ce [mémo](memo-html.pdf)[^ganaelrenault], dans lequel vous trouverez les principales balises pour mettre en forme votre page.
+
+[^ganaelrenault]: Mémo réalisé par Ganaël Renault, publié sous licence *Creative Commons by-nc-sa*. Merci à lui.
+
+## Mise en place de l'environnement de travail
+
+0. Dans votre répertoire personnel, si ce n'est pas déjà fait, créez un dossier `SNT`, puis un dossier `web` à l'intérieur.
+0. Dans le dossier `SNT\web`, créez un nouveau dossier `tâche finale`.
+0. Téléchargez (clic droit sur le lien, puis `Enregistrer la cible du lien sous…`) les fichiers [`page.html`](page.html) et [`style.css`](style.css) dans ce dossier.
+0. Ouvrez les deux fichiers `page.html` et `style.css` avec le logiciel `Notepad++`.
+
+### Au travail !
+
+Modifiez le fichier `page.html` pour compléter les informations sur le personnage que vous avez choisi.
+
+Reportez vous à la [grille d'évaluation](eval_web.pdf) pour voir ce qui doit obligatoirement figurer sur votre page web.
+
+## Fin
+
+À la fin de la séance, [créez une archive](/tutoriels/creer-une-archive/) avec tous les document de votre site web (au moins un fichier *html* et un fichier *css*, probablement une image *jpg* ou *png*, et peut-être d'autres fichiers encore), et envoyez-la à votre professeur via l'ENT *`(objet du message : Tâche finale SNT - 2GT00)`*.

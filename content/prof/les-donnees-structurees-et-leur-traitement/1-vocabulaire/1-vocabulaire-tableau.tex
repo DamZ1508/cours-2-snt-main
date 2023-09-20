@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2023 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[14pt, aspectratio=43]{beamer}
+
+\usepackage{2122-pablo}
+\usepackage{2122-pablo-beamer}
+\usepackage{2122-pablo-paternault}
+
+\title{Les Données structurées et leur Traitement}
+\subtitle{Un peu de vocabulaire…}
+
+\begin{document}
+
+\begin{frame}
+% D'après https://catalogue.bnf.fr/ark:/12148/cb347156037.public
+% Légèrement adapté par mes soins.
+\begin{itemize}
+\item \textbf{Auteur(s) :} Ésope (0620?-0560? av. J.-C.).
+\item \textbf{Titre conventionnel :} Fables (français). Extrait]
+\item \textbf{Titre(s) :} Fables 
+\item \textbf{Publication :} Paris : Gallimard jeunesse, DL 2021
+\item \textbf{Impression :} impr. en Espagne
+\item \textbf{Description matérielle :} 1 vol. (100 p.) : ill. ; 18 cm
+\item \textbf{Collection :} Folio junior. Textes classiques
+\item \textbf{Autre(s) auteur(s) :} Saillard, Rémi (1960-....). Illustrateur ; Chambry, Émile (1864-1951). Traducteur ; Cossou, Bruno. Éditeur scientifique.
+\item \textbf{Identifiants :} ISBN 978-2-07-512050-0 (br.) 
+\item \textbf{Prix :} 4,50 EUR
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+% D'après https://catalogue.bnf.fr/ark:/12148/cb347156037.public
+% Légèrement adapté par mes soins.
+\begin{itemize}
+%\item \textbf{Type(s) de contenu et mode(s) de consultation :} Texte noté : sans médiation
+\item \textbf{Auteur(s) :} Bellonci, Maria (1902-1986) 
+\item \textbf{Titre(s) :} Lucrèce Borgia
+\item \textbf{Traduction de :} Lucrezia Borgia
+\item \textbf{Publication :} Bruxelles : Éditions Complexe ; [Paris] : [diffusion Presses universitaires de France], 1983
+\item \textbf{Impression :} impr. en Belgique
+\item \textbf{Description matérielle :} IV-469 p. : couv. ill. en coul. ; 23 cm
+\item \textbf{Collection :} Le Temps et les hommes ; 14
+%\item \textbf{Lien à la collection :} Le Temps et les hommes 
+\item \textbf{Note(s) :} Bibliogr. p. 463-469
+%\item \textbf{Sujet(s) :} Borgia, Lucrèce (1480-1519) 
+\item \textbf{Identifiants, prix et caractéristiques :} ISBN 2-87027-106-9 (Br.) : 125 F
+%\item \textbf{Identifiant de la notice  :} ark:/12148/cb347156037
+%\item \textbf{Notice n° :}  FRBNF34715603 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Cours}
+   \begin{itemize}
+   \item Une \textbf{collection} est un ensemble d'objets (concrets ou abstraits) dont on collecte des données, partageant les mêmes descripteurs.
+   \item Un \textbf{objet} est un élément de cette collection.
+   \item Un \textbf{descripteur} désigne l'aspect de l'objet concerné par la donnée.
+   \item Une \textbf{valeur} est l'information elle-même.
+   \item Le \textbf{type} d'une valeur est la nature de cette information.
+   \end{itemize}
+   De plus, si une donnée concerne une personne, on dit que c'est une \textbf{donnée personnelle}.
+\end{frame}
+
+\begin{frame}
+\frametitle{Exemple}
+  On s'intéresse aux données gérées par une bibliothèques.
+ 
+ \begin{enumerate}
+ \item L'ensemble des usagers de la bibliothèque est une \emph{collection} ; l'ensemble des livres en est une autre.
+ \item Chacun des livres est un \emph{objet} de cette collection.
+ \end{enumerate}
+
+On s'intéresse au livre \emph{Les Fleurs du mal}, de Charles Baudelaire.
+\end{frame}
+
+\end{document}

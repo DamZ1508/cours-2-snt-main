@@ -1,0 +1,15 @@
+[project]
+name = Genevoix — SNT
+locale = fr_FR
+author = Damien Provost
+url = https://snt.genevoix-vinci-signoret.fr
+
+[packages]
+lektor-tags = 0.2
+lektor-markdown-highlighter = 0.3
+lektor-markdown-header-anchors = 0.3
+lektor-jinja-content = 0.4.3
+
+[servers.production]
+name = SNT Genevoix
+target = ftp://damien.provost@genevoix-signoret-vinci.fr:&ARb35)EKW?m@snt.genevoix-signoret-vinci.fr:21/home3/csgsv/sites/snt/projet

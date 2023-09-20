@@ -1,0 +1,84 @@
+title: Internet
+---
+image: /internet/fishing-nets-youghal.jpg
+---
+description: Séquence d'enseignement sur le thème « Internet » — Ressources pour le professeur.
+---
+body:
+
+{% from 'macros/images.html' import image with context %}
+
+Tous les documents PDF du Chapitre : [Internet](internet.zip) ([sources](internet_sources.zip))
+
+### Séance 1 :
+
+- Les élèves préparent la séance à la maison avec étude du Genially + vidéo + lecture -> PRISE DE NOTES
+
+  - Historique avec Genially : pensez à cliquer sur les points !!!
+
+  - Quelques connaissances avec Vidéo La Hotline : https://youtu.be/aX3z3JoVEdE
+
+  - Quelques connaissances : TCP/IP + Machines et pratiques humaines
+
+- [QCM Pronote](QCM/historique.txt) en 30 min, en classe après un temps de relecture + questions éventuelles
+
+- 45 min - [Topologie](topologie.pdf) ([source](topologie.tex))
+
+   Remarques :
+
+   - Différentes structures :
+
+     - Le réseau « décentralisé » correspond au réseau téléphonique (du moins, avant qu'il ne soit numérisé).
+     - Le réseau « centré » correspond (dans l'idée) à la télévision, ou à la diffusion d'un journal imprimé.
+
+   - En répondant à la dernière question, je précise que c'est une bonne illustration du métier d'ingénieur, dont le travail est de trouver la meilleure solution à un problème soumis à plusieurs contraintes incompatibles (avec comme exemple la construction d'un pont routier au dessus d'une rivière, dont on veut qu'il soit proche de la sortie d'autoroute, mais sans faire exploser le traffic dans un petit village, tout en préservant une zone naturelle protégée, en diminuant les coût au maximum pour construire un ouvrage le plus solide et durable possible…).
+
+### Séance 2
+
+  - 25 min - [Routage](routage.pdf) ([source](routage.tex)) (voir aussi : [routage élastique](https://members.loria.fr/MDuflot/files/med/routage.html))
+
+- 15 min - [TP Routage avec `Tracert`](../../internet/tp-routage)
+
+- 15 min - [Modèle TCP-IP](tcp-ip.pdf) ([source](tcp-ip.tex)) : En cours magistral, le professeur lit et commente le document. Il pourra être utile :
+
+     - de faire un schéma illustrant le découpage sur un exemple (une petite phrase par exemple) ;
+     - de mentionner qu'il existe d'autres protocoles qu'IP, comme [UDP](https://fr.wikipedia.org/wiki/User_Datagram_Protocol), qui n'attend pas d'accusé de réception, et est utile dans des cas où la vitesse est plus importante que la fiabilité (streaming vidéo par exemple) ;
+     - de faire la manipulation en réel avec des bouts de papiers, des élèves routeurs, ...
+
+  -  Réseau physique : traffic ; indépendances
+
+     - 15 min - [Câbles sous-marins](cables.pdf) ([source](cables.tex))
+     - Fin de séance + séance suivante - [Calculs de débit](debit.pdf) ([source](debit.tex))
+
+### Séance 3 : DNS
+
+- 20 min - débits
+- 15 min - *Théorie :* Au tableau, le professeur recopie et explique le schéma suivant, introduit par *« Le DNS permet de faire le lien entre un nom de domaine (par exemple ``fr.wikipedia.org``) et une adresse IP (par exemple ``185.15.58.224``) »*.
+
+{{ image("dns.png") }}
+
+- 45 min - *Pratique :* [TP](../../internet/dns)
+
+### Séance 4
+
+- 30 min - Test sur calcul de débit + conversions
+- 50 min - *Pratique :* TP Simulation d'un réseau -> Filius : https://dav74.github.io/site_snt/a4/
+- Début du chapitre suivant…
+
+### À la maison
+
+- [Réseaux pair-à-pair](../../internet/p2p) : À la maison, avec un [QCM](QCM/p2p.txt) sur Pronote (images : [1](QCM/p2p-graphe-1.png) [2](QCM/p2p-graphe-2.png) [3](QCM/p2p-graphe-3.png)).
+
+- *Exposés par groupe - les sujets possibles :*
+
+  - Bilan carbone d'Internet : l'utilisation d'e-mails, de moteurs de recherche, ... est-elle anodine pour l'environnement ?
+
+  - Très Haut Débit : de quoi parle-t-on ? les avantages ? les inconvénients ? qui investit ?
+
+  - Internet : vers le média universel. Un seul média est-ce plus simple ? plus sûr ? moins coûteux ? plus écologique ?
+
+  - Neutralité du Web : les principes ? la situation dans le monde ? les avantages ? les risques ?
+    - Possibilité de faire un bilan sur la neutralité du Web : 
+{{ image("neutralite.png") }}
+---
+sort_key: 2

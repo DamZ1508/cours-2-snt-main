@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2020 Louis Paternault --- http://snt.ababsurdo.fr
+%
+% Publié sous licence Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+% http://creativecommons.org/licenses/by-sa/4.0/deed.fr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pour compiler :
+%$ lualatex $basename
+
+\documentclass[12pt]{article}
+
+\usepackage[a5paper, margin=1cm]{geometry}
+
+\usepackage{textcomp}
+\usepackage[francais]{babel}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  urlcolor=cyan,
+  pdfauthor={Louis Paternault},
+  pdfproducer={© 2020 Louis Paternault — CC-BY-SA-4.0 — http://snt.ababsurdo.fr},
+  hidelinks,
+}
+
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+Noms : \dotfill
+
+\bigskip
+
+Rôle : \textbf{Équipier/Équipière}
+
+\bigskip
+
+Après avoir préparé vos arguments en équipe, vous allez choisir deux personnes parmi vous (les orateurs ou oratrices) qui vont débattre. Les autres co-équipiers \emph{n'interviennent pas} pendant le débat, sauf si les orateurs et oratrices demandent un temps mort (pendant lequel toute l'équipe peut se concerter durant une minute, mais pas changer les orateurs et oratrices).
+
+Le but des orateurs et oratrices est de présenter des arguments pour \emph{convaincre} l'équipe adverse et le jury.
+
+Voici les critères d'évaluation que les membres du jury vont utiliser.
+
+\bigskip
+\begin{tabularx}{\textwidth}{c|X|X}
+  &\multicolumn{1}{c|}{\textbf{Forme}}&\multicolumn{1}{c|}{\textbf{Fond}}\\
+  \hline
+  \multirow{5}{*}{\rotatebox[origin=c]{90}{\textbf{Positif}}}
+  & Clarté des propos & Nombre d'arguments \\
+  & Capacité à écouter & Capacité à contre-argumenter  \\
+  & Capacité à convaincre (posture, ton, regard, gestes) & Capacité à réorienter/relancer le débat \\
+  & Temps morts demandés au bon moment & Qualité des arguments (maîtrise, précision) \\
+  & Capacité à reprendre la parole & \\
+  \hline
+  \multirow{5}{*}{\rotatebox[origin=c]{90}{\textbf{Négatif}}}
+  & Agressivité
+  & Propos hors sujet \\
+  & Couper la parole
+  & Répétitions (enferme le débat) \\
+  & Rester silencieux / être en retrait
+  & Affirmations gratuites (sans preuves) \\
+  & Monopoliser la parole
+  & Contradictions / erreurs \\
+  & Les co-équipiers parlent pendant les rounds
+  & \\
+\end{tabularx}
+
+\vfill
+{\scriptsize
+\emph{Tableau recopié depuis :}\\
+\url{https://sesame.apses.org/index.php?option=com_content&view=article&id=84&Itemid=235}}
+
+\end{document}

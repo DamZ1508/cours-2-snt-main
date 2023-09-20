@@ -1,0 +1,25 @@
+title: Python et format CSV (1h30)
+---
+sort_key: 5
+---
+body:
+
+En autonomie, sur machine, les élèves suivent [ces instructions](../../../les-donnees-structurees-et-leur-traitement/python-csv/).
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="danger", title="A choisir")}}
+Chaque enseignant de SNT est libre de choisir d'adapter le TP proposé en fonction de ses envies, du temps disponible et de l'attrait des élèves
+{{ alertend() }}
+
+De manière à ce que chaque élève soit bien rattaché à son enseignant de SNT et que chaque enseignant puisse s'il le souhaite modifier, adapter, améliorer l'activité, le prof doit :
+
+0. `Accéder à l'activité version prof` <a href="https://capytale2.ac-paris.fr/web/c/19e0-291194" target="_blank" rel="noopener">disponible sur Capytale</a> ;
+0. `Cloner cette activité` afin d'en devenir le propriétaire : sur la page de vos activités, cliquer sur le **+** et choisir `Cloner` ;
+0. `Accéder à l'activité version élève` <a href="https://capytale2.ac-paris.fr/web/c/5fb8-1768804" target="_blank" rel="noopener">disponible sur Capytale</a> ;
+0. `Cloner cette activité` également ;
+0. `Partager aux élèves` le code de l'activité ou le lien vers cette activité (via Pronote par exemple)
+
+{{ alertstart(level="warning", title="Bonne pratique")}}
+Il est donc important que chaque enseignant de SNT créant une activité sur Capytale pense à ajouter tous les collègues en <b>associés</b> lorsqu'il rentre les paramètres de l'activité.
+{{ alertend() }}

@@ -1,0 +1,132 @@
+title: TP5 — Communiquer avec une autre carte
+---
+sort_key: 5
+---
+image: radio-tower.jpg
+---
+toc: 2
+---
+morehead:
+
+<link rel="stylesheet" href="/static/numbered-h2-h3.css">
+<link rel="stylesheet" href="/static/sublist.css">
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="info", title="Crédits")}}
+Cette séance est inspirée de <a href="https://snt.entraide-ella.fr/chapitres/objets-connectes/4/">celle de mes collègues Stéphane Colomban et Jérémy Chevillot</a>. Merci à eux.
+{{ alertend() }}
+
+Pour l'ensemble des exercices de cette partie, chaque binôme d'élèves devra se munir de deux cartes *Micro:bit*.
+
+## Comment faire communiquer deux cartes ?
+
+La carte *Micro:bit* est équipée d'un émetteur/récepteur radio qui permet à deux cartes de communiquer à distance.
+
+### Instructions
+
+Les instructions disponibles sont :
+
+- `radio.on()` : allume la radio. À écrire obligatoirement avant toute utilisation de la radio ;
+- `radio.config(channel=7)` : configure le canal radio sur lequel vous allez émettre et recevoir (comme les Talkie-Walkies) ; les canaux disponibles vont de 0 à 83 (celui par défaut étant le numéro 7). Les deux cartes qui communiquent entre elles doivent utiliser le *même* canal (donc le même numéro) ;
+- `radio.send("message")` : envoie la chaîne de caractères (texte) `message`. Notez qu'il n'est possible d'envoyer que du texte avec cette méthode. Pour envoyer un nombre (par exemple le résultat de l'opération `1+1`), il faudra d'abord convertir ce message en une chaîne de caractères avec la méthode [`str()`](https://docs.python.org/fr/3/library/stdtypes.html#text-sequence-type-str) : `radio.send(str(1+1))` (au lieu de `radio.send(1+1)` qui échouera).
+- `radio.receive()` : reçoit le prochain message à être diffusé sur le canal de réception ;
+- `radio.off()` : éteint la radio.
+
+Pour plus d'informations, voir la [documentation officielle](https://microbit-micropython.readthedocs.io/fr/latest/tutorials/radio.html).
+
+### Exercice
+
+On fabrique un compteur formé de deux cartes :
+
+- l'afficheur affiche le compteur (des nombres de 0 à …) ;
+- en appuyant sur les boutons gauche et droite du contrôleur, on peut augmenter ou diminuer le compteur.
+
+0. Mise en place
+
+   0. Chaque élève télécharge un des programmes suivants :
+
+      - [compteur-afficheur.py](compteur-afficheur.py) : affichage du compteur ;
+      - [compteur-controleur.py](compteur-controleur.py) : contrôle du compteur avec les boutons gauche et droite.
+
+   0. Chaque élève *flashe* son programme sur sa carte *micro:bit*. Cela doit alors fonctionner :
+
+     - un des élèves voit le compteur sur sa carte ;
+     - l'autre peut contrôler, avec les boutons gauche et droite, la valeur du compteur sur l'autre carte.
+
+     Remarquez qu'à ce stade, toutes les cartes des élèves communiquent sur le même canal : votre carte « contrôleur » n'agit pas seulement sur la carte de votre binôme, mais aussi sur toutes les cartes des élèves de la classe (à conditions que le programme [compteur-afficheur.py](compteur-afficheur.py) y soit installé).
+
+0. Amélioration du programme
+
+   0. *Lisez* et *comprenez* les deux programmes.
+   0. Modifiez le canal utilisé (en choisissant un nombre entre 1 et 83, différent de celui des autres élèves de la classe). Vérifiez que cela fonctionne toujours.
+   0. Modifiez les deux programmes pour que lorsque la carte « contrôleur » est secouée, le compteur est remis à zéro.
+   0. ✋ Appelez le professeur pour vérifier votre travail.
+
+## Un peu plus d'autonomie
+
+Faites un des trois TP ci-dessous, au choix.
+
+### Télé-assistance
+
+On souhaite réaliser un bracelet de télé-assistance pour personnes agées : il s'agit d'un bracelet qui alerte un infirmier en cas de chute.
+
+- La première carte simule le bracelet : Lorsque la carte est secouée (chute de la personne), un message d'alerte est envoyé au poste de contrôle.
+- La second carte simule le poste de contrôle : Lorsqu'il reçoit le message d'alerte, la carte se met à clignoter pour prévenir le personnel qu'une personne est en danger.
+
+0. Chaque élève télécharge un des programmes suivants dans son dossier personnel.
+
+   - [`tele-bracelet.py`](tele-bracelet.py) : Bracelet élecronique : envoie le message `"alerte"` lorsque la carte est secouée.
+   - [`tele-controle.py`](tele-controle.py) : Poste de contrôle : fait clignoter la carte lorsque le message `"alerte"` est reçu.
+
+0. Complétez les programmes pour qu'ils fonctionnent.
+0. **Bilan**
+
+   - complétez la [fiche bilan](bilan.pdf) ;
+   - enregistrez vos deux programmes, puis rendez-les sur Pronote (rubrique « Travail à faire ») ;
+   - rendez la fiche au professeur ;
+   - passez au TP suivant.
+
+### Station météorologique
+
+On souhaite réaliser une station météorologique (rudimentaire) composée de deux parties : un capteur à l'extérieur qui effectue les mesures, et une interface à l'intérieur qui affiche ces mesures.
+
+- La première carte est le capteur placé à l'extérieur : à la réception d'un message, elle mesure la température ou la luminosité, et renvoie cette information.
+- La seconde carte est l'interface, à l'intérieur : lorsque l'utilisatrice appuie sur un des boutons, elle envoie un message à l'autre carte pour demander la température (bouton A) ou la luminosité (bouton B), et affiche le résultat.
+
+0. Chaque élève télécharge un des programmes suivants dans son dossier personnel.
+
+   - [`meteo-interface.py`](meteo-interface.py) : Interface : lorsque l'utilisatrice appuie sur le bouton A, envoie le message `"température"` ; lorsque l'utilisatrice appuie sur le bouton B, envie le message `"luminosité"`. Puis attend que l'autre carte réponde, et affiche la valeur reçue (température ou luminosité).
+   - [`meteo-capteur.py`](meteo-capteur.py) : Capteur : lorsque le message `"température"` est reçu, renvoit [la température](https://microbit-micropython.readthedocs.io/fr/latest/microbit.html#microbit.temperature) ; lorsque le message `"luminosité"` est reçu, renvoit [la luminosité](https://microbit-micropython.readthedocs.io/fr/latest/display.html#microbit.display.read_light_level).
+
+     ⚠️ Attention : Avec la carte *micro:bit*, la température comme la luminosité sont des nombres, qu'il faudra convertir en chaînes de caractères avant de les envoyer par radio : ``radio.send(str(XXX))``.
+
+0. Complétez les programmes pour qu'ils fonctionnent (pour tester la luminosité, on pourra cacher la carte avec sa main pour faire baisser la luminosité).
+0. **Bilan**
+
+   - enregistrez vos deux programmes, puis rendez-les sur Pronote (rubrique « Travail à faire ») ;
+   - complétez la [fiche bilan](bilan.pdf) ;
+   - rendez-la au professeur ;
+   - passez au TP suivant.
+
+### Clignotant de vélo
+
+Le but de cet exercice est de créer un clignotant de vélo connecté :
+
+- sur la première carte, attachée sur le guidon, l'utilisatrice peut appuyer sur le bouton A ou B pour signifier son intention de tourner à gauche (A) ou à droite (B) ;
+- la seconde carte, attachée à l'arrière du vélo, n'affiche rien, jusqu'à ce qu'elle reçoive un signal de la première carte. Elle affiche alors une flèche vers la gauche ou vers la droite pendant cinq secondes, puis s'éteind.
+
+0. Chaque élève télécharge un des programmes suivants dans son dossier personnel.
+
+   - [`velo-guidon.py`](velo-guidon.py) : Lorsque la cycliste appuie sur le bouton A ou B, le message `"gauche"` ou `"droite"` est envoyé à l'autre carte.
+   - [`velo-arriere.py`](velo-arriere.py) : Lorsque le message `"gauche"` ou `"droite"` est reçu, affiche pendant cinq secondes la flèche correspondante.
+
+0. Complétez les programmes pour qu'ils fonctionnent.
+0. **Bilan**
+
+   - Demander puis compléter la fiche bilan de ce TP ;
+   - Enregistrez vos deux programmes ;
+   - Rendez la fiche au professeur ;
+   - Passez au TP suivant.

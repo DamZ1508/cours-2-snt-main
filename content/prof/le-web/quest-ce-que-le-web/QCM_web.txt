@@ -1,0 +1,66 @@
+Quelle est la différence majeure entre le Web et Internet ?
+- Internet est le support physique du Web
+- le Web est le support physique d'Internet
+- Il n'y a pas de différence entre Web et Internet, ce sont des synonymes
+
+Quand on parle de « la toile », de quoi parle-t-on ?
+- de l'ensemble d'Internet
+- de l'ensemble des ordinateurs
+- de l'ensemble du Web
+
+Qui est le principal inventeur du World Wide Web ?
+- Bill Gates
+- Tim Berners-Lee
+- Steve Jobs
+
+Où a été inventé le World Wide Web ?
+- au CERN, en Suisse
+- au MIT, aux Etats-Unis
+- au CNRS, en France
+
+Quand a été mis en ligne le premier site web de l'histoire ?
+- 1985
+- 1988
+- 1990
+
+A quoi servait le tout premier site web ?
+- A expliquer le fonctionnement du Web, ainsi que son code source
+- A envoyer et recevoir des e-mails
+- A acheter des articles en ligne
+
+Parmi les propositions suivantes, laquelle est l'appellation correcte ?
+- site Web
+- site Internet
+- site réseau
+
+Qu'est-ce qu'un lien hypertexte ?
+- un lien permettant de passer à une autre page web d'un clic, sans avoir à coder
+- un lien permettant d'un clic de mettre du texte en surbrillance
+- un lien permettant d'un clic d'envoyer un e-mail
+
+Qu'est-ce que l'HTML ?
+- la première entreprise à avoir utiliser des pages Web
+- le groupe chargé de surveiller les pages Web
+- le langage informatique utilisé sur les pages Web
+
+Qu'est-ce qu'une URL ?
+- une adresse permettant de localiser une ressource Web
+- un identifiant permettant de caractériser une ressource du Web
+- le nom d'une ressource du Web
+
+Combien référence-t-on de sites Web en 2022 ?
+- 1,93 Milliards
+- 1,93 Millions
+- 1,93 Mille
+
+Parmi les domaines de premier niveau proposés ci-dessous, lesquels n'existent pas ?
+- .org
+- .net
+- .cms
+- .web
+- .fe
+- .de
+- .cnn
+- .uk
+
+

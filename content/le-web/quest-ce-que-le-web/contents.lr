@@ -1,0 +1,58 @@
+title: Qu'est-ce que le Web ?
+---
+description: Définition, connaissances initiales, historiques, quelques chiffres
+---
+image: ../silver-web.jpg
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+{% from 'macros/embed.html' import youtube with context %}
+{% from 'macros/spoiler.html' import beginspoiler, endspoiler, spoiler with context %}
+{% from 'macros/images.html' import image with context %}
+
+{{ alertstart(level="info")}}
+A l'aide des supports d'information ci-dessous, vous devrez répondre au QCM PRONOTE proposé.
+{{ alertend() }}
+
+#### Le Web : Repères historiques, Premières connaissances
+
+{{ alertstart(level="danger")}}
+Consultez les articles et vidéos ci-dessous en prenant des notes !
+{{ alertend() }}
+
+- **Site internet ou Site web ? - MOOC SNT**
+<iframe src="https://ladigitale.dev/digiview/inc/video.php?videoId=GqD6AiaRo3U&vignette=https://i.ytimg.com/vi/GqD6AiaRo3U/hqdefault.jpg&debut=0&fin=319&largeur=200&hauteur=113&st=fr,fr" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+- [**Découvrons l'histoire du Web - Editions DELAGRAVE**](http://lienmini.fr/) - Code ressource `3389-303`
+
+- **Culture Numérique : Le Web - Université de Lille - [Licence CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/fr/)**
+<iframe src="https://player.vimeo.com/video/138623515" allowfullscreen frameborder="0" width="700" height="394"></iframe>
+
+- L'adresse URL du premier site Web était `http://nxoc01.cern.ch/hypertext/WWW/TheProject.html`. Inaccessible dorénavant, il a été déplacé et reste consultable [ici](http://info.cern.ch/hypertext/WWW/TheProject.html)
+
+#### Jeu Timeline SNT
+- Ce jeu est composé de 12 cartes comportant 2 faces :
+
+{{ image("Timeline.jpg") }}
+
+- **Déroulement de la partie :**
+
+  1. Constituez une équipe de 4 élèves
+
+  2. Mélangez un paquet de cartes (face visible = face sans date)
+
+  3. Prenez la première carte de la pile et positionnez la au milieu (face visible = face avec date)
+
+  4. Prenez la carte du dessus de la pile et décidez après discussion et argumentation de sa place dans la chronologie : se situe-t-elle avant ou après la première carte ?
+
+  5. Une fois la carte placée, retournez la (face visible = face avec date) pour vérifier si le choix de l'équipe était bon :
+
+    - si elle est bien placée, la carte reste en place dans la frise. Laissez alors un espace entre les 2 cartes.
+
+    - sinon, la carte retourne sous la pile (face visible = face sans date)
+
+  6. Continuez ainsi jusqu'à ce qu'il n'y ait plus de cartes dans la pile
+
+  7. La première équipe qui a positionné correctement toutes ses cartes (sans tricher évidemment) est déclarée vainqueur.
+

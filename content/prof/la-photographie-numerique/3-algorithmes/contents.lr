@@ -1,0 +1,15 @@
+title: TP : Traitement d'images (1h30)
+---
+sort_key: 4
+---
+body:
+
+{% from 'macros/bootstrap.html' import alertstart, alertend with context %}
+
+{{ alertstart(level="success", title="A choisir")}}
+Le choix est proposé aux élèves de faire un voire plusieurs projets en fonction de leurs aptitudes et motivation.
+{{ alertend() }}
+
+En autonomie, sur Capytale, les élèves suivent  <a href="https://capytale2.ac-paris.fr/web/c/8775-1764369" target="_blank" rel="noopener">ces instructions de TP</a>
+
+Et voici la version Prof corrigée : <a href="https://capytale2.ac-paris.fr/web/c/9cc0-1764373" target="_blank" rel="noopener">ces instructions de TP</a>

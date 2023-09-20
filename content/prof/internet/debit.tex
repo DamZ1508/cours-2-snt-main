@@ -1,0 +1,233 @@
+\input{preambule_damien2.tex}     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************TABLEAUX*******************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%% TABLEAU SIGNE ET VARIATION %%%%%%%%%%%%%%
+%\begin{center}
+%%\vspace{0.3cm}
+%\begin{tikzpicture}
+%\tkzTabInit[espcl=2]{$x$ /.8 , $d(x)$ /1.5}{$0$ , $4$,$16$,$24$}
+%\tkzTabLine[]{,+,z,-,}
+%\tkzTabVar[]{+/ $8$,-/$6$,+/$19$,-/$8$}
+%%\tkzTabVal[draw]{1}{2}{0.5}{0}{0}
+%\end{tikzpicture}
+%\end{center}
+
+%%%%%%%%%%%%%%% TABLEAU %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\arraystretch}{hauteur}
+%\begin{center}
+%\begin{tabularx}{0.94\linewidth}{|c|*{7}{>{\centering \arraybackslash}X|}}
+%\hline 
+%
+%\hline 
+%\end{tabularx} 
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%****************** GRAPHIQUE FCT**********************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\psset{xunit=0.75cm,yunit=0.75cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=5pt 0,linewidth=1.4pt,arrowsize=2pt 2,arrowinset=0.25}
+%\def\xmin{-9} \def\xmax{9} \def\ymin{-10.5} \def\ymax{6.5} \def\dx{0.5} \def\dy{0.5}
+%\begin{center}
+%		\begin{pspicture*}(\xmin,\ymin)(\xmax,\ymax)
+%		\multips(0,\ymin)(0,\dy){35}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(\xmin,0)(\xmax,0)}
+%		\multips(\xmin,0)(\dx,0){38}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,\ymin)(0,\ymax)}
+%		\psaxes[labels=all,labelFontSize=\scriptstyle,labelsep=2pt,xAxis=true,yAxis=true,Dx=1,Dy=1,ticksize=-2pt 0,subticks=2,showorigin=False]{->}(0,0)(\xmin,\ymin)(\xmax,\ymax)[{$x$,0][$y$,90]
+%\psclip{%
+%\psframe[linestyle=none](\xmin,\ymin)(\xmax,\ymax)}
+%		\uput[dl](0,0){\scriptsize $0$}
+%		\psplot[linewidth=1.4pt,plotpoints=200, linecolor=blue]{\xmin}{\xmax}{2.79^x}
+%}\endpsclip
+%		\end{pspicture*}
+%\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************MINTED *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{minted}
+%
+\renewcommand{\theFancyVerbLine}{\textcolor{gray}{\tiny \oldstylenums{\arabic{FancyVerbLine}}}}
+%
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+%
+\newminted[python]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3,fontsize=\small, tabsize=4, samepage=true, rulecolor=gray, numbersep=2pt, bgcolor=bg}
+%
+\newmintinline{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newmintedfile[pythonexternal]{python}{fontfamily=tt,linenos=true,autogobble,mathescape=true,python3}
+%
+%\newminted[html]{html}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{html}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[css]{css}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, tabsize=4, numbersep=8pt}
+%
+%\newmintinline{css}{fontfamily=courier, fontsize=\small}
+%
+%\newminted[algo]{bbcode}{fontfamily=courier, fontsize=\footnotesize, rulecolor=gray, framerule=1.5pt, mathescape=true, texcomments=true, autogobble, linenos=true, tabsize=4, numbersep=8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *******************EnTêtes et Pieds de page *****************************%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\setlength{\headheight}{40pt} % Haut de page
+\renewcommand{\headrulewidth}{0.0pt}
+\setlength{\textheight}{26cm}
+\lhead{}
+%\chead{\thepage/\pageref{LastPage}}
+\rhead{}
+\renewcommand{\footrulewidth}{1pt}
+\lfoot{2GT --- SNT}
+\cfoot{}
+%\rfoot{\thepage/\pageref{LastPage}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\usepackage{xspace}
+\newcommand{\ellipse}{[...]\xspace}
+
+
+% mdframed
+\usepackage{mdframed}
+\mdfdefinestyle{citationstyle}{%
+  outerlinewidth=.5em,
+  outerlinecolor=white,%
+  leftmargin=-1em,
+  rightmargin=-1em,%
+  middlelinewidth=1.2pt,
+  roundcorner=5pt,
+  linecolor=black,
+  skipbelow=10cm,
+  innerbottommargin=5pt,
+  innerleftmargin=5pt,
+  innerrightmargin=5pt,
+  innertopmargin=5pt,
+}
+%%%%%%%
+
+\begin{document}
+
+\begin{titre}{2NDE}{Seconde - SNT}
+\centering
+{\Large \textsc{\textbf{Thème : Internet --- Séance 2}}}
+\end{titre}
+
+\section{Unité de données : le Bit}
+
+Le terme \textbf{bit} est une contraction des mots \textbf{binary digit} \textit{(que l'on peut traduire par chiffre binaire en français)}. Il désigne l'unité la plus simple utilisée dans un système de numération. 
+
+Cette unité, directement associée au \textbf{système binaire}, ne peut prendre que deux valeurs : 0 et 1.
+
+En informatique, le bit définit de façon plus précise une quantité minimale d'information pouvant être transmise par un message. On emploie alors le bit comme unité de mesure de base de l'information. 
+
+Un ensemble ordonné de 8 bits équivaut à \textbf{un octet}. Dans cette logique, 8 bits égalent donc 1 octet.
+
+\begin{enumerate}
+	\item Avec un seul bit, on peut compter jusqu'à 1 et donc coder deux informations : 0 ou 1 \dots
+	\begin{enumerate}
+		\item Comment compter jusqu'à 3 ?
+		\item Avec 2 bits, combien d'informations peut-on coder ? Avec 4 ? Avec un octet ?
+	\end{enumerate}
+	\item Conversions :
+	\begin{enumerate}
+		\item Écrire les entiers binaires ci-dessous en écriture décimale
+		\begin{multicols}{4}\begin{itemize}
+		\item \pythoninline{00010011}
+		\item \pythoninline{10010011}
+		\item \pythoninline{11100000}
+		\item \pythoninline{11100110}
+		\end{itemize}\end{multicols}
+		\item Écrire les entiers décimaux ci-dessous en écriture binaire :
+		\begin{multicols}{4}\begin{itemize}
+		\item 156
+		\item 27
+		\item 216
+		\item 73
+		\end{itemize}\end{multicols}
+	\end{enumerate}
+\end{enumerate}
+
+\section{Débit d'une transmission}
+Le \emph{débit} d'une transmission de données est la vitesse à laquelle ces données sont transmises sur le réseau. Il est exprimé en \emph{octets par seconde}, noté \si{o/s} (ou \si{ko/s}, \si{Mo/s}, \si{Go/s}?). En anglais \enquote{octet} se dit \enquote{byte}, donc on trouvera aussi la notations \si{Mb/s} (pour \enquote{megabyte per second}, ou \enquote{mégaoctets par seconde}). Le débit se calcule avec la formule :
+\[
+  \text{débit}=\frac{\text{quantité de données}}{\text{durée}}
+\]
+
+\begin{enumerate}
+  \item
+    \begin{enumerate}
+      \item Exprimer en français, puis convertir en octets : \SI{1}{ko}, \SI{1}{Mo}, \SI{1}{Go}, \SI{1}{To}.
+      \item Convertir en gigaoctets : 2345,6 ko
+    \end{enumerate}
+  \item
+    \begin{enumerate}
+  \item Pendant une vidéo \emph{live} de deux minutes avec un débit de \si{1,5}{~Mo/s}, quelle quantité de données a été transmise ?
+  \item Je veux publier mes \si{1,3}{~Go} de photos de vacances avec ma connexion de \si{20}{~Mo/s}. Combien de temps cela va-t-il prendre (répondre en minutes) ?
+  \item Dans les années 90, la plupart des foyers se connectaient à Internet avec des \enquote{modems \SI{56}{k}}, qui avaient un débit théorique maximum de \SI{56}{ko/s}. Combien de temps fallait-il pour télécharger une photo de \SI{2}{Mo} ? une vidéo de \si{0,5}{~Go}
+    \end{enumerate}
+\end{enumerate}
+
+\sautpage
+
+\section*{Corrigé}
+
+\subsection*{1. Unité de données : le bit}
+\begin{enumerate}
+	\item
+	\begin{enumerate}
+		\item Il faut 2 bits et alors : $2_{10} = 10_{2}$ et $3_{10} = 11_{2}$
+		\item On peut donc coder 4 informations avec 2 bits, soit $2^2$.
+		
+		Donc avec 4 bits, on code $2^4 = 16$ informations et $2^8=256$ avec un octet.
+	\end{enumerate}
+	\item
+	\begin{enumerate}
+		\item En utilisant le tableau suivant :
+		\begin{center}
+		\begin{tabularx}{0.94\linewidth}{|c|*{8}{>{\centering \arraybackslash}X|}}
+  		\hline
+  		Puissances de 2 & $\delair{2^7}$  & $2^6$ & $2^5$ & $2^4$ & $2^3$ & $2^2$ & $2^1$ & $2^0$ \\
+  		\hline 
+  		Valeurs entières & $128$ & $64$ & $32$ & $16$ & $8$ & $4$ & $2$ & $1$ \\ 
+  		\hline
+  		Bits &&&&&&&& \\ \hline
+		\end{tabularx}\end{center}
+		\begin{itemize}
+		\item \pythoninline{00010011}$_2$ = $16 + 2 + 1 = 19_{10}$
+		\item \pythoninline{10010011}$_2$ = $128+16+2+1=147_{10}$
+		\item \pythoninline{11100000}$_2$ = $128+64+32=224_{10}$
+		\item \pythoninline{11100110}$_2$ = $128+64+32+4+2=230_{10}$
+		\end{itemize}
+		\item Par division successives par 2 :
+		\begin{multicols}{4}\begin{itemize}
+		\item $156_{10} = 10011100_2$
+		\item $27_{10} = 00011011_2$
+		\item $216_{10} = 11011000_2$
+		\item $73_{10} = 01001001_2$
+		\end{itemize}\end{multicols}
+	\end{enumerate}
+\end{enumerate}
+
+\subsection*{2. Débit d'une transmission}
+\begin{enumerate}
+	\item 
+	\begin{enumerate}
+		\item \SI{1}{ko} = 1 kilo-octet = \np{1000} octets\\ \SI{1}{Mo} = 1 Méga-octet = \np{1000000} octets = $10^6$ octets \\ \SI{1}{Go} = 1 Giga-octet = \np{1000000000} octets = $10^9$ octets \\ \SI{1}{To} = 1 Tera-octet = $10^{12}$ octets
+		\item \si{2345,6}{~ko} = \si{2,3456}{~Mo} = \si{0,0023456}{~Go} = $2 \times 10^{-3}$ Go
+	\end{enumerate}
+	\item 
+	\begin{enumerate}
+		\item 2 min = 120 s donc $1,5 \times 120 = 180$ Mo.
+		\item \si{1,3}{~Go} = \SI{1300}{Mo} donc $\dfrac{1300}{20} = 65$ s.
+		\item \SI{2}{Mo} = \SI{2000}{ko} donc $\dfrac{2000}{56} \approx 36$ s. \\
+				\si{0,5}{~Go} = $5 \times 10^5$ ko donc $\dfrac{5\times 10^5}{56} \approx \np{8929}$ s soit environ 149 min...
+	\end{enumerate}
+\end{enumerate}
+
+\end{document}
